@@ -12,6 +12,7 @@ class PokemonSystem
   attr_writer   :bgmvolume
   attr_writer   :sevolume
   attr_writer   :textinput
+  attr_accessor :dayNightTint
 
   def initialize
     @textspeed   = 1     # Text speed (0=slow, 1=normal, 2=fast)
@@ -27,6 +28,7 @@ class PokemonSystem
     @bgmvolume   = 100   # Volume of background music and ME
     @sevolume    = 100   # Volume of sound effects
     @textinput   = 0     # Text input mode (0=cursor, 1=keyboard)
+	@dayNightTint = 1 # turn the day-night tint off or on (0=false,1=true)
   end
 
   def textskin;  return @textskin || 0;    end
@@ -37,6 +39,7 @@ class PokemonSystem
   def sevolume;  return @sevolume || 100;  end
   def textinput; return @textinput || 0;   end
   def tilemap;   return MAP_VIEW_MODE;     end
+  def dayNightTint; return @dayNightTint || 1; end
 end
 
 
@@ -518,6 +521,14 @@ class PokemonOption_Scene
            end
          }
        ),
+	   # New - Day Night Cycle Tint
+	   EnumOption.new(_INTL("Day-Night Tinting"),[_INTL("Off"),_INTL("On")],
+		proc { $PokemonSystem.dayNightTint },
+		proc {|value|
+			$PokemonSystem.dayNightTint = value
+		}
+	   ),
+	   #
        EnumOption.new(_INTL("Screen Border"),[_INTL("Off"),_INTL("On")],
          proc { $PokemonSystem.border },
          proc { |value|

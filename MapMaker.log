@@ -1,0 +1,352 @@
+===============================================================================
+Thu Dec 26 23:50:38 GMT Standard Time 2019
+-------------------------------------------------------------------------------
+Collecting map data
+Collecting map data completed
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Saving "Route D-1"
+Saving "Route D-1"
+Saving "Route D-1"
+Collecting map data
+Collecting map data completed
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Saving "Route D-2"
+Script 'SDK' line 0: SystemExit occured.
+
+(eval):129:in `exit'exit
+
+Backtrace:
+'SDK' line 0(eval) 129:in `update'
+'SDK' line 0(eval) 129:in `update'
+'SDK::Scene_Base' line 110 in `update_modules'
+'SDK::Scene_Base' line 91 in `main_loop'
+'SDK::Scene_Base' line 47 in `main'
+'SDK::Scene_Base' line 46 in `loop'
+'SDK::Scene_Base' line 49 in `main'
+'Main' line 12
+
+===============================================================================
+Thu Dec 26 23:56:20 GMT Standard Time 2019
+-------------------------------------------------------------------------------
+Wrote pan_on=>false to .\MapMaker.ini
+Wrote pan_on=>true to .\MapMaker.ini
+Wrote fog_on=>true to .\MapMaker.ini
+Collecting map data
+Collecting map data completed
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Collecting map data
+Collecting map data completed
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Wrote maninstr_on=>false to .\MapMaker.ini
+Wrote maninstr_on=>true to .\MapMaker.ini
+Wrote til_on=>false to .\MapMaker.ini
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Wrote til_on=>true to .\MapMaker.ini
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Wrote pan_on=>false to .\MapMaker.ini
+Wrote pan_on=>true to .\MapMaker.ini
+Wrote pan_on=>false to .\MapMaker.ini
+Collecting map data
+Collecting map data completed
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+===============================================================================
+Fri Dec 27 01:14:44 GMT Standard Time 2019
+-------------------------------------------------------------------------------
+Collecting map data
+Collecting map data completed
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Saving "Route D-2"
+Script 'SDK' line 0: SystemExit occured.
+
+(eval):129:in `exit'exit
+
+Backtrace:
+'SDK' line 0(eval) 129:in `update'
+'SDK' line 0(eval) 129:in `update'
+'SDK::Scene_Base' line 110 in `update_modules'
+'SDK::Scene_Base' line 91 in `main_loop'
+'SDK::Scene_Base' line 47 in `main'
+'SDK::Scene_Base' line 46 in `loop'
+'SDK::Scene_Base' line 49 in `main'
+'Main' line 12
+
+===============================================================================
+Fri Jun 19 22:03:34 GMT Summer Time 2020
+-------------------------------------------------------------------------------
+Collecting map data
+Collecting map data completed
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Saving "Giotto Town"
+Script 'SDK' line 0: SystemExit occured.
+
+(eval):129:in `exit'exit
+
+Backtrace:
+'SDK' line 0(eval) 129:in `update'
+'SDK' line 0(eval) 129:in `update'
+'SDK::Scene_Base' line 110 in `update_modules'
+'SDK::Scene_Base' line 91 in `main_loop'
+'SDK::Scene_Base' line 47 in `main'
+'SDK::Scene_Base' line 46 in `loop'
+'SDK::Scene_Base' line 49 in `main'
+'Main' line 12
+
+===============================================================================
+Tue Jun 23 22:46:04 GMT Summer Time 2020
+-------------------------------------------------------------------------------
+Collecting map data
+Collecting map data completed
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Saving "Route E-1"
+Script 'SDK' line 0: SystemExit occured.
+
+(eval):129:in `exit'exit
+
+Backtrace:
+'SDK' line 0(eval) 129:in `update'
+'SDK' line 0(eval) 129:in `update'
+'SDK::Scene_Base' line 110 in `update_modules'
+'SDK::Scene_Base' line 91 in `main_loop'
+'SDK::Scene_Base' line 47 in `main'
+'SDK::Scene_Base' line 46 in `loop'
+'SDK::Scene_Base' line 49 in `main'
+'Main' line 12
+
+===============================================================================
+Thu Jul 02 16:33:18 GMT Summer Time 2020
+-------------------------------------------------------------------------------
+Script 'SDK' line 0: SystemExit occured.
+
+(eval):129:in `exit'exit
+
+Backtrace:
+'SDK' line 0(eval) 129:in `update'
+'SDK' line 0(eval) 129:in `update'
+'SDK::Scene_Base' line 110 in `update_modules'
+'SDK::Scene_Base' line 91 in `main_loop'
+'SDK::Scene_Base' line 47 in `main'
+'SDK::Scene_Base' line 46 in `loop'
+'SDK::Scene_Base' line 49 in `main'
+'Main' line 12
+
+===============================================================================
+Mon Nov 16 21:35:14 GMT Standard Time 2020
+-------------------------------------------------------------------------------
+Script 'SDK' line 0: SystemExit occured.
+
+(eval):129:in `exit'exit
+
+Backtrace:
+'SDK' line 0(eval) 129:in `update'
+'SDK' line 0(eval) 129:in `update'
+'SDK::Scene_Base' line 110 in `update_modules'
+'SDK::Scene_Base' line 91 in `main_loop'
+'SDK::Scene_Base' line 47 in `main'
+'SDK::Scene_Base' line 46 in `loop'
+'SDK::Scene_Base' line 49 in `main'
+'Main' line 12
+
+===============================================================================
+Mon Nov 16 21:35:27 GMT Standard Time 2020
+-------------------------------------------------------------------------------
+Script 'Resolution' line 24: RuntimeError occured.
+
+LoadLibrary: rgssdisp.dll
+
+
+Backtrace:
+'Resolution' line 24 in `initialize'
+'Resolution' line 24 in `new'
+'Resolution' line 24
+
+===============================================================================
+Mon Nov 16 21:35:34 GMT Standard Time 2020
+-------------------------------------------------------------------------------
+Collecting map data
+Collecting map data completed
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Saving "Route B-2"
+Script 'SDK' line 0: SystemExit occured.
+
+(eval):129:in `exit'exit
+
+Backtrace:
+'SDK' line 0(eval) 129:in `update'
+'SDK' line 0(eval) 129:in `update'
+'SDK::Scene_Base' line 110 in `update_modules'
+'SDK::Scene_Base' line 91 in `main_loop'
+'SDK::Scene_Base' line 47 in `main'
+'SDK::Scene_Base' line 46 in `loop'
+'SDK::Scene_Base' line 49 in `main'
+'Main' line 12
+
+===============================================================================
+Mon Nov 16 21:45:26 GMT Standard Time 2020
+-------------------------------------------------------------------------------
+Collecting map data
+Collecting map data completed
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Saving "Route B-2"
+Script 'SDK' line 0: SystemExit occured.
+
+(eval):129:in `exit'exit
+
+Backtrace:
+'SDK' line 0(eval) 129:in `update'
+'SDK' line 0(eval) 129:in `update'
+'SDK::Scene_Base' line 110 in `update_modules'
+'SDK::Scene_Base' line 91 in `main_loop'
+'SDK::Scene_Base' line 47 in `main'
+'SDK::Scene_Base' line 46 in `loop'
+'SDK::Scene_Base' line 49 in `main'
+'Main' line 12
+
+===============================================================================
+Thu Nov 19 13:45:23 GMT Standard Time 2020
+-------------------------------------------------------------------------------
+Collecting map data
+Collecting map data completed
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Saving "Route A-1"
+Script 'SDK' line 0: SystemExit occured.
+
+(eval):129:in `exit'exit
+
+Backtrace:
+'SDK' line 0(eval) 129:in `update'
+'SDK' line 0(eval) 129:in `update'
+'SDK::Scene_Base' line 110 in `update_modules'
+'SDK::Scene_Base' line 91 in `main_loop'
+'SDK::Scene_Base' line 47 in `main'
+'SDK::Scene_Base' line 46 in `loop'
+'SDK::Scene_Base' line 49 in `main'
+'Main' line 12
+
+===============================================================================
+Thu Nov 19 15:51:01 GMT Standard Time 2020
+-------------------------------------------------------------------------------
+Collecting map data
+Collecting map data completed
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Saving "Route B-2"
+Script 'SDK' line 0: SystemExit occured.
+
+(eval):129:in `exit'exit
+
+Backtrace:
+'SDK' line 0(eval) 129:in `update'
+'SDK' line 0(eval) 129:in `update'
+'SDK::Scene_Base' line 110 in `update_modules'
+'SDK::Scene_Base' line 91 in `main_loop'
+'SDK::Scene_Base' line 47 in `main'
+'SDK::Scene_Base' line 46 in `loop'
+'SDK::Scene_Base' line 49 in `main'
+'Main' line 12
+
+===============================================================================
+Sun Nov 22 23:18:46 GMT Standard Time 2020
+-------------------------------------------------------------------------------
+Collecting map data
+Collecting map data completed
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Script 'SDK' line 0: SystemExit occured.
+
+(eval):129:in `exit'exit
+
+Backtrace:
+'SDK' line 0(eval) 129:in `update'
+'SDK' line 0(eval) 129:in `update'
+'SDK::Scene_Base' line 110 in `update_modules'
+'SDK::Scene_Base' line 91 in `main_loop'
+'SDK::Scene_Base' line 47 in `main'
+'SDK::Scene_Base' line 46 in `loop'
+'SDK::Scene_Base' line 49 in `main'
+'Main' line 12
+

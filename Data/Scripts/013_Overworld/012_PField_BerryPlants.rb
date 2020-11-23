@@ -306,6 +306,9 @@ end
 
 def pbBerryPlant
   interp=pbMapInterpreter
+  # Berry Music
+  meName = "Berries Get"
+  #
   thisEvent=interp.get_character(0)
   berryData=interp.getVariable
   if !berryData
@@ -500,9 +503,9 @@ def pbBerryPlant
       end
       $PokemonBag.pbStoreItem(berry,berrycount)
       if berrycount>1
-        pbMessage(_INTL("You picked the {1} \\c[1]{2}\\c[0].\\wtnp[30]",berrycount,itemname))
+        pbMessage(_INTL("\\me[{1}]You picked the {2} \\c[1]{3}\\c[0].\\wtnp[30]",meName,berrycount,itemname)) # BERRY TEXT
       else
-        pbMessage(_INTL("You picked the \\c[1]{1}\\c[0].\\wtnp[30]",itemname))
+        pbMessage(_INTL("\\me[{1}]You picked the \\c[1]{2}\\c[0].\\wtnp[30]",meName,itemname)) # BERRY TEXT
       end
       pocket = pbGetPocket(berry)
       pbMessage(_INTL("{1} put the \\c[1]{2}\\c[0] in the <icon=bagPocket{3}>\\c[1]{4}\\c[0] Pocket.\1",
@@ -551,6 +554,9 @@ def pbPickBerry(berry,qty=1)
   thisEvent=interp.get_character(0)
   berryData=interp.getVariable
   berry=getID(PBItems,berry)
+  # Berry Music
+  meName = "Berries Get"
+  #
   itemname=(qty>1) ? PBItems.getNamePlural(berry) : PBItems.getName(berry)
   if qty>1
     message=_INTL("There are {1} \\c[1]{2}\\c[0]!\nWant to pick them?",qty,itemname)
@@ -563,11 +569,17 @@ def pbPickBerry(berry,qty=1)
       return
     end
     $PokemonBag.pbStoreItem(berry,qty)
-    if qty>1
-      pbMessage(_INTL("You picked the {1} \\c[1]{2}\\c[0].\\wtnp[30]",qty,itemname))
+    # if qty>1
+      # pbMessage(_INTL("You picked the {1} \\c[1]{2}\\c[0].\\wtnp[30]",qty,itemname))
+    # else
+      # pbMessage(_INTL("You picked the \\c[1]{1}\\c[0].\\wtnp[30]",itemname))
+    # end
+	if qty>1
+		pbMessage(_INTL("\\me[{1}]You picked the {2} \\c[1]{3}\\c[0].\\wtnp[30]",meName,qty,itemname)) # BERRY TEXT
     else
-      pbMessage(_INTL("You picked the \\c[1]{1}\\c[0].\\wtnp[30]",itemname))
+		pbMessage(_INTL("\\me[{1}]You picked the \\c[1]{2}\\c[0].\\wtnp[30]",meName,itemname)) # BERRY TEXT
     end
+	
     pocket = pbGetPocket(berry)
     pbMessage(_INTL("{1} put the \\c[1]{2}\\c[0] in the <icon=bagPocket{3}>\\c[1]{4}\\c[0] Pocket.\1",
        $Trainer.name,itemname,pocket,PokemonBag.pocketNames()[pocket]))

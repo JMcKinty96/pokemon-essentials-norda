@@ -306,7 +306,7 @@ class PokeBattle_AI
     if skill>=PBTrainerAI.bestSkill && !moldBreaker && target.abilityActive?
       # NOTE: These abilities aren't suitable for checking at the start of the
       #       round.
-      abilityBlacklist = [:FILTER,:SOLIDROCK]
+      abilityBlacklist = [:FILTER,:SOLIDROCK,:UNBREAKABLE]
       canCheck = true
       abilityBlacklist.each do |m|
         next if !isConst?(move.id,PBMoves,m)

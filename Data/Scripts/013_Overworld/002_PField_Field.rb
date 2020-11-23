@@ -489,9 +489,16 @@ Events.onMapSceneChange += proc { |_sender,e|
         oldmapname = mapinfos[$PokemonGlobal.mapTrail[1]].name
         nosignpost = true if $game_map.name==oldmapname
       end
+		# SubXxeroxX edit, adds seasonal splash	  
+		# Season
+      pbShowSeasonSplash
+      $PokemonGlobal.lastindoor=false
+		# 
       scene.spriteset.addUserSprite(LocationWindow.new($game_map.name)) if !nosignpost
     end
   end
+
+  
   # Force cycling/walking
   if pbGetMetadata($game_map.map_id,MetadataBicycleAlways)
     pbMountBike

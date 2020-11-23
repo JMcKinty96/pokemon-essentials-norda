@@ -160,10 +160,18 @@ class PokeBattle_Battle
   def pbStartBattleSendOut(sendOuts)
     # "Want to battle" messages
     if wildBattle?
+	  # new
+		maxLevel = pbMaxLevelInTeam(0,0)
+	  #
       foeParty = pbParty(1)
       case foeParty.length
       when 1
-        pbDisplayPaused(_INTL("Oh! A wild {1} appeared!",foeParty[0].name))
+	  # wild battle strong-looking text
+		if foeParty[0].level >= (maxLevel + 15)
+			pbDisplayPaused(_INTL("A very strong-looking wild {1} appeared!",foeParty[0].name))
+		else
+			pbDisplayPaused(_INTL("Oh! A wild {1} appeared!",foeParty[0].name))
+		end
       when 2
         pbDisplayPaused(_INTL("Oh! A wild {1} and {2} appeared!",foeParty[0].name,
            foeParty[1].name))
@@ -212,7 +220,12 @@ class PokeBattle_Battle
         sent = sendOuts[side][0]
         case sent.length
         when 1
-          msg += _INTL("Go! {1}!",@battlers[sent[0]].name)
+		# new - friendship message sending out solo pokemon
+        if @battlers[sent[0]].happiness >= 200
+			msg += _INTL("Go on, {1}, I know you can do it!",@battlers[sent[0]].name)
+		else
+			msg += _INTL("Go! {1}!",@battlers[sent[0]].name)
+		end
         when 2
           msg += _INTL("Go! {1} and {2}!",@battlers[sent[0]].name,@battlers[sent[1]].name)
         when 3
@@ -281,6 +294,7 @@ class PokeBattle_Battle
     when PBWeather::HeavyRain;   pbDisplay(_INTL("It is raining heavily."))
     when PBWeather::StrongWinds; pbDisplay(_INTL("The wind is strong."))
     when PBWeather::ShadowSky;   pbDisplay(_INTL("The sky is shadowy."))
+	when PBWeather::Fog;   		 pbDisplay(_INTL("The deep fog endures.."))
     end
     # Terrain announcement
     pbCommonAnimation(PBBattleTerrains.animationName(@field.terrain))

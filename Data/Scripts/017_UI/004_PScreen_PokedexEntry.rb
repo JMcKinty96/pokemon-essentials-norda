@@ -52,10 +52,11 @@ class PokemonPokedexInfo_Scene
     @sprites["formfront"].x = 130
     @sprites["formfront"].y = 158
     @sprites["formback"] = PokemonSprite.new(@viewport)
-    @sprites["formback"].setOffset(PictureOrigin::Bottom)
+    @sprites["formback"].setOffset(PictureOrigin::Center)
     @sprites["formback"].x = 382   # y is set below as it depends on metrics
+	@sprites["formback"].y = 158
     @sprites["formicon"] = PokemonSpeciesIconSprite.new(0,@viewport)
-    @sprites["formicon"].setOffset(PictureOrigin::Center)
+    @sprites["formicon"].setOffset(PictureOrigin::Center) # originally bottom
     @sprites["formicon"].x = 82
     @sprites["formicon"].y = 328
     @sprites["uparrow"] = AnimatedSprite.new("Graphics/Pictures/uparrow",8,28,40,2,@viewport)
@@ -140,9 +141,9 @@ class PokemonPokedexInfo_Scene
     end
     if @sprites["formback"]
       @sprites["formback"].setSpeciesBitmap(@species,(@gender==1),@form,false,false,true)
-      @sprites["formback"].y = 256
+#      @sprites["formback"].y = 256
       fSpecies = pbGetFSpeciesFromForm(@species,@form)
-      @sprites["formback"].y += (pbLoadSpeciesMetrics[MetricBattlerPlayerY][fSpecies] || 0)*2
+#      @sprites["formback"].y += (pbLoadSpeciesMetrics[MetricBattlerPlayerY][fSpecies] || 0)*2
     end
     if @sprites["formicon"]
       @sprites["formicon"].pbSetParams(@species,@gender,@form)
@@ -367,7 +368,7 @@ class PokemonPokedexInfo_Scene
     textpos = []
     if points.length==0
       pbDrawImagePositions(overlay,[
-         [sprintf("Graphics/Pictures/Pokedex/overlay_areanone"),108,188]
+         [sprintf("Graphics/Pictures/Pokedex/overlay_areanone"),108,188,0,0,-1,-1]
       ])
       textpos.push([_INTL("Area unknown"),Graphics.width/2,Graphics.height/2,2,base,shadow])
     end
@@ -391,7 +392,7 @@ class PokemonPokedexInfo_Scene
     end
     textpos = [
        [PBSpecies.getName(@species),Graphics.width/2,Graphics.height-88,2,base,shadow],
-       [formname,Graphics.width/2,Graphics.height-56,2,base,shadow],
+		[formname,Graphics.width/2,Graphics.height-56,2,base,shadow],
     ]
     # Draw all text
     pbDrawTextPositions(overlay,textpos)

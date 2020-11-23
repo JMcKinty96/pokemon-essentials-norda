@@ -148,6 +148,10 @@ class PokeBattle_Move
     end
     modifiers[EVA_STAGE] = 0 if target.effects[PBEffects::Foresight] && modifiers[EVA_STAGE]>0
     modifiers[EVA_STAGE] = 0 if target.effects[PBEffects::MiracleEye] && modifiers[EVA_STAGE]>0
+	# SCREED NEW - fog weather accuracy mod  
+    if @battle.pbWeather==PBWeather::Fog && !isConst?(user.ability,PBAbilities,:FOGWARNING)
+      modifiers[ACC_MULT] = (modifiers[ACC_MULT]*0.65).round
+    end
   end
 
   #=============================================================================
@@ -233,13 +237,13 @@ class PokeBattle_Move
     baseDmg = pbBaseDamage(@baseDamage,user,target)
     # Calculate user's attack stat
     atk, atkStage = pbGetAttackStats(user,target)
-    if !target.hasActiveAbility?(:UNAWARE) || @battle.moldBreaker
+    if !target.hasActiveAbility?(:UNAWARE) || @battle.moldBreaker || !target.hasActiveAbility?(:IMPERIALRULE)
       atkStage = 6 if target.damageState.critical && atkStage<6
       atk = (atk.to_f*stageMul[atkStage]/stageDiv[atkStage]).floor
     end
     # Calculate target's defense stat
     defense, defStage = pbGetDefenseStats(user,target)
-    if !user.hasActiveAbility?(:UNAWARE)
+    if !user.hasActiveAbility?(:UNAWARE) || !user.hasActiveAbility?(:IMPERIALRULE)
       defStage = 6 if target.damageState.critical && defStage>6
       defense = (defense.to_f*stageMul[defStage]/stageDiv[defStage]).floor
     end

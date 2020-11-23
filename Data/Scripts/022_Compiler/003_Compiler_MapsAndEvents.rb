@@ -500,7 +500,7 @@ def pbConvertToTrainerEvent(event,trainerChecker)
     end
   end
   # Compile the trainer comments
-  rewriteComments = false   # You can change this
+  rewriteComments = true   # You can change this
   battles        = []
   trtype         = nil
   trname         = nil

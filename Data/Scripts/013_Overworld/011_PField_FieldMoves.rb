@@ -250,7 +250,12 @@ def pbSmashEvent(event)
   $PokemonMap.addErasedEvent(event.id) if $PokemonMap
 end
 
-
+# new - cut encounters
+def pbCutRandomEncounter
+	if rand(100)<30
+		pbEncounter(EncounterTypes::CutEncounter)
+	end
+end
 
 #===============================================================================
 # Dig
@@ -605,6 +610,20 @@ HiddenMoveHandlers::UseMove.add(:HEADBUTT,proc { |move,pokemon|
 def pbRockSmashRandomEncounter
   if rand(100)<25
     pbEncounter(EncounterTypes::RockSmash)
+  # rock smash items - credit to Nickalooose
+  elsif rand(100)<50 # item chance if there was no wild encounter
+	pbRandomItem
+  end
+end
+
+# ROCK SMASH ITEM CHANCE (credit to Nickalooose)
+def pbRandomItem
+  newrnd=rand(ROCKSMAMUKEMSLENGTH)
+  prob=rand(PROBABILITY)
+  if prob<=ROCKSMAMUKEMS[newrnd][1]
+    Kernel.pbMessage(_INTL("There's an item here!")) # Change this message to what you want
+    item=ROCKSMAMUKEMS[newrnd][0]
+    Kernel.pbItemBall(item)
   end
 end
 

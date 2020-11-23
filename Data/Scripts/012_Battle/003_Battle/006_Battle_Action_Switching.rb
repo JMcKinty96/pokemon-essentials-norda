@@ -235,6 +235,9 @@ class PokeBattle_Battle
     if battler.pbOwnedByPlayer?
       if battler.hp<=battler.totalhp/4
         pbDisplayBrief(_INTL("Good job, {1}! Come back!",battler.name))
+	# new - friendship message
+	  elsif battler.happiness >= 200
+	    pbDisplayBrief(_INTL("Come on back, {1}! You did great out there!",battler.name))
       elsif battler.hp<=battler.totalhp/2
         pbDisplayBrief(_INTL("OK, {1}! Come back!",battler.name))
       elsif battler.turnCount>=5

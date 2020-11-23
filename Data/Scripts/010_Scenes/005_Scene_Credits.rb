@@ -49,13 +49,27 @@ class Scene_Credits
 #Start Editing
 CREDIT=<<_END_
 
-Your credits go here.
+"Pokémon Norda", by Screedle
 
-Your credits go here.
+Special thanks:
 
-Your credits go here.
+WolfPP
+(Summary screen and general help)
 
-Your credits go here.
+MGriffin
+(General help)
+
+Miles
+(Wild Area)
+
+Nickaloose
+(Rock Smash Goodies)
+
+KleinStudio
+(BW Seasons)
+
+raZ
+(General help)
 
 Your credits go here.
 

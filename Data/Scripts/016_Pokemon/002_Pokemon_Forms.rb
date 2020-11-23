@@ -677,3 +677,21 @@ MultipleForms.register(:PIKACHU,{
 })
 
 MultipleForms.copy(:PIKACHU,:EXEGGCUTE,:CUBONE)
+
+#===============================================================================
+# Norda forms
+#===============================================================================
+# These species are created when a wild pokemon is found in a specific map
+
+MultipleForms.register(:FLETCHLING,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[42,43,81,86]   # Map IDs for regional encounters
+   if $game_map && maps.include?($game_map.map_id)
+     next 1
+   else
+     next 0
+   end
+}
+})
+
+MultipleForms.copy(:FLETCHLING,:FLETCHINDER,:TALONFLAME)

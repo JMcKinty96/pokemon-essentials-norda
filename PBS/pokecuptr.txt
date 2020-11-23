@@ -1309,7 +1309,7 @@ EndSpeechLose = "Man, I lost!"
 Name = RALA
 PokemonNos = 255,269,274,278,283,285,289,292,298,300,318,322,328,336,347,348,350,352
 BeginSpeech = Here I come!
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 EndSpeechWin = "Yes, I won!"
 #-------------------------------
 [164]
@@ -1317,7 +1317,7 @@ EndSpeechLose = "Man, I lost!"
 Name = FUNA
 PokemonNos = 244,263,287,300,307,319,329,331,349,352
 BeginSpeech = Here I come!
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 EndSpeechWin = "Yes, I won!"
 #-------------------------------
 [165]
@@ -1325,7 +1325,7 @@ EndSpeechLose = "Man, I lost!"
 Name = ONAGANA
 PokemonNos = 275,276,283,314,315,323,335,355
 BeginSpeech = Here I come!
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 EndSpeechWin = "Yes, I won!"
 #-------------------------------
 [166]
@@ -1333,7 +1333,7 @@ EndSpeechLose = "Man, I lost!"
 Name = OROCHIE
 PokemonNos = 247,259,263,265,318,344
 BeginSpeech = Here I come!
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 EndSpeechWin = "Yes, I won!"
 #-------------------------------
 [167]

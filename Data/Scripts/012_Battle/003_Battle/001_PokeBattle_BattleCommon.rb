@@ -101,7 +101,13 @@ module PokeBattle_BattleCommon
       @scene.pbThrowAndDeflect(ball,1)
       pbDisplay(_INTL("The Trainer blocked your Poké Ball! Don't be a thief!"))
       return
-    end
+    # Prevent catching wild pokemon based on a switch
+	elsif $game_switches[200]==true
+	  @scene.pbThrowAndDeflect(ball,1)
+      pbDisplay(_INTL("The Pokémon deflected the ball!\nIt seems that it can't be caught!"))
+      return
+	end	
+	
     # Calculate the number of shakes (4=capture)
     pkmn = battler.pokemon
     @criticalCapture = false

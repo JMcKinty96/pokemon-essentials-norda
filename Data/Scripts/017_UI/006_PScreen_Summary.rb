@@ -120,10 +120,10 @@ class PokemonSummary_Scene
     @sprites["pokemon"].setPokemonBitmap(@pokemon)
     @sprites["pokeicon"] = PokemonIconSprite.new(@pokemon,@viewport)
     @sprites["pokeicon"].setOffset(PictureOrigin::Center)
-    @sprites["pokeicon"].x       = 46
-    @sprites["pokeicon"].y       = 92
+    @sprites["pokeicon"].x       = 50
+    @sprites["pokeicon"].y       = 95
     @sprites["pokeicon"].visible = false
-    @sprites["itemicon"] = ItemIconSprite.new(30,320,@pokemon.item,@viewport)
+    @sprites["itemicon"] = ItemIconSprite.new(18,330,@pokemon.item,@viewport)
     @sprites["itemicon"].blankzero = true
     @sprites["overlay"] = BitmapSprite.new(Graphics.width,Graphics.height,@viewport)
     pbSetSystemFont(@sprites["overlay"].bitmap)
@@ -161,6 +161,14 @@ class PokemonSummary_Scene
     @sprites["messagebox"].viewport       = @viewport
     @sprites["messagebox"].visible        = false
     @sprites["messagebox"].letterbyletter = true
+    # credit to Wolf #1235 on discord
+    #
+    @sprites["pokeiconability"] = PokemonIconSprite.new(@pokemon,@viewport)
+    @sprites["pokeiconability"].x = 232 #(Graphics.width/2)-28 #-47.5
+    @sprites["pokeiconability"].y = (Graphics.height/2)-82 #82#75
+    @sprites["pokeiconability"].mirror = false
+    @sprites["pokeiconability"].visible = false
+    # 
     pbBottomLeftLines(@sprites["messagebox"],2)
     drawPage(@page)
     pbFadeInAndShow(@sprites) { pbUpdate }
@@ -180,8 +188,8 @@ class PokemonSummary_Scene
     pbSetSystemFont(@sprites["overlay"].bitmap)
     @sprites["pokeicon"] = PokemonIconSprite.new(@pokemon,@viewport)
     @sprites["pokeicon"].setOffset(PictureOrigin::Center)
-    @sprites["pokeicon"].x       = 46
-    @sprites["pokeicon"].y       = 92
+    @sprites["pokeicon"].x       = 50
+    @sprites["pokeicon"].y       = 95
     @sprites["movesel"] = MoveSelectionSprite.new(@viewport,moveToLearn>0)
     @sprites["movesel"].visible = false
     @sprites["movesel"].visible = true
@@ -316,6 +324,7 @@ class PokemonSummary_Scene
     end
     # Draw all images
     pbDrawImagePositions(overlay,imagepos)
+	textpos = []			
     # Write various bits of text
     pagename = [_INTL("INFO"),
                 _INTL("TRAINER MEMO"),
@@ -326,7 +335,7 @@ class PokemonSummary_Scene
        [pagename,26,16,0,base,shadow],
        [@pokemon.name,46,62,0,base,shadow],
        [@pokemon.level.to_s,46,92,0,Color.new(64,64,64),Color.new(176,176,176)],
-       [_INTL("Item"),66,318,0,base,shadow]
+       [_INTL("Item"),36,318,0,base,shadow]
     ]
     # Write the held item's name
     if @pokemon.hasItem?
@@ -515,6 +524,8 @@ class PokemonSummary_Scene
 
   def drawPageTwo
     overlay = @sprites["overlay"].bitmap
+    base   = Color.new(248,248,248)
+    shadow = Color.new(104,104,104)								   
     memo = ""
     # Write nature
     showNature = !@pokemon.shadowPokemon? || @pokemon.heartStage>3
@@ -606,9 +617,41 @@ class PokemonSummary_Scene
     # Write all text
     drawFormattedTextEx(overlay,232,78,268,memo)
   end
+  
+  # code by Mr. Gela, modified by me
+  def drawRating(pokemon)
+    overlay=@sprites["overlay"].bitmap
+    #overlay.clear
+    imagepos=[]
+    
+    stars=[] # Array of each star depending on IVs
+    for i in 0..5
+     if pokemon.iv[i] >= 31 # Best star above 31 IVs
+    stars.push(4)
+	  elsif pokemon.iv[i] >= 21 # Best star between 21-30 IVs
+    stars.push(3)
+      elsif pokemon.iv[i] >= 11 # Okay star between 11-20 IVs
+    stars.push(2)
+      elsif pokemon.iv[i] >= 1  # Bad star between 1-10 IVs
+    stars.push(1)
+      elsif pokemon.iv[i] == 0  # Worst star at 0 IVs
+    stars.push(0)
+      end
+    end
+    # Draw stars
+      path="Graphics/Pictures/Summary/summaryRating"
+    imagepos.push([path,472,76,stars[0]*32,0,32,-1]) # hp
+    imagepos.push([path,472,120,stars[1]*32,0,32,-1]) # atk
+    imagepos.push([path,472,120+32,stars[2]*32,0,32,-1]) # def
+    imagepos.push([path,472,120+32*2,stars[4]*32,0,32,-1]) # sp atk
+    imagepos.push([path,472,120+32*3,stars[5]*32,0,32,-1]) # sp def
+    imagepos.push([path,472,120+32*4,stars[3]*32,0,32,-1]) # speed
+    pbDrawImagePositions(overlay,imagepos)
+  end 
 
   def drawPageThree
     overlay = @sprites["overlay"].bitmap
+	drawRating(@pokemon) # Mr. Gela							   
     base   = Color.new(248,248,248)
     shadow = Color.new(104,104,104)
     # Determine which stats are boosted and lowered by the Pokémon's nature
@@ -634,14 +677,14 @@ class PokemonSummary_Scene
        [sprintf("%d",@pokemon.spdef),456,216,1,Color.new(64,64,64),Color.new(176,176,176)],
        [_INTL("Speed"),248,248,0,base,statshadows[PBStats::SPEED]],
        [sprintf("%d",@pokemon.speed),456,248,1,Color.new(64,64,64),Color.new(176,176,176)],
-       [_INTL("Ability"),224,284,0,base,shadow],
-       [PBAbilities.getName(@pokemon.ability),362,284,0,Color.new(64,64,64),Color.new(176,176,176)],
+#       [_INTL("Ability"),224,284,0,base,shadow],
+       [PBAbilities.getName(@pokemon.ability),330,318,0,Color.new(64,64,64),Color.new(176,176,176)],
     ]
     # Draw all text
     pbDrawTextPositions(overlay,textpos)
     # Draw ability description
-    abilitydesc = pbGetMessage(MessageTypes::AbilityDescs,@pokemon.ability)
-    drawTextEx(overlay,224,316,282,2,abilitydesc,Color.new(64,64,64),Color.new(176,176,176))
+#    abilitydesc = pbGetMessage(MessageTypes::AbilityDescs,@pokemon.ability)
+#    drawTextEx(overlay,224,316,282,2,abilitydesc,Color.new(64,64,64),Color.new(176,176,176))
     # Draw HP bar
     if @pokemon.hp>0
       w = @pokemon.hp*96*1.0/@pokemon.totalhp
@@ -659,8 +702,8 @@ class PokemonSummary_Scene
 
   def drawPageFour
     overlay = @sprites["overlay"].bitmap
-    moveBase   = Color.new(64,64,64)
-    moveShadow = Color.new(176,176,176)
+    moveBase   = Color.new(248,248,248)
+    moveShadow = Color.new(104,104,104)
     ppBase   = [moveBase,                # More than 1/2 of total PP
                 Color.new(248,192,0),    # 1/2 of total PP or less
                 Color.new(248,136,32),   # 1/4 of total PP or less
@@ -706,8 +749,8 @@ class PokemonSummary_Scene
     drawMoveSelection(moveToLearn)
     # Set various values
     overlay = @sprites["overlay"].bitmap
-    base   = Color.new(64,64,64)
-    shadow = Color.new(176,176,176)
+    base   = Color.new(248,248,248)
+    shadow = Color.new(104,104,104)
     @sprites["pokemon"].visible = false if @sprites["pokemon"]
     @sprites["pokeicon"].pokemon  = @pokemon
     @sprites["pokeicon"].visible  = true
@@ -746,8 +789,10 @@ class PokemonSummary_Scene
     overlay.clear
     base   = Color.new(248,248,248)
     shadow = Color.new(104,104,104)
-    moveBase   = Color.new(64,64,64)
-    moveShadow = Color.new(176,176,176)
+#    moveBase   = Color.new(64,64,64)
+#    moveShadow = Color.new(176,176,176)
+    moveBase   = Color.new(204,204,204)
+    moveShadow = Color.new(104,104,104)
     ppBase   = [moveBase,                # More than 1/2 of total PP
                 Color.new(248,192,0),    # 1/2 of total PP or less
                 Color.new(248,136,32),   # 1/4 of total PP or less
@@ -1229,6 +1274,32 @@ class PokemonSummary_Scene
     return (selmove==4) ? -1 : selmove
   end
 
+  # credit to Wolf on discord
+  def pbAbilityDescription
+    overlay = @sprites["overlay"].bitmap
+    imagepos = [
+       ["Graphics/Pictures/Summary/bg_abilitydetail",35,112,0,0,-1,-1]
+    ]
+    pbDrawImagePositions(overlay,imagepos)
+    # Draw ability description
+    overlay = @sprites["overlay"].bitmap
+    abilitydesc = pbGetMessage(MessageTypes::AbilityDescs,@pokemon.ability)
+    drawTextEx(overlay,45,Graphics.height/2,Graphics.width-(40*2),4,abilitydesc,Color.new(64,64,64),Color.new(176,176,176))
+    # Show Pokemon Icon
+    @sprites["pokeiconability"].pokemon  = @pokemon
+    @sprites["pokeiconability"].mirror = false
+    @sprites["pokeiconability"].visible = true
+    loop do
+      Graphics.update
+      Input.update
+      pbUpdate
+      if Input.trigger?(Input::I) || Input.trigger?(Input::B) || Input.trigger?(Input::C) 
+        pbPlayCancelSE
+        @sprites["pokeiconability"].visible  = false
+        return
+      end
+    end
+  end
   def pbScene
     pbPlayCry(@pokemon)
     loop do
@@ -1255,6 +1326,15 @@ class PokemonSummary_Scene
           pbPlayDecisionSE
           dorefresh = pbOptions
         end
+      
+	  # credit to Wolf - ability scene info
+      elsif Input.trigger?(Input::I)
+        if @page==3
+          pbPlayDecisionSE
+          pbAbilityDescription
+          dorefresh = true
+        end 
+		
       elsif Input.trigger?(Input::UP) && @partyindex>0
         oldindex = @partyindex
         pbGoToPrevious

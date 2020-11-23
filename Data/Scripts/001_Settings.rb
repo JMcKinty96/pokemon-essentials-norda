@@ -35,8 +35,8 @@ MAP_VIEW_MODE      = 1
 #===============================================================================
 MAXIMUM_LEVEL        = 100
 EGG_LEVEL            = 1
-SHINY_POKEMON_CHANCE = 8
-POKERUS_CHANCE       = 3
+SHINY_POKEMON_CHANCE = 16 # 1 in 4096
+POKERUS_CHANCE       = 8  # 1 in 8192
 
 #===============================================================================
 # * Whether outdoor maps should be shaded according to the time of day.
@@ -58,7 +58,7 @@ TIME_SHADING = true
 #===============================================================================
 POISON_IN_FIELD         = true
 POISON_FAINT_IN_FIELD   = false
-FISHING_AUTO_HOOK       = false
+FISHING_AUTO_HOOK       = true
 DIVING_SURFACE_ANYWHERE = false
 NEW_BERRY_PLANTS        = true
 INFINITE_TMS            = true
@@ -78,18 +78,18 @@ BUG_CONTEST_TIME = 1200
 #      Moving between two maps that have the exact same name won't show the
 #      location signpost anyway, so you don't need to list those maps here.
 #===============================================================================
-NO_SIGNPOSTS = []
-
+NO_SIGNPOSTS = [105,106,106,107,108,109,109,110,111,112,112,113,105,108,108,111,
+106,109,109,112,107,110,110,113]
 #===============================================================================
 # * The amount of money the player starts the game with.
 # * The maximum amount of money the player can have.
 # * The maximum number of Game Corner coins the player can have.
 # * The maximum length, in characters, that the player's name can be.
 #===============================================================================
-INITIAL_MONEY        = 3000
+INITIAL_MONEY        = 2500
 MAX_MONEY            = 999_999
 MAX_COINS            = 99_999
-MAX_PLAYER_NAME_SIZE = 10
+MAX_PLAYER_NAME_SIZE = 12
 
 #===============================================================================
 # * A set of arrays each containing a trainer type followed by a Global Variable
@@ -97,9 +97,10 @@ MAX_PLAYER_NAME_SIZE = 10
 #      associated trainer type will be named as whatever is in that variable.
 #===============================================================================
 RIVAL_NAMES = [
-  [:RIVAL1, 12],
-  [:RIVAL2, 12],
-  [:CHAMPION, 12]
+   [:POKEMONTRAINER_One,33], # first rival
+   [:POKEMONTRAINER_Two,33],
+   [:RIVAL2,34],
+   [:CHAMPION,12]
 ]
 
 #===============================================================================
@@ -153,7 +154,7 @@ MOVE_CATEGORY_PER_MOVE    = true
 NEWEST_BATTLE_MECHANICS   = true
 SCALED_EXP_FORMULA        = true
 SPLIT_EXP_BETWEEN_GAINERS = false
-ENABLE_CRITICAL_CAPTURES  = false
+ENABLE_CRITICAL_CAPTURES  = true
 GAIN_EXP_FOR_CAPTURE      = true
 MEGA_RINGS                = [:MEGARING, :MEGABRACELET, :MEGACUFF, :MEGACHARM]
 
@@ -229,11 +230,11 @@ NUM_STORAGE_BOXES = 30
 #===============================================================================
 USE_CURRENT_REGION_DEX = false
 def pbDexNames; return [
-  [_INTL("Kanto Pokédex"), 0],
-  [_INTL("Johto Pokédex"), 1],
+  [_INTL("Norda Pokédex"), 0],
+#  [_INTL("Johto Pokédex"), 1],
   _INTL("National Pokédex")
 ]; end
-DEX_SHOWS_ALL_FORMS = false
+DEX_SHOWS_ALL_FORMS = true
 DEXES_WITH_OFFSETS  = []
 
 #===============================================================================
@@ -250,27 +251,33 @@ DEXES_WITH_OFFSETS  = []
 #      - Roaming areas specifically for this Pokémon (optional).
 #===============================================================================
 RoamingAreas = {
-  5  => [   21, 28, 31, 39, 41, 44, 47, 66, 69],
-  21 => [5,     28, 31, 39, 41, 44, 47, 66, 69],
-  28 => [5, 21,     31, 39, 41, 44, 47, 66, 69],
-  31 => [5, 21, 28,     39, 41, 44, 47, 66, 69],
-  39 => [5, 21, 28, 31,     41, 44, 47, 66, 69],
-  41 => [5, 21, 28, 31, 39,     44, 47, 66, 69],
-  44 => [5, 21, 28, 31, 39, 41,     47, 66, 69],
-  47 => [5, 21, 28, 31, 39, 41, 44,     66, 69],
-  66 => [5, 21, 28, 31, 39, 41, 44, 47,     69],
-  69 => [5, 21, 28, 31, 39, 41, 44, 47, 66    ]
+   5  => [21,28,31,39,41,44,47,66,69],
+   21 => [5,28,31,39,41,44,47,66,69],
+   28 => [5,21,31,39,41,44,47,66,69],
+   31 => [5,21,28,39,41,44,47,66,69],
+   39 => [5,21,28,31,41,44,47,66,69],
+   41 => [5,21,28,31,39,44,47,66,69],
+   44 => [5,21,28,31,39,41,47,66,69],
+   47 => [5,21,28,31,39,41,44,66,69],
+   66 => [5,21,28,31,39,41,44,47,69],
+   69 => [5,21,28,31,39,41,44,47,66],
+   81 => [82,77] # route C-1							
 }
 RoamingSpecies = [
-  [:LATIAS, 30, 53, 0, "Battle roaming"],
-  [:LATIOS, 30, 53, 0, "Battle roaming"],
-  [:KYOGRE, 40, 54, 2, nil, {
-    2  => [   21, 31    ],
-    21 => [2,     31, 69],
-    31 => [2, 21,     69],
-    69 => [   21, 31    ]
-  }],
-  [:ENTEI, 40, 55, 1, nil]
+   [:LATIAS, 30, 53, 0, "Battle roaming"],
+   [:LATIOS, 30, 53, 0, "Battle roaming"],
+   [:KYOGRE, 40, 54, 2, nil, {
+       2  => [21,31],
+       21 => [2,31,69],
+       31 => [2,21,69],
+       69 => [21,31]
+       }],
+   #[:ENTEI, 40, 55, 1, nil],
+   [:VICTINI, 30, 55, 1, "237 Battle! Uxie & Mesprit & Azelf", {
+       81 => [82,77],
+       77 => [81],
+       82 => [81]
+       }]
 ]
 
 #===============================================================================
@@ -282,11 +289,12 @@ RoamingSpecies = [
 #      - Minimum possible level.
 #      - Maximum possible level (optional).
 #===============================================================================
-POKE_RADAR_ENCOUNTERS = [
-  [5,  20, :STARLY,     12, 15],
-  [21, 10, :STANTLER,   14],
-  [28, 20, :BUTTERFREE, 15, 18],
-  [28, 20, :BEEDRILL,   15, 18]
+POKERADAREXCLUSIVES=[
+   [5,  20, :STARLY,     12, 15],
+   [21, 10, :STANTLER,   14],
+   [28, 20, :BUTTERFREE, 15, 18],
+   [28, 20, :BEEDRILL,   15, 18],
+   [42, 43, :RIOLU,      15, 25]
 ]
 
 #===============================================================================

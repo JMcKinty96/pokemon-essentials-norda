@@ -702,6 +702,7 @@ class PokeBattle_Battler
         end
       end
     end
+	
     # Make the target flinch (because of an item/ability)
     targets.each do |b|
       next if b.fainted?

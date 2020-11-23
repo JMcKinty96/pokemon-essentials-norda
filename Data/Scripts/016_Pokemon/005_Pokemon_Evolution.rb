@@ -61,6 +61,7 @@ module PBEvolution
   TradeNight        = 57
   TradeItem         = 58
   TradeSpecies      = 59
+  HasInPartyMinLevel= 60
 
   def self.maxValue; return 59; end
 
@@ -353,7 +354,7 @@ PBEvolution.register(:LevelRain, {
   "levelUpCheck" => proc { |pkmn, parameter|
     if pkmn.level >= parameter && $game_screen
       next [PBFieldWeather::Rain, PBFieldWeather::HeavyRain,
-            PBFieldWeather::Storm].include?($game_screen.weather_type)
+            PBFieldWeather::Storm, PBFieldWeather::Fog].include?($game_screen.weather_type)
     end
   }
 })
@@ -757,5 +758,13 @@ PBEvolution.register(:TradeSpecies, {
   "parameterType" => :PBSpecies,
   "tradeCheck"    => proc { |pkmn, parameter, other_pkmn|
     next pkmn.species == parameter && !other_pkmn.hasItem?(:EVERSTONE)
+  }
+})
+# custom evolution from here down
+PBEvolution.register(:HasInPartyMinLevel, {
+  "minimumLevel"  => 15,   # Needs to be level 15 or up
+  "parameterType" => :PBSpecies,
+  "levelUpCheck"  => proc { |pkmn, parameter|
+    next pbHasSpecies?(parameter)
   }
 })

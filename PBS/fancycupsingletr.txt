@@ -893,7 +893,7 @@ EndSpeechLose = I REFUSE TO ACCEPT THAT OUTRAGE
 Name = JOANA
 PokemonNos = 4,5,36,42,87,189
 BeginSpeech = YOU'RE GOING TO LOSE RIGHT AWAY
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 EndSpeechWin = I AM THE WINNER HEAR ME ROAR
 #-------------------------------
 [112]
@@ -901,7 +901,7 @@ EndSpeechLose = THE HOME WORK IS AWFULLY SCARY
 Name = KELLY
 PokemonNos = 5,19,37,50,56,87,116,118,189
 BeginSpeech = MY NIGHT SCHOOL IS REALLY SCARY
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 EndSpeechWin = A LADY GHOST APPEARS THERE
 #-------------------------------
 [113]
@@ -909,7 +909,7 @@ EndSpeechLose = TERRIBLE ... I AM TERRIBLE ...
 Name = RAYNA
 PokemonNos = 4,15,35,118,153,226,239
 BeginSpeech = I AM NO. 1 WHEN IT'S ABOUT POWER
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 EndSpeechWin = UNDERSTAND MY POWER NOW ?
 #-------------------------------
 [114]
@@ -1925,7 +1925,7 @@ EndSpeechLose = GOOD IT'S OVER AT LAST ...
 Name = KAY
 PokemonNos = 18,49,64,91,106,166
 BeginSpeech = AND YET ANOTHER BATTLE ?
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 EndSpeechWin = I WON BUT I AM TIRED ...
 #-------------------------------
 [241]
@@ -1933,7 +1933,7 @@ EndSpeechLose = YOU DISLIKE A BATTLE GIRL ?
 Name = ELENA
 PokemonNos = 104,129,190,191,192,194
 BeginSpeech = A BATTLE GIRL THAT'S ME !
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 EndSpeechWin = ISN'T A BATTLE GIRL AWESOME ?
 #-------------------------------
 [242]
@@ -1941,7 +1941,7 @@ EndSpeechLose = SO MUCH FOR MY INVINCIBLE ATTACK
 Name = ALANA
 PokemonNos = 83,84,85,130,177,237
 BeginSpeech = EAT MY INVINCIBLE ATTACK YOU !
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 EndSpeechWin = YOU HAVE MUCH TO LEARN
 #-------------------------------
 [243]

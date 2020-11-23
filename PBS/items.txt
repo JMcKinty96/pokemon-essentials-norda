@@ -646,3 +646,27 @@
 631,NSOLARIZER,N-Solarizer,N-Solarizers,8,0,"A machine to fuse Necrozma, which needs light, and Solgaleo.",5,0,6,
 632,NLUNARIZER,N-Lunarizer,N-Lunarizers,8,0,"A machine to fuse Necrozma, which needs light, and Lunala.",5,0,6,
 633,MEGARING,Mega Ring,Mega Rings,8,0,"This ring contains an untold power that somehow enables Pokémon carrying Mega Stones to Mega Evolve.",0,0,6,
+#-------------------------------
+700,DREAMCAPSULE,Dream Capsule,Dream Capsules,1,3000,"A capsule that forces a Pokémon to have its first Hidden Ability.",1,0,0,
+701,REVERSIONCAPSULE,Reversion Capsule,Reversion Capsules,1,500,"A capsule that causes a Pokémon with a Hidden Ability to revert to its first basic Ability.",1,0,0,
+702,SHINYCAPSULE,Shiny Capsule,Shiny Capsules,1,99999,"A ludicrously rare item that makes a Pokémon shiny permanently.",1,0,0,
+703,MAGNEZONEITE,Magnezoneite,Magnezoneites,1,1000,"One of the mysterious Mega Stones. Have Magnezone hold it, and this stone will enable it to Mega Evolve.",0,0,12,
+704,BISHARPNITE,Bisharpnite,Bisharpnites,1,1000,"One of the mysterious Mega Stones. Have Bisharp hold it, and this stone will enable it to Mega Evolve.",0,0,12,
+705,FLYGONITEX,Flygonite X,Flygonite Xs,1,1000,"One of the mysterious Mega Stones. Have Flygon hold it, and this stone will enable it to Mega Evolve.",0,0,12,
+706,FLYGONITEY,Flygonite Y,Flygonite Ys,1,1000,"One of the mysterious Mega Stones. Have Flygon hold it, and this stone will enable it to Mega Evolve.",0,0,12,
+707,RAINBOWORB,Rainbow Orb,Rainbow Orbs,1,0,"An orb that shines every colour. It has a connection to Omnihoggr.",0,0,12,
+708,CRACKEDRAINBOWORB,Cracked Rainbow,Cracked Rainbows,1,0,"An orb that shines every colour. It has a connection to Omnihoggr. It is cracked and imperfect.",0,0,12,
+709,TORTERRAITE,Torterraite,Torterraites,1,1000,"One of the mysterious Mega Stones. Have Torterra hold it, and this stone will enable it to Mega Evolve.",0,0,12,
+710,INFERNAPEITE,Infernapeite,Infernapeites,1,1000,"One of the mysterious Mega Stones. Have Infernape hold it, and this stone will enable it to Mega Evolve.",0,0,12,
+711,EMPOLEONITE,Empoleonite,Empoleonites,1,1000,"One of the mysterious Mega Stones. Have Empoleon hold it, and this stone will enable it to Mega Evolve.",0,0,12,
+#-------------------------------
+720,SURFITEM,Float Raft,Float Rafts,8,0,"A portable motorised foam raft that lets you ride on top of calm water. Surf's up!",2,0,6
+721,ROCKSMASHITEM,Hammer,Hammers,8,0,"A small hammer with a head made of steel. It is able to break cracked boulders.",2,0,6
+722,FLYITEM,Eon Flute,Eon Flutes,8,0,"A flute that can summon Latios or Latias to take you to a previously visited town.",2,0,6
+723,CUTITEM,Handaxe,Handaxes,8,0,"A small handaxe that is able to cut down small trees that block the way.",2,0,6
+724,PCITEM,PC Linkbox,PC Linkboxes,8,0,"A marvel of technology that allows access to the Pokémon Storage System from anywhere.",2,0,6
+725,EXPALL,Exp All,Exp Alls,8,0,"Turned ON. An item that gives all party members experience points (EXP).",2,0,6
+726,EXPALLOFF,Exp All,Exp Alls,8,0,"Turned OFF. An item that gives all party members experience points (EXP).",2,0,6
+#-------------------------------
+727,DRAGONSTONE,DracoStone,Draco Stones,1,2200,"A stone with a dark purple tint. It makes certain species of Pokémon evolve.",1,0,0,
+717,MINTYFRESH,MintyFresh Toothpaste,MintyFresh Toothpastes,2,300,"A delightful tube of Minty Fresh brand toothpaste. It restores the HP of one Pokémon by 60 points.",1,1,0,

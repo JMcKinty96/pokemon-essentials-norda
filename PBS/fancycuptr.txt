@@ -889,7 +889,7 @@ EndSpeechLose = I WON'T FORGET ABOUT YOU
 PokemonNos = 32,35,39,61,66,101,304,362,455,456,483,523,554,570,591
 #-------------------------------
 [Trainer]
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 Name = JOANA
 BeginSpeech = JOANA
 EndSpeechWin = YOU'RE GOING TO LOSE RIGHT AWAY
@@ -897,7 +897,7 @@ EndSpeechLose = I AM THE WINNER HEAR ME ROAR
 PokemonNos = 67,81,100,103,111,206,210,211,212,217,221,304,307,364,457
 #-------------------------------
 [Trainer]
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 Name = KELLY
 BeginSpeech = KELLY
 EndSpeechWin = MY NIGHT SCHOOL IS REALLY SCARY
@@ -905,7 +905,7 @@ EndSpeechLose = A LADY GHOST APPEARS THERE
 PokemonNos = 64,77,78,207,211,220,260,362,364,366,455,521
 #-------------------------------
 [Trainer]
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 Name = RAYNA
 BeginSpeech = RAYNA
 EndSpeechWin = I AM NO. 1 WHEN IT'S ABOUT POWER
@@ -1921,7 +1921,7 @@ EndSpeechLose = HUMPH ! ANOTHER WEAK TRAINER ...
 PokemonNos = 307,308,315,452,564,611,613,617
 #-------------------------------
 [Trainer]
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 Name = KAY
 BeginSpeech = KAY
 EndSpeechWin = AND YET ANOTHER BATTLE ?
@@ -1929,7 +1929,7 @@ EndSpeechLose = I WON BUT I AM TIRED ...
 PokemonNos = 124,125,129,134,135,137,140,217,220,222,261,275,305,308,422,423,425,426
 #-------------------------------
 [Trainer]
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 Name = ELENA
 BeginSpeech = ELENA
 EndSpeechWin = A BATTLE GIRL THAT'S ME !
@@ -1937,7 +1937,7 @@ EndSpeechLose = ISN'T A BATTLE GIRL AWESOME ?
 PokemonNos = 258,305,326,327,332,333,336,348,349,492,493,495,496,516,518,520
 #-------------------------------
 [Trainer]
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 Name = ALANA
 BeginSpeech = ALANA
 EndSpeechWin = EAT MY INVINCIBLE ATTACK YOU !

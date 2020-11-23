@@ -50,6 +50,8 @@ class PokeBattle_Battle
         pbDisplay(_INTL("The hail stopped."))
       when PBWeather::ShadowSky
         pbDisplay(_INTL("The shadow sky faded."))
+	  when PBWeather::ShadowSky
+        pbDisplay(_INTL("The fog rolled away."))
       end
       @field.weather = PBWeather::None
       # Check for form changes caused by the weather changing

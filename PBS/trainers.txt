@@ -1,13 +1,280 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
+[ACETRAINERF,Amanda]
+Pokemon = IVYSAUR,16
+    Moves = VINEWHIP,POISONPOWDER,SLEEPPOWDER,TAKEDOWN
+Pokemon = BEEDRILL,18
+    Moves = TWINEEDLE,FURYATTACK,PROTECT,BRICKBREAK
+    Ball = 5
+Pokemon = PONYTA,18
+    Name = Eponyta
+    Gender = female
+    Moves = DOUBLEKICK,FLAMEWHEEL,SOLARBEAM,SUNNYDAY
+    Ability = 2
+    Item = QUICKCLAW
+    IV = 31
+    Happiness = 200
+    Ball = 3
+#-------------------------------
+[ACETRAINERF,Flygon Woman Y]
+Pokemon = FLYGON,45
+    Gender = female
+    Moves = SANDSTORM,EARTHQUAKE,HYPERBEAM,DRAGONCLAW
+    Ability = 0
+    Ball = 3
+#-------------------------------
+[ACETRAINERF,Flygon Woman X]
+Pokemon = FLYGON,45
+    Gender = female
+    Moves = AERIALACE,TOXIC,HYPERBEAM,DRAGONCLAW
+    Ability = 0
+    Ball = 3
+#-------------------------------
+[ACETRAINERF_2,Severa]
+Pokemon = BAYLEEF,20
+    Gender = female
+    Moves = RAZORLEAF,POISONPOWDER,SYNTHESIS,REFLECT
+    Ability = 0
+Pokemon = DODUO,20
+    Gender = male
+    Moves = QUICKATTACK,RAGE,FURYATTACK,PURSUIT
+    Ability = 0
+#-------------------------------
+[ACETRAINERM,Barry]
+Pokemon = CHARMELEON,16
+    Moves = SCRATCH,GROWL,EMBER,SMOKESCREEN
+Pokemon = STARAVIA,16
+    Moves = QUICKATTACK,WINGATTACK,ROOST,UTURN
+    Ability = 1
+    Ball = 1
+Pokemon = LOMBRE,18
+    Gender = male
+    Moves = ASTONISH,ENERGYBALL,WATERFALL,TICKLE
+    Ability = 1
+    Item = REDCARD
+    Nature = RASH
+    IV = 30
+    Happiness = 200
+    Ball = 14
+#-------------------------------
+[ACETRAINERM_1,Aaron]
+Items = SUPERPOTION
+Pokemon = BISHARP,52
+    Gender = male
+    Moves = SUCKERPUNCH,KNOCKOFF,IRONHEAD,SUCKERPUNCH
+    Ability = 1
+    Nature = ADAMANT
+    Happiness = 255
+    Ball = 12
+#-------------------------------
+[ACETRAINERM_2,Laslow]
+Pokemon = QUILAVA,20
+    Gender = male
+    Moves = SMOKESCREEN,EMBER,QUICKATTACK,FLAMEWHEEL
+    Ability = 0
+Pokemon = RIOLU,20
+    Gender = female
+    Moves = ENDURE,FEINT,FORCEPALM,COPYCAT
+    Ability = 0
+#-------------------------------
+[ATHLETE,Steve]
+Pokemon = NUMEL,10
+    Gender = male
+    Shiny = yes
+    Moves = DEFENSECURL,EMBER,FOCUSENERGY
+    Ball = 1
+Pokemon = NIDORANmA,12
+    Moves = POISONJAB,DRILLRUN,SUCKERPUNCH,HONECLAWS
+    Ability = 0
+Pokemon = DIPDUCK,15
+    Gender = female
+    Moves = SIMPLEBEAM,WINGATTACK,FEATHERDANCE,TAILWIND
+    Ability = 0
+    Item = WACANBERRY
+#-------------------------------
+[ATHLETE,Johnny]
+Pokemon = SIPCHICK,10
+	Moves = WINGATTACK,TAILWIND,WATERGUN
+	Ability = 0
+	Item=ORANBERRY
+Pokemon = BIDOOF,12
+    Moves = TACKLE,DEFENSECURL,ROLLOUT
+    Ability = 0
+#-------------------------------
+[LEADER_Michael,Michael]
+Items = SUPERPOTION,SUPERPOTION
+Pokemon = NUMEL,14
+    Gender = male
+    Moves = FLAMECHARGE,FIREBLAST,EARTHPOWER,GROWTH
+    Ability = 1
+    Item = BERRYJUICE
+Pokemon = BIBAREL,15
+    Gender = male
+    Moves = SWORDSDANCE,RETURN,WATERFALL,AQUAJET
+    Ability = 0
+    Item = LIFEORB
+Pokemon = SKIDDO,16
+    Gender = female
+    Moves = BULKUP,HORNLEECH,ROCKSLIDE,VINEWHIP
+    Ability = 1
+    Item = ORANBERRY
+Pokemon = DUNKYBIRD,20
+    Gender = female
+    Moves = AERIALACE,BUBBLEBEAM,FEATHERDANCE,AGILITY
+    Ability = 0
+    Item = WACANBERRY
+#-------------------------------
+[BEAUTY,Bridget]
+Pokemon = SKITTY,18
+#-------------------------------
+[BLACKBELT,Kai]
+Pokemon = MACHOP,15
+    Moves = KARATECHOP,FORESIGHT,LOWSWEEP,SEISMICTOSS
+Pokemon = TIMBURR,15
+    Gender = male
+    Moves = LEER,FOCUSENERGY,BIDE,LOWKICK
+    Ball = 11
+Pokemon = TIMBURR,15
+    Gender = male
+    Item = FOCUSSASH
+#-------------------------------
+[BLACKBELT,Solomon]
+Pokemon = HITMONCHAN,20
+    Moves = AGILITY,PURSUIT,MACHPUNCH,BULLETPUNCH
+Pokemon = MACHOP,20
+    Moves = FORESIGHT,LOWSWEEP,SEISMICTOSS,REVENGE
+#-------------------------------
+[BLACKBELT,Blaise]
+Pokemon = SCRAGGY,16
+    Moves = SANDATTACK,FEINTATTACK,HEADBUTT,SWAGGER
+Pokemon = THROH,18
+    Moves = BIDE,FOCUSENERGY,SEISMICTOSS,VITALTHROW
+Pokemon = SAWK,18
+    Moves = BIDE,FOCUSENERGY,DOUBLEKICK,LOWSWEEP
+#-------------------------------
+[BLACKBELT,Bruce Yu]
+Pokemon = TYROGUE,16
+    Moves = TACKLE,HELPINGHAND,FAKEOUT,FORESIGHT
+Pokemon = HITMONLEE,20
+    Moves = MEDITATE,ROLLINGKICK,JUMPKICK,BRICKBREAK
+#-------------------------------
+[BUGCATCHER_2,Weevil]
+Pokemon = NINJASK,20
+    Gender = male
+    Moves = ENDURE,FURYSWIPES,FURYCUTTER,SCREECH
+    Ability = 0
+    Ball = 5
+Pokemon = SHEDINJA,20
+    Moves = LEECHLIFE,SANDATTACK,FURYSWIPES,ENDURE
+#-------------------------------
+[BUGCATCHER_2,Wrex]
+Pokemon = BEAUTIFLY,18
+    Gender = male
+    Moves = ABSORB,STUNSPORE,MORNINGSUN,AIRCUTTER
+    Ability = 0
+Pokemon = BUTTERFREE,18
+    Gender = male
+    Moves = STUNSPORE,SLEEPPOWDER,GUST,SUPERSONIC
+    Ability = 0
+Pokemon = DUSTOX,22
+    Gender = female
+    Moves = CONFUSION,POISONPOWDER,MOONLIGHT,VENOSHOCK
+    Ability = 0
+#-------------------------------
+[CAMPER,Jeff]
+Pokemon = SPEAROW,16
+Pokemon = SENTRET,16
+#-------------------------------
+[CAMPER,Jeff,1]
+Pokemon = FEAROW,29
+Pokemon = FURRET,29
+#-------------------------------
 [CAMPER,Liam]
-LoseText = "A very good battle, indeed!"
 Pokemon = DIGLETT,10
 Pokemon = BONSLY,11
 #-------------------------------
+[CHAMPION,Blue]
+Pokemon = VENUSAUR,63
+    Item = SITRUSBERRY
+Pokemon = CHARIZARD,63
+    Item = SITRUSBERRY
+Pokemon = BLASTOISE,63
+    Item = SITRUSBERRY
+#-------------------------------
+[COOLCOUPLE,Alice & Bob]
+Pokemon = TURTWIG,19
+Pokemon = CHIMCHAR,19
+#-------------------------------
+[COOLCOUPLE,Julia & Romero]
+Pokemon = GYARADOS,15
+Pokemon = RIOLU,15
+Pokemon = STARAVIA,15
+Pokemon = EMOLGA,15
+#-------------------------------
+[FINALBOSS,Final Bossman,1]
+Items = FULLRESTORE
+Pokemon = GROUDON,10
+    Item = REDORB
+Pokemon = OMNIDRAGON,10
+#-------------------------------
+[FINALBOSS,Final Bossman]
+Items = HYPERPOTION
+Pokemon = OMNIDRAGON,50
+    Moves = MYTHICBLAST,BARRIER,ICEBEAM,DRAGONCLAW
+    IV = 31
+    Happiness = 5
+    Ball = 4
+#-------------------------------
+[FISHERMAN,Andrew]
+Pokemon = MAGIKARP,14
+Pokemon = MAGIKARP,18
+#-------------------------------
+[HIKER,Ginger]
+Pokemon = DWEBBLE,20
+    Moves = SANDATTACK,FEINTATTACK,SMACKDOWN,ROCKPOLISH
+Pokemon = STEELIX,20
+    Moves = ROCKTOMB,CRUNCH,STEALTHROCK,AUTOTOMIZE
+    Ability = 1
+    Item = ORANBERRY
+#-------------------------------
+[HIKER,Ford]
+Pokemon = MACHOP,19
+#-------------------------------
+[HIKER,Bruce]
+Pokemon = GEODUDE,10
+    Moves = DEFENSECURL,MUDSPORT,ROCKPOLISH,ROLLOUT
+Pokemon = ONIX,13
+    Moves = CURSE,ROCKTHROW,ROCKTOMB,RAGE
+#-------------------------------
+[HIKER,Clark]
+Items = SUPERPOTION,SUPERPOTION
+Pokemon = GEODUDE,12
+    Moves = MUDSPORT,ROCKPOLISH,ROLLOUT,MAGNITUDE
+Pokemon = BONSLY,16
+    Moves = FLAIL,LOWKICK,ROCKTHROW,MIMIC
+Pokemon = NUMEL,16
+    Moves = EMBER,FOCUSENERGY,MAGNITUDE,FLAMEBURST
+#-------------------------------
+[HIKER,West]
+Pokemon = EKANS,15
+    Moves = LEER,POISONSTING,BITE,GLARE
+Pokemon = DEINO,15
+    Moves = DRAGONRAGE,FOCUSENERGY,BITE,HEADBUTT
+#-------------------------------
+[LASS,Denise]
+Pokemon = MAGIKARP,15
+    Moves = SPLASH,TACKLE
+Pokemon = DIPDUCK,10
+    Moves = WATERGUN,WATERSPORT,DEFOG,WINGATTACK
+Pokemon = FLABEBE,10
+    Moves = TACKLE,VINEWHIP,FAIRYWIND
+#-------------------------------
+[LASS,Crissy]
+Pokemon = PLUSLE,17
+Pokemon = MINUN,17
+#-------------------------------
 [LEADER_Brock,Brock]
 Items = FULLRESTORE,FULLRESTORE
-LoseText = "Very good."
 Pokemon = GEODUDE,12
     Gender = male
     Moves = DEFENSECURL,HEADSMASH,ROCKPOLISH,ROCKTHROW
@@ -23,95 +290,542 @@ Pokemon = ONIX,14
     IV = 20
     Ball = 19
 #-------------------------------
-[TEAMROCKET_M,Grunt,1]
-LoseText = "You're too good for me!"
-Pokemon = WEEPINBELL,21
-    Shadow = yes
+[LEADERPoseidon,Njord,1]
+Pokemon = CARRACOSTA,40
+    Moves = ANCIENTPOWER,CRUNCH,WIDEGUARD,BRINE
+Pokemon = SHARPEDO,40
+    Gender = male
+    Moves = ICEFANG,CRUNCH,EARTHQUAKE,PROTECT
+    Ability = 2
+    Item = SHARPEDONITE
+    Nature = JOLLY
+    Ball = 11
+Pokemon = KINGDRA,40
+    Gender = female
+    Moves = AGILITY,BUBBLEBEAM,ICEBEAM,TWISTER
+    Ability = 2
+    Item = ORANBERRY
+    Nature = MODEST
+Pokemon = MANTINE,40
+    Gender = female
+    Moves = SUBSTITUTE,TOXIC,AQUARING,AIRSLASH
+    Ability = 1
+    Item = SITRUSBERRY
+    Nature = MODEST
+Pokemon = FLOATZEL,40
+    Gender = male
+    Moves = WATERFALL,ICEPUNCH,PURSUIT,AQUATAIL
+    Ability = 0
+    Item = CHOICEBAND
+    Nature = JOLLY
+Pokemon = SEISMITOAD,40
+    Gender = male
+    Moves = STEALTHROCK,SCALD,TOXIC,KNOCKOFF
+    Ability = 2
+    Item = LEFTOVERS
+    Nature = BOLD
+#-------------------------------
+[LEADERPoseidon,Njord]
+Pokemon = TIRTOUGA,30
+    Gender = male
+    Moves = SHELLSMASH,ZENHEADBUTT,RAINDANCE,WATERFALL
+    Ability = 1
+    Item = BERRYJUICE
+    Nature = JOLLY
+Pokemon = SHARPEDO,35
+    Gender = male
+    Moves = CRUNCH,ICEFANG,EARTHQUAKE,AQUAJET
+    Ability = 2
+    Item = LIFEORB
+    Nature = JOLLY
+    Ball = 11
+Pokemon = SEADRA,33
+    Gender = female
+    Moves = AGILITY,BUBBLEBEAM,ICEBEAM,TWISTER
+    Ability = 2
+    Nature = MODEST
+Pokemon = MANTINE,34
+    Gender = female
+    Moves = WATERPULSE,SCALD,TAKEDOWN,SUBSTITUTE
+    Ability = 1
+    Item = SITRUSBERRY
+    Nature = MODEST
+Pokemon = BUIZEL,35
+    Gender = male
+    Moves = AQUATAIL,ICEPUNCH,BRICKBREAK,AQUAJET
+    Ability = 0
+    Nature = JOLLY
+Pokemon = SEISMITOAD,36
+    Gender = male
+    Moves = STEALTHROCK,SCALD,TOXIC,KNOCKOFF
+    Ability = 1
+    Nature = BOLD
+#-------------------------------
+[LEADERWright,Doctor Wright,1]
+Pokemon = PORYGONZ,40
+    Moves = NASTYPLOT,TRIATTACK,DARKPULSE,THUNDERBOLT
+    Ability = 0
+    Item = LUMBERRY
+    Nature = MODEST
+Pokemon = MAGNEZONE,40
+    Moves = VOLTSWITCH,FLASHCANNON,THUNDERBOLT,TRIATTACK
+    Ability = 1
+    Nature = MODEST
+Pokemon = KLANG,40
+    Moves = GEARGRIND,SHIFTGEAR,REST,SLEEPTALK
+    Ability = 2
+    Item = EVIOLITE
+    Nature = IMPISH
+Pokemon = ELECTABUZZ,40
+    Moves = THUNDERWAVE,ELECTROBALL,LIGHTSCREEN,THUNDERPUNCH
+    Ability = 0
+    Nature = CALM
+Pokemon = MELTINCUBE,40
+    Moves = ICEBEAM,FIRESPIN,SCALD,REFLECT
+    Ability = 2
+    Item = SITRUSBERRY
+    Nature = MILD
+Pokemon = DITTO,40
+    Moves = TRANSFORM
+    Ability = 2
+    Item = EXPERTBELT
+    Nature = RELAXED
+#-------------------------------
+[LEADERWright,Doctor Wright]
+Pokemon = PORYGON2,30
+    Moves = RECOVER,TRIATTACK,ICEBEAM,THUNDERWAVE
+    Ability = 0
+    Item = EVIOLITE
+    Nature = CALM
+Pokemon = MAGNETON,35
+    Moves = MIRRORSHOT,METALSOUND,ELECTROBALL,TRIATTACK
+    Ability = 1
+    Item = AIRBALLOON
+    Nature = MODEST
+Pokemon = KLINK,35
+    Moves = GEARGRIND,BIND,CHARGEBEAM,AUTOTOMIZE
+    Ability = 2
+    Item = SITRUSBERRY
+    Nature = CALM
+Pokemon = ELECTABUZZ,35
+    Moves = THUNDERWAVE,ELECTROBALL,LIGHTSCREEN,THUNDERPUNCH
+    Ability = 0
+    Nature = CALM
+Pokemon = MELTINCUBE,35
+    Moves = ICEBEAM,FIRESPIN,SCALD,REFLECT
+    Ability = 2
+    Item = CHARTIBERRY
+    Nature = MILD
+Pokemon = DITTO,35
+    Moves = TRANSFORM
+    Ability = 2
+    Item = EXPERTBELT
+    Nature = RELAXED
+#-------------------------------
+[PICNICKER,Susie]
+Pokemon = MEOWTH,18
+#-------------------------------
+[PICNICKER,Susie,1]
+Pokemon = PERSIAN,32
+#-------------------------------
+[PICNICKER_F_1,Cindy]
+Pokemon = ROSELIA,20
+    Gender = female
+    Moves = STUNSPORE,MEGADRAIN,LEECHSEED,MAGICALLEAF
+    Ability = 0
+Pokemon = PIKACHU,20
+    Gender = female
+    Moves = QUICKATTACK,ELECTROBALL,IRONTAIL,PLAYROUGH
+    Ability = 0
+Pokemon = MARILL,20
+    Gender = female
+    Moves = ROLLOUT,BUBBLEBEAM,HELPINGHAND,AQUATAIL
+    Ability = 0
+#-------------------------------
+[PICNICKER_F_1,Mandy]
+Pokemon = LEAFEON,20
+    Gender = female
+    Moves = RAZORLEAF,QUICKATTACK,SUNNYDAY,SYNTHESIS
+    Ability = 2
+    Ball = 21
+Pokemon = PIKACHU,20
+    Gender = female
+    Moves = PLAYNICE,QUICKATTACK,DOUBLESLAP,SPARK
+    Ability = 0
+Pokemon = LOMBRE,20
+    Gender = male
+    Moves = FAKEOUT,KNOCKOFF,WATERGUN,MEGADRAIN
+    Ability = 0
+#-------------------------------
+[PICNICKER_F_1,Lindy]
+Pokemon = SKARMORY,20
+    Gender = female
+    Moves = METALCLAW,AIRCUTTER,FURYATTACK,FEINT
+    Ability = 0
+Pokemon = NUZLEAF,20
+    Gender = male
+    Moves = FAKEOUT,RAZORLEAF,TORMENT,RAZORWIND
+    Ability = 0
+#-------------------------------
+[POKEMONBREEDER,Vanilla]
+Pokemon = BONSLY,15
+    Gender = female
+    Moves = FLAIL,LOWKICK,ROCKTHROW,MIMIC
+    Ability = 0
+    Ball = 21
+Pokemon = PICHU,15
+    Gender = female
+    Moves = CHARM,TAILWHIP,SWEETKISS,NASTYPLOT
+    Ability = 0
+    Ball = 21
+Pokemon = SWIRLIX,15
+    Gender = female
+    Moves = FAIRYWIND,DRAININGKISS,FAKETEARS,CHARM
+    Ability = 0
+    Ball = 21
+#-------------------------------
+[POKEMONBREEDER,Jasmine]
+Pokemon = SKITTY,16
+    Gender = female
+    Moves = SING,ATTRACT,DISARMINGVOICE,DOUBLESLAP
+    Ability = 0
+    Ball = 21
+Pokemon = SHINX,16
+    Gender = female
+    Moves = LEER,CHARGE,BABYDOLLEYES,SPARK
+    Ability = 0
+    Ball = 21
+Pokemon = ROSERADE,16
+    Gender = female
+    Moves = POISONSTING,MEGADRAIN,MAGICALLEAF,SWEETSCENT
+    Ability = 1
+    Item = SITRUSBERRY
+    Ball = 21
+#-------------------------------
+[POKEMONTRAINER_Brendan,Brendan]
+Pokemon = MARSHTOMP,19
+#-------------------------------
+[PSYCHIC_F_2,Elowen]
+Pokemon = MUSHARNA,20
+    Moves = DEFENSECURL,LUCKYCHANT,PSYBEAM,HYPNOSIS
+Pokemon = SLOWPOKE,20
+    Moves = GROWL,WATERGUN,CONFUSION,DISABLE
+    Ball = 11
+Pokemon = WOBBUFFET,20
+    Moves = COUNTER,MIRRORCOAT,SAFEGUARD,DESTINYBOND
+#-------------------------------
+[PSYCHIC_M_2,Fraiser]
+Pokemon = BEEPO,17
+    Moves = TACKLE,SANDATTACK,BITE,YAWN
+Pokemon = DODUO,18
+    Moves = FURYATTACK,RAGE,SUBSTITUTE,REST
+Pokemon = WYNAUT,20
+    Moves = COUNTER,MIRRORCOAT,SAFEGUARD,AMNESIA
+#-------------------------------
+[PSYCHIC_M_2,Elwood]
+Pokemon = KADABRA,20
+    Moves = TELEPORT,KINESIS,CONFUSION,DISABLE
+Pokemon = SLOWPOKE,20
+    Moves = GROWL,WATERGUN,CONFUSION,DISABLE
+    Ball = 11
+Pokemon = KIRLIA,20
+    Moves = DISARMINGVOICE,LUCKYCHANT,MAGICALLEAF,HEALPULSE
+#-------------------------------
+[PSYCHIC_M_2,Elah]
+Pokemon = HAUNTER,20
+    Moves = MEANLOOK,CURSE,NIGHTSHADE,CONFUSERAY
+Pokemon = SLOWPOKE,20
+    Moves = GROWL,WATERGUN,CONFUSION,DISABLE
+    Ball = 11
+Pokemon = ESPURR,20
+    Moves = CONFUSION,LIGHTSCREEN,PSYBEAM,FAKEOUT
+#-------------------------------
+[RIVAL1,Blue,1]
+Pokemon = PIDGEOTTO,17
+Pokemon = RATTATA,15
+Pokemon = CHARMANDER,18
+#-------------------------------
+[RIVAL1,Blue]
+Pokemon = PIDGEOTTO,17
+Pokemon = RATTATA,15
+Pokemon = BULBASAUR,18
+#-------------------------------
+[RIVAL1,Blue,2]
+Pokemon = PIDGEOTTO,17
+Pokemon = RATTATA,15
+Pokemon = SQUIRTLE,18
+#-------------------------------
+[SCIENTIST_F,Gen]
+Pokemon = KLINK,22
+    Moves = CHARGE,THUNDERSHOCK,GEARGRIND,BIND
+Pokemon = MAGNEMITE,24
+    Moves = THUNDERWAVE,MAGNETBOMB,SPARK,MIRRORSHOT
+#-------------------------------
+[SCIENTIST_F,Helen]
+Pokemon = GLAMEOW,20
+    Moves = GROWL,HYPNOSIS,FEINTATTACK,FURYSWIPES
+Pokemon = JOLTIK,20
+    Moves = SCREECH,FURYCUTTER,ELECTROWEB,BUGBITE
+Pokemon = GULPIN,22
+    Moves = POUND,YAWN,AMNESIA,SHADOWBALL
+#-------------------------------
+[SCIENTIST_M,Bery]
+Pokemon = MAGNEMITE,23
+    Moves = THUNDERWAVE,MAGNETBOMB,SPARK,MIRRORSHOT
+Pokemon = NOSEPASS,23
+    Moves = ROCKTHROW,THUNDERWAVE,REST,ROCKSLIDE
+#-------------------------------
+[SCIENTIST_M,Magnes]
+Pokemon = SKARMORY,24
+    Moves = AIRCUTTER,FURYATTACK,FEINT,SWIFT
+Pokemon = CROBAT,24
+    Moves = WINGATTACK,CONFUSERAY,AIRCUTTER,SWIFT
+#-------------------------------
+[SWIMMER2_F,Ariel]
+Pokemon = STARYU,15
+Pokemon = GOLDEEN,11
 #-------------------------------
 [TEAMROCKET_F,Grunt,1]
-LoseText = "You're too good for me!"
 Pokemon = BURMY,19
 Pokemon = WINGULL,19
 Pokemon = ELECTABUZZ,20
     Shadow = yes
 #-------------------------------
+[TEAMROCKET_M,Grunt,1]
+Pokemon = WEEPINBELL,21
+    Shadow = yes
+#-------------------------------
+[YOUNGSTER,Cody]
+Pokemon = PIKACHU,10
+    Gender = male
+    Moves = THUNDERSHOCK,GROWL,PLAYNICE,QUICKATTACK
+    Ability = 0
+    Ball = 21
+#-------------------------------
+[YOUNGSTER,Bobby]
+Pokemon = CATERPIE,5
+    Moves = TACKLE,STRINGSHOT
+    Ball = 5
+Pokemon = FLETCHLING,6
+    Form = 1
+    Moves = TACKLE,GROWL,QUICKATTACK
+#-------------------------------
 [YOUNGSTER,Ben]
-LoseText = "Aww, I lost."
 Pokemon = RATTATA,11
 Pokemon = EKANS,11
 #-------------------------------
-[CAMPER,Jeff]
-LoseText = "A very good battle, indeed!"
-Pokemon = SPEAROW,16
-Pokemon = SENTRET,16
+[YOUNGSTER,Adam]
+Pokemon = RATTATA,3
+    Name = Ratty
+    Moves = TACKLE,TAILWHIP
+Pokemon = CATERPIE,2
+    Moves = TACKLE,STRINGSHOT
 #-------------------------------
-[CAMPER,Jeff,1]
-LoseText = "You beat me again!"
-Pokemon = FEAROW,29
-Pokemon = FURRET,29
+[YOUNGSTER,Orland]
+Pokemon = RATTATA,6
+    Moves = TACKLE,TAILWHIP,QUICKATTACK
+Pokemon = GEODUDE,6
+    Moves = TACKLE,DEFENSECURL,MUDSPORT,ROCKPOLISH
 #-------------------------------
-[PICNICKER,Susie]
-LoseText = "Defeated! Oh my!"
-Pokemon = MEOWTH,18
+[NURSE_BATTLE,Elliot]
+Items = POTION,POTION
+Pokemon = AUDINO,30
+    Gender = female
+    Moves = HYPERVOICE,POUND,ATTRACT,DISARMINGVOICE
+    Ability = 2
+Pokemon = MUSHARNA,30
+    Gender = female
+    Moves = ZENHEADBUTT,CALMMIND,YAWN,DREAMEATER
+    Ability = 1
 #-------------------------------
-[PICNICKER,Susie,1]
-LoseText = "Defeated! Oh my!"
-Pokemon = PERSIAN,32
+[HIKER,Paul]
+Pokemon = LUDICOLO,20
+    Gender = male
+    Moves = ASTONISH,RAINDANCE,MEGADRAIN,NATUREPOWER
+    Ability = 1
+Pokemon = SNORLAX,20
+    Gender = male
+    Moves = AMNESIA,LICK,CHIPAWAY,YAWN
+    Ability = 1
+Pokemon = HOUNDOUR,20
+    Gender = male
+    Moves = EMBER,BITE,TOXIC,TAUNT
+    Ability = 1
 #-------------------------------
-[HIKER,Ford]
-LoseText = "You're too good for me!"
-Pokemon = MACHOP,19
+[POKEMONTRAINER_One,Arthur]
+Pokemon = MAREEP,3
+    Gender = male
+    Moves = TACKLE
+    Ability = 2
+Pokemon = CHIMCHAR,5
+    Gender = male
+    Moves = SCRATCH,LEER
+    Ability = 0
 #-------------------------------
-[FISHERMAN,Andrew]
-LoseText = "Washed out!"
-Pokemon = MAGIKARP,14
-Pokemon = MAGIKARP,18
+[POKEMONTRAINER_One,Arthur,1]
+Pokemon = MAREEP,3
+    Gender = male
+    Moves = TACKLE
+    Ability = 2
+Pokemon = PIPLUP,5
+    Gender = male
+    Moves = POUND,GROWL
+    Ability = 0
 #-------------------------------
-[BEAUTY,Bridget]
-LoseText = "My Skitty!"
-Pokemon = SKITTY,18
+[POKEMONTRAINER_One,Arthur,2]
+Pokemon = MAREEP,3
+    Gender = male
+    Moves = TACKLE
+    Ability = 2
+Pokemon = TURTWIG,5
+    Gender = male
+    Moves = TACKLE,WITHDRAW
+    Ability = 0
 #-------------------------------
-[LASS,Crissy]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = PLUSLE,17
-Pokemon = MINUN,17
+[POKEMONTRAINER_Two,Laura]
+Pokemon = MAREEP,3
+    Gender = female
+    Moves = TACKLE
+    Ability = 2
+Pokemon = CHIMCHAR,5
+    Gender = female
+    Moves = SCRATCH,LEER
+    Ability = 0
 #-------------------------------
-[COOLCOUPLE,Alice & Bob]
-LoseText = "Our teamwork failed!"
-Pokemon = TURTWIG,19
-Pokemon = CHIMCHAR,19
+[POKEMONTRAINER_Two,Laura,1]
+Pokemon = MAREEP,3
+    Gender = female
+    Moves = TACKLE
+    Ability = 2
+Pokemon = PIPLUP,5
+    Gender = female
+    Moves = POUND,GROWL
+    Ability = 0
 #-------------------------------
-[POKEMONTRAINER_Brendan,Brendan]
-Pokemon = MARSHTOMP,19
+[POKEMONTRAINER_Two,Laura,2]
+Pokemon = MAREEP,3
+    Gender = female
+    Moves = TACKLE
+    Ability = 2
+Pokemon = TURTWIG,5
+    Gender = female
+    Moves = TACKLE,WITHDRAW
+    Ability = 0
 #-------------------------------
-[SWIMMER2_F,Ariel]
-LoseText = "Washed out!"
-Pokemon = STARYU,15
-Pokemon = GOLDEEN,11
+[PICNICKER_F_1,Fiora]
+Pokemon = SNOVER,22
+    Moves = ICYWIND,GRASSWHISTLE,SWAGGER,MIST
+Pokemon = SWINUB,22
+    Moves = MUDSLAP,ENDURE,MUDBOMB,ICYWIND
+Pokemon = JIGGLYPUFF,22
+    Moves = DISARMINGVOICE,DISABLE,DOUBLESLAP,ROLLOUT
 #-------------------------------
-[RIVAL1,Blue]
-LoseText = "Not too shabby."
-Pokemon = PIDGEOTTO,17
-Pokemon = RATTATA,15
-Pokemon = BULBASAUR,18
+[LASS,Niyah]
+Pokemon = SLOWPOKE,22
+    Moves = GROWL,WATERGUN,CONFUSION,DISABLE
+Pokemon = MARILL,22
+    Moves = ROLLOUT,BUBBLEBEAM,HELPINGHAND,AQUATAIL
+Pokemon = SHIFTRY,22
+    Moves = FEINTATTACK,WHIRLWIND,NASTYPLOT,LEAFTORNADO
 #-------------------------------
-[RIVAL1,Blue,1]
-LoseText = "Not too shabby."
-Pokemon = PIDGEOTTO,17
-Pokemon = RATTATA,15
-Pokemon = CHARMANDER,18
+[HIKER,Damien]
+Pokemon = SNORUNT,22
+    Moves = DOUBLETEAM,ICESHARD,ICYWIND,BITE
+Pokemon = DELIBIRD,23
+    Moves = PRESENT
+Pokemon = SNEASEL,23
+    Moves = ICYWIND,FURYSWIPES,AGILITY,METALCLAW
 #-------------------------------
-[RIVAL1,Blue,2]
-LoseText = "Not too shabby."
-Pokemon = PIDGEOTTO,17
-Pokemon = RATTATA,15
-Pokemon = SQUIRTLE,18
+[PARASOLGIRL,Minnie]
+Pokemon = SKITTY,25
+    Moves = FORESIGHT,SING,ATTRACT,DISARMINGVOICE
+Pokemon = AUDINO,25
+    Moves = ZENHEADBUTT,ICEBEAM,SNORE
+Pokemon = CINCCINO,25
+    Moves = SWIFT,HYPERVOICE,THUNDERBOLT,SEEDBOMB
 #-------------------------------
-[CHAMPION,Blue]
-LoseText = "A good battle indeed!"
-Pokemon = VENUSAUR,63
-    Item = SITRUSBERRY
-Pokemon = CHARIZARD,63
-    Item = SITRUSBERRY
-Pokemon = BLASTOISE,63
-    Item = SITRUSBERRY
+[PARASOLLADY,Kylie]
+Pokemon = FEEBAS,20
+    Gender = female
+    Moves = SPLASH,TACKLE,LIGHTSCREEN,SWIFT
+    Ability = 0
+Pokemon = MILOTIC,25
+    Gender = female
+    Moves = DISARMINGVOICE,TWISTER,WATERPULSE,AQUARING
+    Ability = 1
+#-------------------------------
+[GRUNTHORDE,Delta Squad]
+Pokemon = EKANS,10
+Pokemon = RATTATA,10
+Pokemon = PIDGEY,10
+Pokemon = MACHOP,10
+Pokemon = ZUBAT,10
+#-------------------------------
+[TWINS,Tina & Leela]
+Pokemon = PLUSLE,16
+    Gender = female
+    Moves = SPARK,HELPINGHAND,SWIFT
+    Ability = 0
+Pokemon = MINUN,16
+    Gender = female
+    Moves = SPARK,HELPINGHAND,SWIFT
+    Ability = 0
+Pokemon = SWIRLIX,20
+    Gender = female
+    Moves = FAIRYWIND,FAKETEARS,ENERGYBALL
+    Ability = 0
+Pokemon = SPRITZEE,20
+    Gender = female
+    Moves = FAIRYWIND,DRAININGKISS,PSYCHIC
+    Ability = 0
+#-------------------------------
+[YOUNGSTER,Zach]
+Pokemon = KRICKETUNE,13
+    Gender = male
+Pokemon = TAILLOW,14
+    Gender = female
+Pokemon = BEAUTIFLY,15
+    Gender = male
+#-------------------------------
+[YOUNGSTER,Zach,1]
+Pokemon = KRICKETUNE,15
+    Gender = male
+Pokemon = TAILLOW,16
+    Gender = female
+Pokemon = BEAUTIFLY,17
+    Gender = male
+#-------------------------------
+[LASS,Sharla]
+Pokemon = JIGGLYPUFF,16
+    Gender = female
+    Moves = DISABLE,DRAINPUNCH,ROUND,REST
+Pokemon = FLAAFFY,18
+Pokemon = FEAROW,20
+    Moves = PURSUIT,FURYATTACK,AERIALACE,ASTONISH
+    Item = ORANBERRY
+#-------------------------------
+[LASS,Mel]
+Pokemon = BUTTERFREE,16
+Pokemon = TYROGUE,18
+Pokemon = MEDITITE,20
+    Item = FOCUSSASH
+#-------------------------------
+[PICNICKER_M_1,Cliff]
+Pokemon = NIDORANmA,6
+Pokemon = PACHIRISU,9
+    Moves = GROWL,QUICKATTACK,CHARM
+#-------------------------------
+[PICNICKER_F_1,River]
+Pokemon = NIDORANfE,7
+Pokemon = GEODUDE,7
+    Moves = TACKLE,ROCKPOLISH
+#-------------------------------
+[ACETRAINERM_2,Brady]
+Pokemon = ARON,15
+Pokemon = SABLEYE,15
+Pokemon = TYROGUE,18
+#-------------------------------
+[ACETRAINERF_2,Cynthia]
+Pokemon = NOSEPASS,15
+Pokemon = ZUBAT,15
+Pokemon = ONIX,18

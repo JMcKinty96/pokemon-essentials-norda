@@ -399,6 +399,8 @@ BattleHandlers::StatLossImmunityAbility.add(:CLEARBODY,
 
 BattleHandlers::StatLossImmunityAbility.copy(:CLEARBODY,:WHITESMOKE)
 
+BattleHandlers::StatLossImmunityAbility.copy(:CLEARBODY,:IMPERIALRULE)
+
 BattleHandlers::StatLossImmunityAbility.add(:FLOWERVEIL,
   proc { |ability,battler,stat,battle,showMessages|
     next false if !battler.pbHasType?(:GRASS)
@@ -520,6 +522,12 @@ BattleHandlers::AbilityOnStatLoss.add(:DEFIANT,
 BattleHandlers::PriorityChangeAbility.add(:GALEWINGS,
   proc { |ability,battler,move,pri|
     next pri+1 if battler.hp==battler.totalhp && isConst?(move.type,PBTypes,:FLYING)
+  }
+)
+
+BattleHandlers::PriorityChangeAbility.add(:FROSTWINGS,
+  proc { |ability,battler,move,pri|
+    next pri+1 if battler.hp==battler.totalhp && isConst?(move.type,PBTypes,:ICE)
   }
 )
 
@@ -762,6 +770,111 @@ BattleHandlers::MoveBaseTypeModifierAbility.add(:REFRIGERATE,
   }
 )
 
+# SCREED NEW
+BattleHandlers::MoveBaseTypeModifierAbility.add(:PHLOGISTINATE,
+  proc { |ability,user,move,type|
+    next if !isConst?(type,PBTypes,:NORMAL) || !hasConst?(PBTypes,:FIRE)
+    move.powerBoost = true
+    next getConst(PBTypes,:FIRE)
+  }
+)
+
+BattleHandlers::MoveBaseTypeModifierAbility.add(:INVIGORATE,
+  proc { |ability,user,move,type|
+    next if !isConst?(type,PBTypes,:NORMAL) || !hasConst?(PBTypes,:FIGHTING)
+    move.powerBoost = true
+    next getConst(PBTypes,:FIGHTING)
+  }
+)
+
+BattleHandlers::MoveBaseTypeModifierAbility.add(:IRRIGATE,
+  proc { |ability,user,move,type|
+    next if !isConst?(type,PBTypes,:NORMAL) || !hasConst?(PBTypes,:WATER)
+    move.powerBoost = true
+    next getConst(PBTypes,:WATER)
+  }
+)
+
+BattleHandlers::MoveBaseTypeModifierAbility.add(:FOLIATE,
+  proc { |ability,user,move,type|
+    next if !isConst?(type,PBTypes,:NORMAL) || !hasConst?(PBTypes,:GRASS)
+    move.powerBoost = true
+    next getConst(PBTypes,:GRASS)
+  }
+)
+
+BattleHandlers::MoveBaseTypeModifierAbility.add(:CONTAMINATE,
+  proc { |ability,user,move,type|
+    next if !isConst?(type,PBTypes,:NORMAL) || !hasConst?(PBTypes,:POISON)
+    move.powerBoost = true
+    next getConst(PBTypes,:POISON)
+  }
+)
+
+BattleHandlers::MoveBaseTypeModifierAbility.add(:EXCAVATE,
+  proc { |ability,user,move,type|
+    next if !isConst?(type,PBTypes,:NORMAL) || !hasConst?(PBTypes,:GROUND)
+    move.powerBoost = true
+    next getConst(PBTypes,:GROUND)
+  }
+)
+
+BattleHandlers::MoveBaseTypeModifierAbility.add(:ELUCIDATE,
+  proc { |ability,user,move,type|
+    next if !isConst?(type,PBTypes,:NORMAL) || !hasConst?(PBTypes,:PSYCHIC)
+    move.powerBoost = true
+    next getConst(PBTypes,:PSYCHIC)
+  }
+)
+
+BattleHandlers::MoveBaseTypeModifierAbility.add(:GRANULATE,
+  proc { |ability,user,move,type|
+    next if !isConst?(type,PBTypes,:NORMAL) || !hasConst?(PBTypes,:ROCK)
+    move.powerBoost = true
+    next getConst(PBTypes,:ROCK)
+  }
+)
+
+BattleHandlers::MoveBaseTypeModifierAbility.add(:POLLINATE,
+  proc { |ability,user,move,type|
+    next if !isConst?(type,PBTypes,:NORMAL) || !hasConst?(PBTypes,:BUG)
+    move.powerBoost = true
+    next getConst(PBTypes,:BUG)
+  }
+)
+
+BattleHandlers::MoveBaseTypeModifierAbility.add(:DRAGONIFY,
+  proc { |ability,user,move,type|
+    next if !isConst?(type,PBTypes,:NORMAL) || !hasConst?(PBTypes,:DRAGON)
+    move.powerBoost = true
+    next getConst(PBTypes,:DRAGON)
+  }
+)
+
+BattleHandlers::MoveBaseTypeModifierAbility.add(:INSTIGATE,
+  proc { |ability,user,move,type|
+    next if !isConst?(type,PBTypes,:NORMAL) || !hasConst?(PBTypes,:DARK)
+    move.powerBoost = true
+    next getConst(PBTypes,:DARK)
+  }
+)
+
+BattleHandlers::MoveBaseTypeModifierAbility.add(:METALLICIZE,
+  proc { |ability,user,move,type|
+    next if !isConst?(type,PBTypes,:NORMAL) || !hasConst?(PBTypes,:STEEL)
+    move.powerBoost = true
+    next getConst(PBTypes,:STEEL)
+  }
+)
+
+BattleHandlers::MoveBaseTypeModifierAbility.add(:SPOOKIFY,
+  proc { |ability,user,move,type|
+    next if !isConst?(type,PBTypes,:NORMAL) || !hasConst?(PBTypes,:GHOST)
+    move.powerBoost = true
+    next getConst(PBTypes,:GHOST)
+  }
+)
+
 #===============================================================================
 # AccuracyCalcUserAbility handlers
 #===============================================================================
@@ -778,6 +891,13 @@ BattleHandlers::AccuracyCalcUserAbility.add(:HUSTLE,
   }
 )
 
+# SCREED - new for fog, accuracy check with fog 
+BattleHandlers::AccuracyCalcUserAbility.add(:FOGWARNING,
+  proc { |ability,mods,user,target,move,type|
+    mods[ACC_MULT] = (mods[ACC_MULT]*1).round
+  }
+)
+
 BattleHandlers::AccuracyCalcUserAbility.add(:KEENEYE,
   proc { |ability,mods,user,target,move,type|
     mods[EVA_STAGE] = 0 if mods[EVA_STAGE]>0 && NEWEST_BATTLE_MECHANICS
@@ -791,6 +911,12 @@ BattleHandlers::AccuracyCalcUserAbility.add(:NOGUARD,
 )
 
 BattleHandlers::AccuracyCalcUserAbility.add(:UNAWARE,
+  proc { |ability,mods,user,target,move,type|
+    mods[EVA_STAGE] = 0 if move.damagingMove?
+  }
+)
+
+BattleHandlers::AccuracyCalcUserAbility.add(:IMPERIALRULE,
   proc { |ability,mods,user,target,move,type|
     mods[EVA_STAGE] = 0 if move.damagingMove?
   }
@@ -844,6 +970,16 @@ BattleHandlers::AccuracyCalcTargetAbility.add(:SNOWCLOAK,
   }
 )
 
+# SCREED - add fog AccuracyCalcTargetAbility
+# fog does not reduce accuracy if you have the ability
+BattleHandlers::AccuracyCalcTargetAbility.add(:FOGWARNING,
+  proc { |ability,mods,user,target,move,type|
+    if target.battle.pbWeather==PBWeather::Fog
+      mods[ACC_MULT] = (mods[ACC_MULT]*1.0).round
+    end
+  }
+)
+
 BattleHandlers::AccuracyCalcTargetAbility.add(:STORMDRAIN,
   proc { |ability,mods,user,target,move,type|
     mods[BASE_ACC] = 0 if isConst?(type,PBTypes,:WATER)
@@ -857,6 +993,12 @@ BattleHandlers::AccuracyCalcTargetAbility.add(:TANGLEDFEET,
 )
 
 BattleHandlers::AccuracyCalcTargetAbility.add(:UNAWARE,
+  proc { |ability,mods,user,target,move,type|
+    mods[ACC_STAGE] = 0 if move.damagingMove?
+  }
+)
+
+BattleHandlers::AccuracyCalcTargetAbility.add(:IMPERIALRULE,
   proc { |ability,mods,user,target,move,type|
     mods[ACC_STAGE] = 0 if move.damagingMove?
   }
@@ -879,8 +1021,12 @@ BattleHandlers::DamageCalcUserAbility.add(:AERILATE,
     mults[BASE_DMG_MULT] *= 1.2 if move.powerBoost
   }
 )
-
+# Screed edit - one for each type
 BattleHandlers::DamageCalcUserAbility.copy(:AERILATE,:PIXILATE,:REFRIGERATE,:GALVANIZE)
+BattleHandlers::DamageCalcUserAbility.copy(:AERILATE,:PHLOGISTINATE,:INVIGORATE,:IRRIGATE,:FOLIATE)
+BattleHandlers::DamageCalcUserAbility.copy(:AERILATE,:CONTAMINATE,:EXCAVATE,:ELUCIDATE,:GRANULATE)
+BattleHandlers::DamageCalcUserAbility.copy(:AERILATE,:POLLINATE,:DRAGONIFY,:INSTIGATE,:METALLICIZE)
+BattleHandlers::DamageCalcUserAbility.copy(:AERILATE,:SPOOKIFY)
 
 BattleHandlers::DamageCalcUserAbility.add(:ANALYTIC,
   proc { |ability,user,target,move,mults,baseDmg,type|
@@ -956,6 +1102,12 @@ BattleHandlers::DamageCalcUserAbility.add(:HUSTLE,
 BattleHandlers::DamageCalcUserAbility.add(:IRONFIST,
   proc { |ability,user,target,move,mults,baseDmg,type|
     mults[BASE_DMG_MULT] *= 1.2 if move.punchingMove?
+  }
+)
+
+BattleHandlers::DamageCalcUserAbility.add(:MEGAFIST,
+  proc { |ability,user,target,move,mults,baseDmg,type|
+    mults[BASE_DMG_MULT] *= 1.4 if move.punchingMove?
   }
 )
 
@@ -1161,6 +1313,14 @@ BattleHandlers::DamageCalcTargetAbility.add(:FILTER,
 )
 
 BattleHandlers::DamageCalcTargetAbility.copy(:FILTER,:SOLIDROCK)
+
+BattleHandlers::DamageCalcTargetAbility.add(:UNBREAKABLE,
+  proc { |ability,user,target,move,mults,baseDmg,type|
+    if PBTypes.superEffective?(target.damageState.typeMod)
+      mults[FINAL_DMG_MULT] *= 0.65
+    end
+  }
+)
 
 BattleHandlers::DamageCalcTargetAbility.add(:FLOWERGIFT,
   proc { |ability,user,target,move,mults,baseDmg,type|
@@ -2349,6 +2509,14 @@ BattleHandlers::AbilityOnSwitchIn.add(:SANDSTREAM,
   }
 )
 
+# SCREED NEW - fog weather ability
+BattleHandlers::AbilityOnSwitchIn.add(:FOGWARNING,
+  proc { |ability,battler,battle|
+    pbBattleWeatherAbility(PBWeather::Fog,battler,battle)
+#    battle.pbDisplay(_INTL("{1} summoned thick fog!",battler.pbThis))
+  }
+)
+
 BattleHandlers::AbilityOnSwitchIn.add(:SLOWSTART,
   proc { |ability,battler,battle|
     battle.pbShowAbilitySplash(battler)
@@ -2368,6 +2536,8 @@ BattleHandlers::AbilityOnSwitchIn.add(:SNOWWARNING,
     pbBattleWeatherAbility(PBWeather::Hail,battler,battle)
   }
 )
+
+
 
 BattleHandlers::AbilityOnSwitchIn.add(:TERAVOLT,
   proc { |ability,battler,battle|

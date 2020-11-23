@@ -26,6 +26,7 @@ How are your Pokémon doing?\mMy \TP's really energetic.  It's a handful!
 How are your Pokémon doing?\mI always keep my \TP in top shape by going to Pokémon Centers.
 My \TP's looking really awesome.  I wish I could show you.
 I dressed my \TP and it looks even cuter than before.
+I took my \TP out for a walk, and it was so happy afterwards.
 #-------------------------------
 [<Bodies2>]
 Oh yeah, I managed to beat a tough \TE.\mI need to make my party stronger.

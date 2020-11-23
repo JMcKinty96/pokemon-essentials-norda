@@ -80,6 +80,7 @@ module PBDayNight
   def self.getTone
     @cachedTone = Tone.new(0,0,0) if !@cachedTone
     return @cachedTone if !TIME_SHADING
+#	return @cachedTone if $PokemonSystem.dayNightTint=="Off"
     if !@dayNightToneLastUpdate ||
        Graphics.frame_count-@dayNightToneLastUpdate>=Graphics.frame_rate*30
       getToneInternal
@@ -93,7 +94,7 @@ module PBDayNight
     return (now.hour*60)+now.min
   end
 
-  private
+# private
 
 # Internal function
 
@@ -117,7 +118,8 @@ end
 
 def pbDayNightTint(object)
   return if !$scene.is_a?(Scene_Map)
-  if TIME_SHADING && pbGetMetadata($game_map.map_id,MetadataOutdoor)
+  if TIME_SHADING && pbGetMetadata($game_map.map_id,MetadataOutdoor) &&
+	$PokemonSystem.dayNightTint==1 # new day night tint setting
     tone = PBDayNight.getTone
     object.tone.set(tone.red,tone.green,tone.blue,tone.gray)
   else
@@ -278,9 +280,9 @@ end
 #===============================================================================
 # Seasons
 #===============================================================================
-def pbGetSeason
-  return (pbGetTimeNow.mon-1)%4
-end
+ def pbGetSeason
+   return (pbGetTimeNow.mon-1)%4
+ end
 
 def pbIsSeason(seasonVariable,*arg)
   thisseason = pbGetSeason

@@ -62,7 +62,7 @@ class Game_Character
     @always_on_top             = false
     @anime_count               = 0
     @stop_count                = 0
-    @jump_peak                 = 0   # Max height while jumping
+    @jump_peak                 = 4   # Max height while jumping
     @jump_distance             = 0   # Total distance of jump
     @jump_distance_left        = 0   # Distance left to travel
     @jump_count                = 0   # Frames left in a stationary jump

@@ -1,40 +1,158 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 # Route 5 (41) - Route 4 (40)
-41,N,0,40,S,0
+41,North,0,40,South,0
 # Route 5 (41) - Route 6 (45)
-41,S,6,45,N,0
-# Route 6 (44) - Route 1 (5)
-44,S,43,5,N,0
+41,South,6,45,North,0
 # Safari Zone (66) - Route 1 (5)
-66,N,18,5,S,0
+66,North,18,5,South,0
+# Route 6 (44) - Route 1 (5)
+44,South,43,5,North,0
 # Cedolan City (7) - Route 1 (5)
-7,S,0,5,N,2
-# Lappet Town (2) - Route 1 (5)
-2,N,0,5,S,4
-# Cedolan City (7) - Route 6 (44)
-7,W,5,44,E,0
-# Lappet Town (2) - Safari Zone (66)
-2,W,0,66,E,0
+7,South,0,5,North,2
+# Example Maps (2) - Route 1 (5)
+2,North,0,5,South,4
+# Example Maps (2) - Safari Zone (66)
+2,West,0,66,East,0
 # Route 8 (69) - Safari Zone (66)
-69,N,0,66,S,10
+69,North,0,66,South,10
+# Cedolan City (7) - Route 6 (44)
+7,West,5,44,East,0
 # Ingido Plateau (35) - Route 4 (39)
-35,W,11,39,E,0
+35,West,11,39,East,0
 # Cedolan City (7) - Lerucean Town (23)
-7,E,0,23,W,78
+7,East,0,23,West,78
 # Route 3 (31) - Lerucean Town (23)
-31,S,32,23,N,0
+31,South,32,23,North,0
 # Route 2 (21) - Lerucean Town (23)
-21,E,0,23,W,1
+21,East,0,23,West,1
 # Route 7 (47) - Cedolan City (7)
-47,W,0,7,E,0
+47,West,0,7,East,0
 # Route 2 (21) - Cedolan City (7)
-21,S,0,7,N,21
+21,South,0,7,North,21
+# Route 8 (69) - Example Maps (2)
+69,North,12,2,South,0
 # Route 3 (31) - Ingido Plateau (35)
-31,W,0,35,E,10
-# Route 8 (69) - Lappet Town (2)
-69,N,12,2,S,0
+31,West,0,35,East,10
 # Route 7 (47) - Battle Frontier (52)
-47,E,8,52,W,0
+47,East,8,52,West,0
 # Route 2 (21) - Route 7 (47)
-21,E,77,47,W,0
+21,East,77,47,West,0
+# OpenField A1 (105) - OpenField B3 (110)
+105,South,112,110,North,0
+# OpenField C1 (111) - OpenField B3 (110)
+111,North,112,110,South,0
+# OpenField A2 (106) - OpenField B3 (110)
+106,East,48,110,West,0
+# OpenField C2 (112) - OpenField B3 (110)
+112,North,64,110,South,0
+# OpenField A3 (107) - OpenField B3 (110)
+107,South,0,110,North,0
+# OpenField C3 (113) - OpenField B3 (110)
+113,North,0,110,South,0
+# OpenField B2 (109) - OpenField B3 (110)
+109,East,0,110,West,0
+# OpenField A2 (106) - OpenField A1 (105)
+106,West,0,105,East,0
+# OpenField C2 (112) - OpenField A1 (105)
+112,West,0,105,East,112
+# OpenField B1 (108) - OpenField A1 (105)
+108,North,0,105,South,0
+# OpenField B2 (109) - OpenField A1 (105)
+109,West,0,105,East,48
+# OpenField A2 (106) - OpenField C1 (111)
+106,West,112,111,East,0
+# OpenField C2 (112) - OpenField C1 (111)
+112,West,0,111,East,0
+# OpenField B1 (108) - OpenField C1 (111)
+108,South,0,111,North,0
+# OpenField B2 (109) - OpenField C1 (111)
+109,West,64,111,East,0
+# OpenField A3 (107) - OpenField A2 (106)
+107,West,0,106,East,0
+# OpenField C3 (113) - OpenField A2 (106)
+113,West,0,106,East,112
+# OpenField B1 (108) - OpenField A2 (106)
+108,North,48,106,South,0
+# OpenField B2 (109) - OpenField A2 (106)
+109,North,0,106,South,0
+# OpenField A3 (107) - OpenField C2 (112)
+107,West,112,112,East,0
+# OpenField C3 (113) - OpenField C2 (112)
+113,West,0,112,East,0
+# OpenField B1 (108) - OpenField C2 (112)
+108,East,64,112,West,0
+# OpenField B2 (109) - OpenField C2 (112)
+109,South,0,112,North,0
+# OpenField B1 (108) - OpenField A3 (107)
+108,North,112,107,South,0
+# OpenField B2 (109) - OpenField A3 (107)
+109,North,64,107,South,0
+# OpenField B1 (108) - OpenField C3 (113)
+108,South,112,113,North,0
+# OpenField B2 (109) - OpenField C3 (113)
+109,East,64,113,West,0
+# OpenField B2 (109) - OpenField B1 (108)
+109,West,0,108,East,0
+# Rembrant City (87) - Route E-1 (115)
+87,East,0,115,West,0
+# Route D-1 (99) - Route F-2 (121)
+99,East,136,121,West,0
+# Route F-3 (122) - Route F-2 (121)
+122,East,24,121,West,0
+# Town 7 (123) - Route F-2 (121)
+123,North,0,121,South,88
+# Gauguin Town (3) - Route F-2 (121)
+3,East,64,121,West,0
+# Route F-1 (120) - Route F-2 (121)
+120,South,0,121,North,56
+# Route D-2 (100) - Route D-1 (99)
+100,West,0,99,East,16
+# Gauguin Town (3) - Route D-1 (99)
+3,North,0,99,South,0
+# Rembrant City (87) - Route D-1 (99)
+87,South,8,99,North,0
+# Route F-3 (122) - Route D-2 (100)
+122,East,0,100,West,96
+# Gauguin Town (3) - Route D-2 (100)
+3,East,0,100,West,56
+# Kandinsky City (97) - Route D-2 (100)
+97,West,8,100,East,0
+# Town 7 (123) - Route F-3 (122)
+123,North,0,122,South,120
+# Gauguin Town (3) - Route F-3 (122)
+3,South,8,122,North,0
+# Rembrant City (87) - Route B-2 (86)
+87,West,0,86,East,0
+# Route F-1 (120) - Kandinsky City (97)
+120,North,0,97,South,8
+# Route C-2 (116) - Monet Town (82)
+116,West,0,82,East,0
+# Route C-1 (81) - Monet Town (82)
+81,South,4,82,North,0
+# Route A-1 (42) - Pablo Town (33)
+42,North,0,33,South,0
+# Route C-1 (81) - Pablo Town (33)
+81,West,0,33,East,72
+# Route A-2 (43) - Pablo Town (33)
+43,West,0,33,East,32
+# Route B-1 (32) - Pablo Town (33)
+32,West,0,33,East,2
+# Route A-1 (42) - Giotto Town (77)
+42,South,0,77,North,2
+# Route C-1 (81) - Giotto Town (77)
+81,West,0,77,East,0
+# Route A-2 (43) - Giotto Town (77)
+43,West,40,77,East,0
+# Route B-1 (32) - Giotto Town (77)
+32,West,70,77,East,0
+# Route C-1 (81) - Route C-2 (116)
+81,South,60,116,North,0
+# Route C-1 (81) - Route A-1 (42)
+81,West,0,42,East,46
+# Route A-2 (43) - Route A-1 (42)
+43,West,0,42,East,6
+# Route B-1 (32) - Route A-1 (42)
+32,West,24,42,East,0
+# Route B-1 (32) - Route A-2 (43)
+32,South,0,43,North,0

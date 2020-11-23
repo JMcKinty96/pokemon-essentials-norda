@@ -1341,7 +1341,7 @@ EndSpeechLose = "Man, I lost!"
 Name = OPTUCHA
 PokemonNos = 290,298,301,321,322,326,337,351,361
 BeginSpeech = Here I come!
-Type = CRUSHGIRL
+Type = BATTLEGIRL
 EndSpeechWin = "Yes, I won!"
 #-------------------------------
 [168]
