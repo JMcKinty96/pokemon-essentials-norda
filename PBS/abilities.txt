@@ -253,3 +253,4 @@
 252,UNBREAKABLE,Unbreakable,"Reduces damage from super-effective attacks by 35%, regardless of effectiveness."
 253,MEGAFIST,Mega Fist,"Boosts the power of all punching attacks by 40%."
 254,IMPERIALRULE,Imperial Rule,"This Pokémon ignores stat changes that don't benefit itself, and other Pokémon cannot lower its stats."
+255,ROGUEJUSTICE,Rogue Justice,"Powers up Dark-type moves in a pinch."

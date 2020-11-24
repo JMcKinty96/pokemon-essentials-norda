@@ -1252,6 +1252,14 @@ BattleHandlers::DamageCalcUserAbility.add(:TORRENT,
   }
 )
 
+BattleHandlers::DamageCalcUserAbility.add(:ROGUEJUSTICE,
+  proc { |ability,user,target,move,mults,baseDmg,type|
+    if user.hp<=user.totalhp/3 && isConst?(type,PBTypes,:DARK)
+      mults[ATK_MULT] *= 1.5
+    end
+  }
+)
+
 BattleHandlers::DamageCalcUserAbility.add(:TOUGHCLAWS,
   proc { |ability,user,target,move,mults,baseDmg,type|
     mults[BASE_DMG_MULT] *= 4/3.0 if move.contactMove?

@@ -1036,8 +1036,8 @@ Type1 = DARK
 Type2 = FIGHTING
 BaseStats = 72,125,65,90,65,105
 Pokedex = This Gallade is a rogue defender of justice, acting more pragmatically than others of its kind.
-Abilities = STEADFAST
-HiddenAbility = JUSTIFIED
+Abilities = ROGUEJUSTICE
+HiddenAbility = SCRAPPY
 BattlerPlayerY = 11
 BattlerEnemyY = 15
 #-------------------------------
