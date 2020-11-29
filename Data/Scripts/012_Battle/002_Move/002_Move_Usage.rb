@@ -182,7 +182,8 @@ class PokeBattle_Move
     end
     # Disguise takes the damage
     return if target.damageState.disguise
-    # Target takes the damage
+    
+	# Target takes the damage
     if damage>=target.hp
       damage = target.hp
       # Survive a lethal hit with 1 HP effects
@@ -201,6 +202,10 @@ class PokeBattle_Move
         elsif target.hasActiveItem?(:FOCUSBAND) && @battle.pbRandom(100)<10
           target.damageState.focusBand = true
           damage -= 1
+		# friendship lets them hang on with 1 hp, can happen multiple times
+		elsif target.happiness >= 200 && @battle.pbRandom(100)<=100
+		  target.damageState.friendshipEndured = true
+		  damage -= 1
         end
       end
     end
@@ -300,6 +305,10 @@ class PokeBattle_Move
       target.pbChangeForm(1,_INTL("{1}'s disguise was busted!",target.pbThis))
     elsif target.damageState.endured
       @battle.pbDisplay(_INTL("{1} endured the hit!",target.pbThis))
+	# friendship message
+	elsif target.damageState.friendshipEndured
+      @battle.pbDisplay(_INTL("{1} endured the hit to make you proud!",target.pbThis))
+	#
     elsif target.damageState.sturdy
       @battle.pbShowAbilitySplash(target)
       if PokeBattle_SceneConstants::USE_ABILITY_SPLASH

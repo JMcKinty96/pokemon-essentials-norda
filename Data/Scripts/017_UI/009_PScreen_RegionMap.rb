@@ -153,7 +153,7 @@ class PokemonRegionMap_Scene
         end
       end
     end
-    @sprites["cursor"] = AnimatedSprite.create("Graphics/Pictures/mapCursor",3,5)
+    @sprites["cursor"] = AnimatedSprite.create("Graphics/Pictures/mapCursor",3,8)
     @sprites["cursor"].viewport = @viewport
     @sprites["cursor"].x        = -SQUAREWIDTH/2+(@mapX*SQUAREWIDTH)+(Graphics.width-@sprites["map"].bitmap.width)/2
     @sprites["cursor"].y        = -SQUAREHEIGHT/2+(@mapY*SQUAREHEIGHT)+(Graphics.height-@sprites["map"].bitmap.height)/2

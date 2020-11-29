@@ -143,9 +143,9 @@ ShowArea = true
 MapSize = 1,11
 BattleBack = CityConcrete
 Bicycle = true
-TrainerBattleBGM = GAMBLER.ogg
 MapPosition = 0,7,2
 Outdoor = true
+Environment = None
 ShowArea = true
 #-------------------------------
 [088]
@@ -164,35 +164,35 @@ HealingSpot = 87,20,18
 ShowArea = true
 #-------------------------------
 [090]
-# Rembrant Dept. 1F
+# Rembrant Dept. Store
 Bicycle = false
 MapPosition = 0,7,3
 Outdoor = false
 ShowArea = true
 #-------------------------------
 [091]
-# Rembrant Dept. 2F
+# dept 2f
 Bicycle = false
 MapPosition = 0,7,3
 Outdoor = false
 ShowArea = true
 #-------------------------------
 [092]
-# Rembrant Dept. 3F
+# dept 3f
 Bicycle = false
 MapPosition = 0,7,3
 Outdoor = false
 ShowArea = true
 #-------------------------------
 [093]
-# Rembrant Dept. 4F
+# dept 4f
 Bicycle = false
 MapPosition = 0,7,3
 Outdoor = false
 ShowArea = true
 #-------------------------------
 [094]
-# Rembrant Dept. 5F
+# dept 5f
 Bicycle = false
 MapPosition = 0,7,3
 Outdoor = false

@@ -35,8 +35,8 @@ module EncounterTypes
      "CutEncounter"			   
   ]
   EnctypeChances = [
-     [20,20,10,10,10,10,5,5,5,5],
-     [20,20,10,10,10,10,5,5,5,5],
+     [20,20,10,10,10,10,5,5,5,5], # land
+     [20,20,10,10,10,10,5,5,5,5], # cave
      [40,40,10,10],   # water
      [40,40,10,10],   # rock smash
      [70,30],       # old rod
@@ -49,8 +49,8 @@ module EncounterTypes
      [20,20,10,10,10,10,5,5,5,5],# land night, 8pm to 5am
      [20,20,10,10,10,10,5,5,4,4,1,1],# bug contest
      [30,30,20,20], # wild area (roaming pokemon), also event based
-     [50,30,10,10],  # event based encounters e.g. totems
-     [50,30,20]     # wild pokemon encountered when using cut move
+     [40,20,20,20],  # event based encounters e.g. totems
+     [50,25,25]     # wild pokemon encountered when using cut move
   ]
   EnctypeDensities   = [25,10,10,0,0,0,0,0,0,25,25,25,25,0,0,0]
   EnctypeCompileDens = [ 1, 2, 3,0,0,0,0,0,0, 1, 1, 1, 1,0,0,0]

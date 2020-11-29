@@ -350,3 +350,29 @@ Backtrace:
 'SDK::Scene_Base' line 49 in `main'
 'Main' line 12
 
+===============================================================================
+Fri Nov 27 19:00:34 GMT Standard Time 2020
+-------------------------------------------------------------------------------
+Collecting map data
+Collecting map data completed
+Starting to refresh preview
+Created bitmap
+Skipping panorama
+Drawing preview
+Skipping fog
+Finished refreshing preview.
+Saving "Rembrant City"
+Script 'SDK' line 0: SystemExit occured.
+
+(eval):129:in `exit'exit
+
+Backtrace:
+'SDK' line 0(eval) 129:in `update'
+'SDK' line 0(eval) 129:in `update'
+'SDK::Scene_Base' line 110 in `update_modules'
+'SDK::Scene_Base' line 91 in `main_loop'
+'SDK::Scene_Base' line 47 in `main'
+'SDK::Scene_Base' line 46 in `loop'
+'SDK::Scene_Base' line 49 in `main'
+'Main' line 12
+

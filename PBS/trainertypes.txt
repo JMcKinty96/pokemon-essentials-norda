@@ -31,8 +31,8 @@
 28,SCIENTIST,Scientist,48,,,,Male,,
 29,SUPERNERD,Super Nerd,48,,,,Male,,
 30,TAMER,Tamer,40,,,,Male,,
-31,BLACKBELT,Black Belt,32,,,,Male,,
-32,BATTLEGIRL,Battle Girl,32,,,,Female,,
+31,BLACKBELT,Black Belt,32,,,214 Encounter! Martial Artist,Male,,
+32,BATTLEGIRL,Battle Girl,32,,,214 Encounter! Martial Artist,Female,,
 33,CAMPER,Camper,16,,,,Male,,
 34,PICNICKER,Picnicker,16,,,,Female,,
 35,COOLTRAINER_M,Cool Trainer,60,,,,Male,,
@@ -97,5 +97,4 @@
 95,INTERVIEWERS,Interviewers,144,,,,Mixed,,
 96,RICHBOY,Rich Boy,160,,,,Male,,
 97,HIGHCLASSGIRL,High-Class Girl,150,,,,Female,,
-
-
+98,LEADERLoreQueen,Gym Leader,100,132 Battle! Gym Leader.ogg,133 Gym Leader Defeated!.mp3,,Female,150,

@@ -498,11 +498,13 @@ MultipleForms.register(:ESPURR,{
 
 MultipleForms.copy(:ESPURR,:MEOWSTIC)
 
-MultipleForms.register(:AEGISLASH,{
-  "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
-    next 0
-  }
-})
+
+# dummied out for regional variant
+# MultipleForms.register(:AEGISLASH,{
+  # "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
+    # next 0
+  # }
+# })
 
 MultipleForms.register(:PUMPKABOO,{
   "getFormOnCreation" => proc { |pkmn|
@@ -684,14 +686,32 @@ MultipleForms.copy(:PIKACHU,:EXEGGCUTE,:CUBONE)
 # These species are created when a wild pokemon is found in a specific map
 
 MultipleForms.register(:FLETCHLING,{
-"getFormOnCreation"=>proc{|pokemon|
-   maps=[42,43,81,86]   # Map IDs for regional encounters
-   if $game_map && maps.include?($game_map.map_id)
-     next 1
-   else
-     next 0
-   end
-}
+  "getFormOnCreation" => proc { |pkmn|
+    mapPos = pbGetMetadata($game_map.map_id,MetadataMapPosition)
+    next 1 if mapPos && mapPos[0]==0   # Main region
+    next 0
+  }
 })
 
 MultipleForms.copy(:FLETCHLING,:FLETCHINDER,:TALONFLAME)
+
+MultipleForms.register(:HONEDGE,{
+  "getFormOnCreation" => proc { |pkmn|
+    mapPos = pbGetMetadata($game_map.map_id,MetadataMapPosition)
+    next 1 if mapPos && mapPos[0]==0   # Main region
+    next 0
+  }
+})
+
+MultipleForms.copy(:HONEDGE,:DOUBLADE)
+
+# There are no wild Aegislash so it doesnt need to be defined
+
+# Honedge/Doublade/Aegislash Regional Form AND Stance Change
+
+MultipleForms.register(:AEGISLASH,{
+  "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
+    next 0 if pkmn.form == 2
+	next 1 if pkmn.form == 3
+  }
+})

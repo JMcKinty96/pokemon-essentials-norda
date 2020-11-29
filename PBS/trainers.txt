@@ -94,9 +94,9 @@ Pokemon = DIPDUCK,15
 #-------------------------------
 [ATHLETE,Johnny]
 Pokemon = SIPCHICK,10
-	Moves = WINGATTACK,TAILWIND,WATERGUN
-	Ability = 0
-	Item=ORANBERRY
+    Moves = WINGATTACK,TAILWIND,WATERGUN
+    Ability = 0
+    Item = ORANBERRY
 Pokemon = BIDOOF,12
     Moves = TACKLE,DEFENSECURL,ROLLOUT
     Ability = 0
@@ -314,16 +314,16 @@ Pokemon = MANTINE,40
     Nature = MODEST
 Pokemon = FLOATZEL,40
     Gender = male
-    Moves = WATERFALL,ICEPUNCH,PURSUIT,AQUATAIL
+    Moves = SURF,ICEPUNCH,PURSUIT,AQUATAIL
     Ability = 0
     Item = CHOICEBAND
     Nature = JOLLY
-Pokemon = SEISMITOAD,40
+Pokemon = LANTURN,36
     Gender = male
-    Moves = STEALTHROCK,SCALD,TOXIC,KNOCKOFF
-    Ability = 2
+    Moves = SCALD,VOLTSWITCH,ICEBEAM,SNORE
+    Ability = 0
     Item = LEFTOVERS
-    Nature = BOLD
+    Nature = CALM
 #-------------------------------
 [LEADERPoseidon,Njord]
 Pokemon = TIRTOUGA,30
@@ -350,16 +350,16 @@ Pokemon = MANTINE,34
     Ability = 1
     Item = SITRUSBERRY
     Nature = MODEST
-Pokemon = BUIZEL,35
+Pokemon = BUIZEL,30
     Gender = male
-    Moves = AQUATAIL,ICEPUNCH,BRICKBREAK,AQUAJET
+    Moves = SURF,ICEPUNCH,PURSUIT,AQUATAIL
     Ability = 0
     Nature = JOLLY
-Pokemon = SEISMITOAD,36
+Pokemon = LANTURN,36
     Gender = male
-    Moves = STEALTHROCK,SCALD,TOXIC,KNOCKOFF
-    Ability = 1
-    Nature = BOLD
+    Moves = SCALD,VOLTSWITCH,ICEBEAM,SNORE
+    Ability = 0
+    Nature = CALM
 #-------------------------------
 [LEADERWright,Doctor Wright,1]
 Pokemon = PORYGONZ,40
@@ -370,6 +370,7 @@ Pokemon = PORYGONZ,40
 Pokemon = MAGNEZONE,40
     Moves = VOLTSWITCH,FLASHCANNON,THUNDERBOLT,TRIATTACK
     Ability = 1
+    Item = MAGNEZONEITE
     Nature = MODEST
 Pokemon = KLANG,40
     Moves = GEARGRIND,SHIFTGEAR,REST,SLEEPTALK
@@ -829,3 +830,15 @@ Pokemon = TYROGUE,18
 Pokemon = NOSEPASS,15
 Pokemon = ZUBAT,15
 Pokemon = ONIX,18
+#-------------------------------
+[RICHBOY,Edgar]
+Pokemon = PAWNIARD,20
+#-------------------------------
+[LEADERLoreQueen,Lady Alfhild]
+Pokemon = AZUMARILL,30
+	Ball = 13
+Pokemon = GARDEVOIR,30
+Pokemon = TYRUNT,30
+Pokemon = DOUBLADE,30
+Pokemon = ROSERADE,30
+Pokemon = LAMPENT,30

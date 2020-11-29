@@ -67,7 +67,7 @@ INFINITE_TMS            = true
 # * The number of steps allowed before a Safari Zone game is over (0=infinite).
 # * The number of seconds a Bug Catching Contest lasts for (0=infinite).
 #===============================================================================
-SAFARI_STEPS     = 600
+SAFARI_STEPS     = 0 # 600
 BUG_CONTEST_TIME = 1200
 
 #===============================================================================
@@ -178,7 +178,7 @@ def pbPocketNames; return ["",
 ]; end
 BAG_MAX_POCKET_SIZE  = [0, -1, -1, -1, -1, -1, -1, -1, -1]
 BAG_MAX_PER_SLOT     = 999
-BAG_POCKET_AUTO_SORT = [0, false, false, false, true, true, false, false, false]
+BAG_POCKET_AUTO_SORT = [0, false, false, false, true, true, false, false, true]
 
 #===============================================================================
 # * A set of arrays each containing details of a graphic to be shown on the

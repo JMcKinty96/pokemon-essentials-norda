@@ -218,10 +218,16 @@ class PokeBattle_Battler
     end
     # Stance Change
     if isSpecies?(:AEGISLASH) && isConst?(@ability,PBAbilities,:STANCECHANGE)
-      if move.damagingMove?
-        pbChangeForm(1,_INTL("{1} changed to Blade Forme!",pbThis))
-      elsif isConst?(move.id,PBMoves,:KINGSSHIELD)
+      if move.damagingMove? && @form == 0
+        pbChangeForm(2,_INTL("{1} changed to Blade Forme!",pbThis))
+      elsif isConst?(move.id,PBMoves,:KINGSSHIELD) && @form == 2
         pbChangeForm(0,_INTL("{1} changed to Shield Forme!",pbThis))
+      end
+	  # Norda form
+	  if move.damagingMove? && @form == 1
+        pbChangeForm(3,_INTL("{1} changed to Hammer Forme!",pbThis))
+      elsif isConst?(move.id,PBMoves,:KINGSSHIELD) && @form == 3
+        pbChangeForm(1,_INTL("{1} changed to Shield Forme!",pbThis))
       end
     end
     # Calculate the move's type during this usage

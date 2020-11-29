@@ -206,7 +206,13 @@ class PokeBattle_Battle
         sent = sendOuts[side][0]
         case sent.length
         when 1
-          msg += _INTL("Go! {1}!",@battlers[sent[0]].name)
+#          msg += _INTL("Go! {1}!",@battlers[sent[0]].name)
+		# new - friendship message sending out solo pokemon
+			if @battlers[sent[0]].happiness >= 200
+				msg += _INTL("Go on, {1}, I know you can do it!",@battlers[sent[0]].name)
+			else
+				msg += _INTL("Go! {1}!",@battlers[sent[0]].name)
+			end
         when 2
           msg += _INTL("Go! {1} and {2}!",@battlers[sent[0]].name,@battlers[sent[1]].name)
         when 3
@@ -725,6 +731,10 @@ class PokeBattle_Move
       # Survive a lethal hit with 1 HP effects
       if nonLethal?(user,target)
         damage -= 1
+	# friendship lets them hang on with 1 hp, can happen multiple times
+	  elsif target.happiness >= 200 && target.status!=PBStatuses::SLEEP && @battle.pbRandom(100)<10
+		  target.damageState.friendshipEndured = true
+		  damage -= 1
       elsif target.effects[PBEffects::Endure]
         target.damageState.endured = true
         damage -= 1
@@ -765,6 +775,10 @@ class PokeBattle_Move
       target.pbChangeForm(1,_INTL("{1}'s disguise was busted!",target.pbThis))
     elsif target.damageState.endured
       @battle.pbDisplay(_INTL("{1} endured the hit!",target.pbThis))
+	# friendship message
+	elsif target.damageState.friendshipEndured
+      @battle.pbDisplay(_INTL("{1} endured the hit to make you proud!",target.pbThis))
+	#
     elsif target.damageState.sturdy
       @battle.pbShowAbilitySplash(target)
       if PokeBattle_SceneConstants::USE_ABILITY_SPLASH

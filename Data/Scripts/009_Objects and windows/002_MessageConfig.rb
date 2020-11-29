@@ -295,12 +295,12 @@ def getSkinColor(windowskin,color,isDarkSkin)
      windowskin.width!=128 || windowskin.height!=128
     # Base color, shadow color (these are reversed on dark windowskins)
     textcolors = [
-       "0070F8","78B8E8",   # 1  Blue
-       "E82010","F8A8B8",   # 2  Red
-       "60B048","B0D090",   # 3  Green
+       "0070F8","78B8E8",   # 1  Blue 0070F8 78B8E8
+       "E82010","F8A8B8",   # 2  Red E82010 F8A8B8
+       "60B048","4E5B40",   # 3  Green 60B048 B0D090
        "48D8D8","A8E0E0",   # 4  Cyan
        "D038B8","E8A0E0",   # 5  Magenta
-       "E8D020","F8E888",   # 6  Yellow
+       "E8D020","262105",   # 6  Yellow E8D020 F8E888
        "A0A0A8","D0D0D8",   # 7  Grey
        "F0F0F8","C8C8D0",   # 8  White
        "9040E8","B8A8E0",   # 9  Purple

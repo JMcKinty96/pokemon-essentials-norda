@@ -2161,6 +2161,16 @@ BattleHandlers::EOREffectAbility.add(:SPEEDBOOST,
   }
 )
 
+BattleHandlers::EOREffectAbility.add(:SCOPEOUT,
+  proc { |ability,battler,battle|
+    # A Pokémon's turnCount is 0 if it became active after the beginning of a
+    # round
+    if battler.turnCount>0 && battler.pbCanRaiseStatStage?(PBStats::ACCURACY,battler)
+      battler.pbRaiseStatStageByAbility(PBStats::ACCURACY,1,battler)
+    end
+  }
+)
+
 #===============================================================================
 # EORGainItemAbility handlers
 #===============================================================================

@@ -157,11 +157,13 @@ MultipleForms.register(:SLOWBRO,{
 # Prevent the special Gallade from mega evolving
 MultipleForms.register(:GALLADE,{
   "getSpecificMegaForm" => proc { |pkmn|
-	next 1 if (pkmn.form == 0 && pkmn.hasItem?(:GALLADITE))
-    next
+    next 1 if (pkmn.form == 0 && pkmn.hasItem?(:GALLADITE))
+    next 0
   },
   "getSpecificUnmegaForm" => proc { |pkmn|
     next 0 if pkmn.form == 1
-    next
+    next 
   }
 })
+
+

@@ -143,6 +143,11 @@ class PokeBattle_Battle
         exp = (exp*1.5).floor
       end
     end
+	# Pokemon with high happiness gain more exp
+	
+	if pkmn.happiness >= 200
+		exp = (exp*1.2).floor
+	end
     # Modify Exp gain based on pkmn's held item
     i = BattleHandlers.triggerExpGainModifierItem(pkmn.item,pkmn,exp)
     if i<0
@@ -155,7 +160,7 @@ class PokeBattle_Battle
     return if expGained<=0
     # "Exp gained" message
     if showMessages
-      if isOutsider
+      if isOutsider || pkmn.happiness >= 200
         pbDisplayPaused(_INTL("{1} got a boosted {2} Exp. Points!",pkmn.name,expGained))
       else
         pbDisplayPaused(_INTL("{1} got {2} Exp. Points!",pkmn.name,expGained))

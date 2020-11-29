@@ -133,6 +133,12 @@ class PokeBattle_Battler
     if numHits>0
       @battle.eachBattler { |b| b.pbItemEndOfMoveCheck }
     end
+	# new - mega fist recoil damage
+	if move.punchingMove? && user.hasActiveAbility?(:MEGAFIST)
+		user.pbReduceHP(user.totalhp/10)
+		battle.pbDisplay(_INTL("{1} lost some of its HP due to Mega Fist!", user.pbThis))
+		user.pbFaint if user.fainted?
+	end
   end
 
   # Everything in this method is negated by Sheer Force.

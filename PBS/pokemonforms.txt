@@ -1035,9 +1035,10 @@ FormName = Rogue Gallade
 Type1 = DARK
 Type2 = FIGHTING
 BaseStats = 72,125,65,90,65,105
-Pokedex = This Gallade is a rogue defender of justice, acting more pragmatically than others of its kind.
+Pokedex = This Gallade is a rogue defender of justice, acting more pragmatically than others of its kind. It is incompatible with Mega Evolution.
 Abilities = ROGUEJUSTICE
-HiddenAbility = SCRAPPY
+HiddenAbility = ROGUEJUSTICE
+Moves = 0,SLASH,1,SLASH,1,SUCKERPUNCH,1,CLOSECOMBAT,1,LEAFBLADE,1,NIGHTSLASH,1,LEER,1,CONFUSION,1,DOUBLETEAM,1,TELEPORT,4,CONFUSION,6,DOUBLETEAM,9,TELEPORT,11,QUICKGUARD,14,PURSUIT,17,AERIALACE,19,HEALPULSE,23,WIDEGUARD,26,SWORDSDANCE,31,PSYCHOCUT,35,HELPINGHAND,40,FEINT,44,FALSESWIPE,49,PROTECT,53,CLOSECOMBAT,58,SUCKERPUNCH,64,PURSUIT
 BattlerPlayerY = 11
 BattlerEnemyY = 15
 #-------------------------------
@@ -1917,10 +1918,6 @@ Kind = Hammer
 Pokedex = This Pokémon is often found around power plants and near the places that lightning strikes.
 Evolutions = AEGISLASH,Item,THUNDERSTONE
 #-------------------------------
-[AEGISLASH,2]
-FormName = Blade Forme
-BaseStats = 60,150,50,60,150,50
-#-------------------------------
 [AEGISLASH,1]
 FormName = Norda Aegislash (Shield)
 Type1 = ELECTRIC
@@ -1932,6 +1929,10 @@ Pokedex = This Pokémon only lets itself be carried by warriors who are worthy. 
 BattlerPlayerY = 9
 BattlerEnemyY = 13
 #-------------------------------
+[AEGISLASH,2]
+FormName = Blade Forme
+BaseStats = 60,150,50,60,150,50
+#-------------------------------
 [AEGISLASH,3]
 FormName = Norda Aegislash (Hammer)
 BaseStats = 60,150,50,60,150,50
@@ -1940,7 +1941,7 @@ Pokedex = This Pokémon only lets itself be carried by warriors who are worthy. 
 [OMNIDRAGON,1]
 FormName = Alpha Primal Omnimungandr
 BaseStats = 500,110,125,80,110,125
-Abilities = MAGICBOUNCE
+Abilities = WORLDEATER
 Height = 4.5
 Weight = 200.0
 Kind = World Eater
