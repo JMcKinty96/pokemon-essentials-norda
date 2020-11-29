@@ -1868,6 +1868,7 @@ Color = Blue
 Pokedex = These friendly Pokemon send signals to one another with beautiful chirps and tail-feather movements. They love cold weather.
 BattlerPlayerY = 15
 BattlerEnemyY = 18
+Evolutions = FLETCHINDER,Level,17
 #-------------------------------
 [FLETCHINDER,1]
 FormName = Norda Fletchinder
@@ -1877,7 +1878,7 @@ BaseStats = 62,62,56,85,70,55
 BaseEXP = 120
 Abilities = SNOWCLOAK
 HiddenAbility = FROSTWINGS
-Moves = 1,TACKLE,1,GROWL,6,QUICKATTACK,10,PECK,13,AGILITY,16,FLAIL,17,POWDERSNOW,25,ROOST,27,RAZORWIND,31,NATURALGIFT,38,HAIL,42,ACROBATICS,46,ICYWIND,51,TAILWIND,55,STEELWING,60,BRAVEBIRD,65,ICEBEAM
+Moves = 0,POWDERSNOW,1,TACKLE,1,GROWL,6,QUICKATTACK,10,PECK,13,AGILITY,16,FLAIL,17,POWDERSNOW,25,ROOST,27,RAZORWIND,31,NATURALGIFT,38,HAIL,42,ACROBATICS,46,ICYWIND,51,TAILWIND,55,STEELWING,60,BRAVEBIRD,65,ICEBEAM
 Color = Blue
 Kind = Snowy Bird
 Pokedex = This northern bird loves the cold weather. It is known to fly faster in cold air currents than warm ones.
@@ -1891,7 +1892,7 @@ Type2 = FLYING
 BaseStats = 78,73,72,126,82,70
 Abilities = SNOWCLOAK
 HiddenAbility = FROSTWINGS
-Moves = 1,BRAVEBIRD,1,FLAREBLITZ,1,TACKLE,1,GROWL,6,QUICKATTACK,10,PECK,13,AGILITY,16,FLAIL,17,POWDERSNOW,25,ROOST,27,RAZORWIND,31,NATURALGIFT,39,HAIL,44,ACROBATICS,49,ICYWIND,55,TAILWIND,60,STEELWING,64,BRAVEBIRD,72,ICEBEAM
+Moves = 0,HAIL,1,BRAVEBIRD,1,DOUBLEEDGE,1,TACKLE,1,GROWL,6,QUICKATTACK,10,PECK,13,AGILITY,16,FLAIL,17,POWDERSNOW,25,ROOST,27,RAZORWIND,31,NATURALGIFT,39,HAIL,44,ACROBATICS,49,ICYWIND,55,TAILWIND,60,STEELWING,64,BRAVEBIRD,72,ICEBEAM
 Color = Blue
 Kind = Frostbite
 Pokedex = Talonflame adapted to the Norda region, and it now burns with cold instead of fire. It preys on smaller birds and large field rodents.

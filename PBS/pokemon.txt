@@ -22711,7 +22711,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 33
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = GOURGEIST,Trade,
+Evolutions = GOURGEIST,Level,30,GOURGEIST,Trade,
 #-------------------------------
 [711]
 Name = Gourgeist
