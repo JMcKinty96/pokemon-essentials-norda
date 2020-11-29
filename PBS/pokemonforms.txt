@@ -1936,6 +1936,7 @@ BaseStats = 60,150,50,60,150,50
 [AEGISLASH,3]
 FormName = Norda Aegislash (Hammer)
 BaseStats = 60,150,50,60,150,50
+Kind = Divine Hammer
 Pokedex = This Pokémon only lets itself be carried by warriors who are worthy. For the unworthy, it weighs an infinite amount.
 #-------------------------------
 [OMNIDRAGON,1]

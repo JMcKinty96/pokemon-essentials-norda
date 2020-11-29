@@ -687,9 +687,10 @@ MultipleForms.copy(:PIKACHU,:EXEGGCUTE,:CUBONE)
 
 MultipleForms.register(:FLETCHLING,{
   "getFormOnCreation" => proc { |pkmn|
+    next 1 if pkmn.formSimple==1
     mapPos = pbGetMetadata($game_map.map_id,MetadataMapPosition)
     next 1 if mapPos && mapPos[0]==0   # Main region
-    next 0
+    next 
   }
 })
 
@@ -697,15 +698,14 @@ MultipleForms.copy(:FLETCHLING,:FLETCHINDER,:TALONFLAME)
 
 MultipleForms.register(:HONEDGE,{
   "getFormOnCreation" => proc { |pkmn|
+	next 1 if pkmn.formSimple>=2
     mapPos = pbGetMetadata($game_map.map_id,MetadataMapPosition)
     next 1 if mapPos && mapPos[0]==0   # Main region
-    next 0
+    next 
   }
 })
 
 MultipleForms.copy(:HONEDGE,:DOUBLADE)
-
-# There are no wild Aegislash so it doesnt need to be defined
 
 # Honedge/Doublade/Aegislash Regional Form AND Stance Change
 
@@ -713,5 +713,12 @@ MultipleForms.register(:AEGISLASH,{
   "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
     next 0 if pkmn.form == 2
 	next 1 if pkmn.form == 3
+  },
+  "getFormOnCreation" => proc { |pkmn|
+	next 1 if pkmn.formSimple>=1
+    mapPos = pbGetMetadata($game_map.map_id,MetadataMapPosition)
+    next 1 if mapPos && mapPos[0]==0   # Main region
+    next 
   }
 })
+
