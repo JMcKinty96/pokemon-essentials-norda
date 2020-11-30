@@ -2040,3 +2040,9 @@ BattlerEnemyY=11
 BattlerPlayerY=7
 BattlerAltitude=0
 #-------------------------------
+[BRANNSKELL,1]
+FormName = Dragon Forme
+Type1 = FIRE
+Type2 = DRAGON
+Pokedex = Brannskell can't keep up the facade of being a dragon forever, but, at least for a short while, it will do whatever it can to act like one.
+#-------------------------------

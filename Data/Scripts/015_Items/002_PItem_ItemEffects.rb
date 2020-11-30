@@ -788,6 +788,25 @@ ItemHandlers::UseOnPokemon.add(:RARECANDY,proc { |item,pkmn,scene|
   next true
 })
 
+# Rare Candy XL
+
+ItemHandlers::UseOnPokemon.add(:RARECANDYXL,proc { |item,pkmn,scene|
+  if pkmn.level>=PBExperience.maxLevel || pkmn.shadowPokemon?
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  i = 0
+  while i < 3
+	pbChangeLevel(pkmn,pkmn.level+1,scene)
+	if pkmn.level>=PBExperience.maxLevel
+		i = 4
+	end
+	i += 1
+  end
+  scene.pbHardRefresh
+  next true
+})
+
 ItemHandlers::UseOnPokemon.add(:POMEGBERRY,proc { |item,pkmn,scene|
   next pbRaiseHappinessAndLowerEV(pkmn,scene,PBStats::HP,[
      _INTL("{1} adores you! Its base HP fell!",pkmn.name),
@@ -1112,6 +1131,67 @@ ItemHandlers::UseOnPokemon.add(:ABILITYCAPSULE,proc { |item,pkmn,scene|
   end
   newabil = (pkmn.abilityIndex+1)%2
   newabilname = PBAbilities.getName((newabil==0) ? abil1 : abil2)
+  if scene.pbConfirm(_INTL("Would you like to change {1}'s Ability to {2}?",
+     pkmn.name,newabilname))
+    pkmn.setAbility(newabil)
+    scene.pbRefresh
+    scene.pbDisplay(_INTL("{1}'s Ability changed to {2}!",pkmn.name,
+       PBAbilities.getName(pkmn.ability)))
+    next true
+  end
+  next false
+})
+
+# DREAMCAPSULE
+ItemHandlers::UseOnPokemon.add(:DREAMCAPSULE,proc { |item,pkmn,scene|
+	abils = pkmn.getAbilityList
+	abil1=0; abil2=0; abil3=0; # abil4=0; abil5=0
+	for i in abils
+		abil1 = i[0] if i[1]==0
+		abil2 = i[0] if i[1]==1
+		abil3=i[0] if i[1]==2
+	end
+	if abil3<=0 || pkmn.hasHiddenAbility?
+		scene.pbDisplay(_INTL("It won't have any effect."))
+		next false # exit without consuming the item
+	end
+	pkmnSpecies = pkmn.species
+	if isConst?(pkmnSpecies,PBSpecies,:ZYGARDE)
+		scene.pbDisplay(_INTL("That doesn't work on this species."))
+		next false
+	end
+	newabil = 2
+	newabilname=PBAbilities.getName(abil3)
+	if scene.pbConfirm(_INTL("Would you like to change {1}'s Ability to {2}?",
+		pkmn.name,newabilname))
+			# change ability 
+		pkmn.setAbility(newabil)
+			# small happiness change
+        pkmn.changeHappiness("powder")
+		scene.pbRefresh
+		scene.pbDisplay(_INTL("{1}'s Ability changed to {2}!",pkmn.name,
+			PBAbilities.getName(pkmn.ability)))
+		scene.pbDisplay(_INTL("{1} seems slightly uncomfortable after using the capsule...",pkmn.name))
+
+		next true
+	end
+	next false
+})
+
+# REVERSIONCAPSULE
+ItemHandlers::UseOnPokemon.add(:REVERSIONCAPSULE,proc { |item,pkmn,scene|
+  abils = pkmn.getAbilityList
+  abil1 = 0; abil2 = 0
+  for i in abils
+    abil1 = i[0] if i[1]==0
+    abil2 = i[0] if i[1]==1
+  end
+  if !pkmn.hasHiddenAbility? || pkmn.isSpecies?(:ZYGARDE)
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  newabil = 0
+  newabilname=PBAbilities.getName(abil1)
   if scene.pbConfirm(_INTL("Would you like to change {1}'s Ability to {2}?",
      pkmn.name,newabilname))
     pkmn.setAbility(newabil)

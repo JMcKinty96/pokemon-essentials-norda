@@ -13,7 +13,7 @@ EffortPoints = 0,0,0,0,1,0
 Rareness = 45
 Happiness = 70
 Abilities = OVERGROW
-HiddenAbility = CHLOROPHYLL,SCOPEOUT
+HiddenAbility = CHLOROPHYLL,DRAGONDREAM
 Moves = 1,TACKLE,3,GROWL,7,LEECHSEED,9,VINEWHIP,13,POISONPOWDER,13,SLEEPPOWDER,15,TAKEDOWN,19,RAZORLEAF,21,SWEETSCENT,25,GROWTH,27,DOUBLEEDGE,31,WORRYSEED,33,SYNTHESIS,37,SEEDBOMB
 EggMoves = AMNESIA,CHARM,CURSE,ENDURE,GIGADRAIN,GRASSWHISTLE,GRASSYTERRAIN,INGRAIN,LEAFSTORM,MAGICALLEAF,NATUREPOWER,PETALDANCE,POWERWHIP,SKULLBASH,SLUDGE
 Compatibility = Monster,Grass
@@ -26157,6 +26157,39 @@ BattlerShadowSize = 2
 Evolutions = 
 #-------------------------------
 [821]
+Name = Brannskell
+InternalName = BRANNSKELL
+Type1 = FIRE
+Type2 = BUG
+BaseStats = 45,85,60,75,65,45
+GenderRate = Female75Percent
+GrowthRate = Medium
+BaseEXP = 95
+EffortPoints = 0,2,0,0,0,0
+Rareness = 45
+Happiness = 55
+Abilities = DRAGONDREAM
+Moves= 1,EMBER,1,TACKLE,5,DRAGONDANCE,10,PROTECT,15,INCINERATE,20,DRAGONDANCE,25,BUGBITE,30,ENDURE,35,IRONDEFENSE,40,LEECHLIFE,40,DRAGONDANCE,45,TAKEDOWN,50,BUGBUZZ,55,OVERHEAT,60,EXPLOSION,60,DRAGONDANCE,80,DRAGONDANCE
+EggMoves = FIRESPIN,HEADSMASH,REVENGE,WIDEGUARD,DRAGONCLAW,DRAGONTAIL,DRAGONRAGE
+Compatibility = Field,Dragon
+StepsToHatch = 3240
+Height = 0.6
+Weight = 42.1
+Color = Blue
+Shape = 12
+Habitat = RoughTerrain
+Kind = Cinder Snake
+Pokedex = Brannskell are aggressively territorial in the wild. However, they are very tame and friendly towards trainers.
+WildItemUncommon = ORANBERRY
+BattlerPlayerX = 0
+BattlerPlayerY = 23
+BattlerEnemyX = 0
+BattlerEnemyY = 28
+BattlerShadowX = 0
+BattlerShadowSize = 2
+Evolutions =
+#-------------------------------
+[822]
 Name = Omnimungandr
 InternalName = OMNIDRAGON
 Type1 = DRAGON
@@ -26186,7 +26219,7 @@ BattlerShadowX = 0
 BattlerShadowSize = 2
 Evolutions = 
 #-------------------------------
-[822]
+[823]
 Name = Locomortis
 InternalName = LOCOMORTIS
 Type1 = STEEL

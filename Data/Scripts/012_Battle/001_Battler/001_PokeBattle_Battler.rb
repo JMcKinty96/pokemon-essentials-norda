@@ -357,7 +357,7 @@ class PokeBattle_Battler
       :ZENMODE,
       # Abilities intended to be inherent properties of a certain species
       :COMATOSE,
-      :RKSSYSTEM
+      :RKSSYSTEM,
     ]
     abilityBlacklist.each do |a|
       return true if isConst?(abil, PBAbilities, a)
@@ -385,7 +385,9 @@ class PokeBattle_Battler
       :IMPOSTER,
       # Abilities intended to be inherent properties of a certain species
       :COMATOSE,
-      :RKSSYSTEM
+      :RKSSYSTEM,
+	  # Custom
+	  :DRAGONDREAM
     ]
     abilityBlacklist.each do |a|
       return true if isConst?(abil, PBAbilities, a)

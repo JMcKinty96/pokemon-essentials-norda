@@ -836,9 +836,13 @@ Pokemon = PAWNIARD,20
 #-------------------------------
 [LEADERLoreQueen,Lady Alfhild]
 Pokemon = AZUMARILL,30
-	Ball = 13
+    Ball = 13
 Pokemon = GARDEVOIR,30
 Pokemon = TYRUNT,30
 Pokemon = DOUBLADE,30
 Pokemon = ROSERADE,30
 Pokemon = LAMPENT,30
+#-------------------------------
+[PROFESSOR,Type Tester]
+Pokemon = BULBASAUR,5
+    Moves = DAZZLINGGLEAM,SPARK

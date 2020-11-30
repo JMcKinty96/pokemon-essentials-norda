@@ -203,8 +203,8 @@
 201,CHILLDRIVE,Chill Drive,Chill Drives,1,1000,"A cassette to be held by Genesect. It changes Techno Blast to an Ice-type move.",0,0,0,
 202,EVERSTONE,Everstone,Everstones,1,3000,"An item to be held by a Pokémon. The Pokémon holding this peculiar stone is prevented from evolving.",0,0,0,
 203,DRAGONSCALE,Dragon Scale,Dragon Scales,1,2000,"A thick and tough scale. Dragon-type Pokémon may be holding this item when caught.",0,0,0,
-204,UPGRADE,Upgrade,Upgrades,1,2000,"A transparent device filled with all sorts of data. It was produced by Silph Co.",0,0,0,
-205,DUBIOUSDISC,Dubious Disc,Dubious Discs,1,2000,"A transparent device overflowing with dubious data.  Its producer is unknown.",0,0,0,
+204,UPGRADE,Upgrade,Upgrades,1,2000,"A CD-ROM installation disc for updating Porygon. It was produced by Silph Co.",0,0,0,
+205,DUBIOUSDISC,Dubious Disc,Dubious Discs,1,2000,"A CD-ROM installation disc with questionable software. Its producer is unknown.",0,0,0,
 206,PROTECTOR,Protector,Protectors,1,2000,"A protective item of some sort. It is extremely stiff and heavy. It is loved by a certain Pokémon.",0,0,0,
 207,ELECTIRIZER,Electirizer,Electirizers,1,2000,"A box packed with a tremendous amount of electric energy. It is loved by a certain Pokémon.",0,0,0,
 208,MAGMARIZER,Magmarizer,Magmarizers,1,2000,"A box packed with a tremendous amount of magma energy. It is loved by a certain Pokémon.",0,0,0,
@@ -647,8 +647,8 @@
 632,NLUNARIZER,N-Lunarizer,N-Lunarizers,8,0,"A machine to fuse Necrozma, which needs light, and Lunala.",5,0,6,
 633,MEGARING,Mega Ring,Mega Rings,8,0,"This ring contains an untold power that somehow enables Pokémon carrying Mega Stones to Mega Evolve.",0,0,6,
 #-------------------------------
-700,DREAMCAPSULE,Dream Capsule,Dream Capsules,1,3000,"A capsule that forces a Pokémon to have its first Hidden Ability.",1,0,0,
-701,REVERSIONCAPSULE,Reversion Capsule,Reversion Capsules,1,500,"A capsule that causes a Pokémon with a Hidden Ability to revert to its first basic Ability.",1,0,0,
+700,DREAMCAPSULE,Dream Capsule,Dream Capsules,2,12500,"A capsule that forces a Pokémon to have its first Hidden Ability.",1,0,0,
+701,REVERSIONCAPSULE,Reversion Capsule,Reversion Capsules,2,1500,"A capsule that causes a Pokémon with a Hidden Ability to revert to its first basic Ability.",1,0,0,
 702,SHINYCAPSULE,Shiny Capsule,Shiny Capsules,1,99999,"A ludicrously rare item that makes a Pokémon shiny permanently.",1,0,0,
 703,MAGNEZONEITE,Magnezoneite,Magnezoneites,1,1000,"One of the mysterious Mega Stones. Have Magnezone hold it, and this stone will enable it to Mega Evolve.",0,0,12,
 704,BISHARPNITE,Bisharpnite,Bisharpnites,1,1000,"One of the mysterious Mega Stones. Have Bisharp hold it, and this stone will enable it to Mega Evolve.",0,0,12,
@@ -669,4 +669,6 @@
 726,EXPALLOFF,Exp All,Exp Alls,8,0,"Turned OFF. An item that gives all party members experience points (EXP).",2,0,6
 #-------------------------------
 727,DRAGONSTONE,DracoStone,Draco Stones,1,2200,"A stone with a dark purple tint. It makes certain species of Pokémon evolve.",1,0,0,
-717,MINTYFRESH,MintyFresh Toothpaste,MintyFresh Toothpastes,2,300,"A delightful tube of Minty Fresh brand toothpaste. It restores the HP of one Pokémon by 60 points.",1,1,0,
+728,MINTYFRESH,MintFrshTthpste,MintFrshTthpstes,2,300,"A delightful tube of Minty Fresh brand toothpaste. It restores the HP of one Pokémon by 60 points.",1,1,0,
+729,RARECANDYXL,Rare Candy XL,Rare Candy XLs,2,30000,"A candy that is packed with energy. It raises the level of a single Pokémon by three.",1,0,0,
+#-------------------------------
