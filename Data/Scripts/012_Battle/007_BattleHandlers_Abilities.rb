@@ -1107,7 +1107,7 @@ BattleHandlers::DamageCalcUserAbility.add(:IRONFIST,
 
 BattleHandlers::DamageCalcUserAbility.add(:MEGAFIST,
   proc { |ability,user,target,move,mults,baseDmg,type|
-    mults[BASE_DMG_MULT] *= 1.4 if move.punchingMove?
+    mults[BASE_DMG_MULT] *= 1.5 if move.punchingMove?
   }
 )
 

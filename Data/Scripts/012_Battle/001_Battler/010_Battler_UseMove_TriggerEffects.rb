@@ -135,7 +135,7 @@ class PokeBattle_Battler
     end
 	# new - mega fist recoil damage
 	if move.punchingMove? && user.hasActiveAbility?(:MEGAFIST)
-		user.pbReduceHP(user.totalhp/10)
+		user.pbReduceHP(user.totalhp/8)
 		battle.pbDisplay(_INTL("{1} lost some of its HP due to Mega Fist!", user.pbThis))
 		user.pbFaint if user.fainted?
 	end

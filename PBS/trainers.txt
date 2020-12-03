@@ -359,6 +359,7 @@ Pokemon = LANTURN,36
     Gender = male
     Moves = SCALD,VOLTSWITCH,ICEBEAM,SNORE
     Ability = 0
+	Item = SITRUSBERRY
     Nature = CALM
 #-------------------------------
 [LEADERWright,Doctor Wright,1]
@@ -422,6 +423,52 @@ Pokemon = DITTO,35
     Ability = 2
     Item = EXPERTBELT
     Nature = RELAXED
+#-------------------------------
+[LEADERLoreQueen,Lady Alfhild,1]
+Pokemon = AZUMARILL,40
+	Moves = AQUAJET,KNOCKOFF,PLAYROUGH,BELLYDRUM
+    Ball = 13
+Pokemon = BERSERKOAL,40
+	Moves = DRAGONDANCE,DRAGONTAIL,PROTECT,FLAMEWHEEL
+	Item = HABANBERRY
+Pokemon = GARDEVOIR,40
+	Moves = MOONBLAST,PSYSHOCK,WILLOWISP,CALMMIND
+	Ability = 1
+	Item = GARDEVOIRITE
+Pokemon = TYRANTRUM,40
+	Moves = STONEEDGE,EARTHQUAKE,ZENHEADBUTT
+	Ability = 2
+	Item = YACHEBERRY
+Pokemon = AEGISLASH,40
+	Moves = SWORDSDANCE,IRONHEAD,SPARK,KINGSSHIELD
+	Item = LEFTOVERS
+	Form = 1
+Pokemon = LAMPENT,40
+	Moves = CALMMIND,FLAMETHROWER,SHADOWBALL
+	Item = EVIOLITE
+	Ability = 1
+#-------------------------------
+[LEADERLoreQueen,Lady Alfhild]
+Pokemon = AZUMARILL,30
+	Moves = AQUAJET,KNOCKOFF,PLAYROUGH
+    Ball = 13
+Pokemon = BRANNSKELL,30
+	Ball = 21
+	Moves = DRAGONDANCE,DRAGONCLAW,PROTECT,FLAMEWHEEL
+Pokemon = GARDEVOIR,30
+	Moves = MOONBLAST,PSYSHOCK,WILLOWISP,CALMMIND
+	Ability = 1
+Pokemon = TYRUNT,30
+	Moves = STONEEDGE,EARTHQUAKE,ZENHEADBUTT
+	Ability = 2
+	Item = BERRYJUICE
+Pokemon = DOUBLADE,30
+	Moves = SWORDSDANCE,IRONHEAD,SPARK
+	Item = EVIOLITE
+	Form = 1
+Pokemon = LAMPENT,30
+	Moves = CALMMIND,FLAMETHROWER,SHADOWBALL
+	Ability = 1
 #-------------------------------
 [PICNICKER,Susie]
 Pokemon = MEOWTH,18
@@ -833,15 +880,6 @@ Pokemon = ONIX,18
 #-------------------------------
 [RICHBOY,Edgar]
 Pokemon = PAWNIARD,20
-#-------------------------------
-[LEADERLoreQueen,Lady Alfhild]
-Pokemon = AZUMARILL,30
-    Ball = 13
-Pokemon = GARDEVOIR,30
-Pokemon = TYRUNT,30
-Pokemon = DOUBLADE,30
-Pokemon = ROSERADE,30
-Pokemon = LAMPENT,30
 #-------------------------------
 [PROFESSOR,Type Tester]
 Pokemon = BULBASAUR,5

@@ -191,8 +191,9 @@ BAG_POCKET_AUTO_SORT = [0, false, false, false, true, true, false, false, true]
 #      - The graphic will always (true) or never (false) be shown on a wall map.
 #===============================================================================
 REGION_MAP_EXTRAS = [
-  [0, 51, 16, 15, "mapHiddenBerth", false],
-  [0, 52, 20, 14, "mapHiddenFaraday", false]
+#  [0, 51, 16, 15, "mapHiddenBerth", false],
+	[0, 51, 3, 1, "mapHiddenFairyGrotto", false],
+	[0, 52, 20, 14, "mapHiddenFaraday", false]
 ]
 
 #===============================================================================

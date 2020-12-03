@@ -384,9 +384,9 @@ class PokeBattle_Battler
       end
     end
 	# Dragon Dream for BRANNSKELL
-	if user.hasActiveAbility?(:DRAGONDREAM) && !move.snatched && user.pbHasType?(:BUG) && isConst?(move.calcType,PBTypes,:DRAGON)
+	if user.hasActiveAbility?(:DRAGONDREAM) && !move.snatched && user.pbHasType?(:ROCK) && isConst?(move.calcType,PBTypes,:DRAGON)
 		@battle.pbShowAbilitySplash(user)
-		typeName1 = PBTypes.getName(:BUG)
+		typeName1 = PBTypes.getName(:ROCK)
 		typeName2 = PBTypes.getName(:DRAGON)
         # Changes to fire/dragon form
 		pbChangeForm(1,_INTL("{1} gave up its {2} type to become {3} type!",user.pbThis,typeName1, typeName2))
