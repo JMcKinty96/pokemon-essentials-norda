@@ -358,6 +358,8 @@ class PokeBattle_Battler
       # Abilities intended to be inherent properties of a certain species
       :COMATOSE,
       :RKSSYSTEM,
+	  #
+	  :WORLDEATER
     ]
     abilityBlacklist.each do |a|
       return true if isConst?(abil, PBAbilities, a)
@@ -387,7 +389,8 @@ class PokeBattle_Battler
       :COMATOSE,
       :RKSSYSTEM,
 	  # Custom
-	  :DRAGONDREAM
+	  :DRAGONDREAM,
+	  :WORLDEATER
     ]
     abilityBlacklist.each do |a|
       return true if isConst?(abil, PBAbilities, a)
@@ -458,7 +461,7 @@ class PokeBattle_Battler
   end
 
   def hasMoldBreaker?
-    return hasActiveAbility?([:MOLDBREAKER, :TERAVOLT, :TURBOBLAZE])
+    return hasActiveAbility?([:MOLDBREAKER, :TERAVOLT, :TURBOBLAZE, :WORLDEATER])
   end
 
   def canChangeType?

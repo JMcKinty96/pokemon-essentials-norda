@@ -254,5 +254,5 @@
 253,MEGAFIST,Mega Fist,"Boosts the power of all punching attacks by 50%, but at the cost of some HP on each hit."
 254,IMPERIALRULE,Imperial Rule,"This Pokémon ignores stat changes that don't benefit itself, and other Pokémon cannot lower its stats."
 255,ROGUEJUSTICE,Rogue Justice,"Powers up Dark-type moves in a pinch."
-256,WORLDEATER,World Eater,"Reduces super-effective damage. Moves can be used regardless of Abilities. Immune to one-hit KO moves."
-257,DRAGONDREAM,Dragon Dream,"Wishing to be a dragon, when the Pokémon uses a Dragon-type move it gives up its Bug-type to become Dragon-type."
+256,WORLDEATER,World Eater,"Reduces super-effective damage. Moves can be used regardless of Abilities. Immune to one-hit KO moves. Immune to Endeavor."
+257,DRAGONDREAM,Dragon Dream,"Wishing to be a dragon, when the Pokémon uses a Dragon-type move it gives up its Rock-type to become Dragon-type."

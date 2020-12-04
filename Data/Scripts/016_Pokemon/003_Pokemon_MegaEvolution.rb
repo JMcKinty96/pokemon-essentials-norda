@@ -114,6 +114,14 @@ MultipleForms.register(:KYOGRE,{
   }
 })
 
+MultipleForms.register(:OMNIDRAGON,{
+  "getPrimalForm" => proc { |pkmn|
+    next 1 if pkmn.hasItem?(:RAINBOWORB) && pkmn.happiness >= 200
+	next 2 if pkmn.hasItem?(:CRACKEDRAINBOWORB)
+    next
+  }
+})
+
 #===============================================================================
 # Form Specific Mega Evolution
 # To prevent Galarian Slowbro from Mega Evolving

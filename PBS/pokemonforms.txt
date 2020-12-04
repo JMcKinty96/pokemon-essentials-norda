@@ -1941,22 +1941,22 @@ Kind = Divine Hammer
 Pokedex = This Pokémon only lets itself be carried by warriors who are worthy. For the unworthy, it weighs an infinite amount.
 #-------------------------------
 [OMNIDRAGON,1]
-FormName = Alpha Primal Omnimungandr
-BaseStats = 500,110,125,80,110,125
+FormName = Alpha Primal Omnidragon
+BaseStats = 1000,110,125,80,110,125
 Abilities = WORLDEATER
-Height = 4.5
-Weight = 200.0
+Height = 9.5
+Weight = 500.0
 Kind = World Eater
-Pokedex = At full strength, Omnimungandr was a threat to the world, and required the cooperation of various warriors and the Aura Trio to take it down.
+Pokedex = At full strength, Omnidragon was a threat to the world, and required the cooperation of various warriors and the Aura Trio to take it down.
 #-------------------------------
 [OMNIDRAGON,2]
-FormName = Zeta Primal Omnimungandr
+FormName = Zeta Primal Omnidragon
 BaseStats = 100,100,120,80,100,120
 BaseEXP = 300
 Abilities = MAGICBOUNCE
 Height = 5.0
 Weight = 500.0
-Pokedex = With the Rainbow Orb cracked, Omnimungandr has lost some of its full potential, but it is still a powerful creature of legend.
+Pokedex = With the Rainbow Orb cracked, Omnidragon has lost some of its full potential, but it is still a powerful creature of legend.
 #-------------------------------
 # New Megas
 #-------------------------------

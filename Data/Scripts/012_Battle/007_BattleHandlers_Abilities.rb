@@ -1322,6 +1322,8 @@ BattleHandlers::DamageCalcTargetAbility.add(:FILTER,
 
 BattleHandlers::DamageCalcTargetAbility.copy(:FILTER,:SOLIDROCK)
 
+BattleHandlers::DamageCalcTargetAbility.copy(:FILTER,:WORLDEATER)
+
 BattleHandlers::DamageCalcTargetAbility.add(:UNBREAKABLE,
   proc { |ability,user,target,move,mults,baseDmg,type|
     if PBTypes.superEffective?(target.damageState.typeMod)
@@ -2502,6 +2504,14 @@ BattleHandlers::AbilityOnSwitchIn.add(:PRESSURE,
   proc { |ability,battler,battle|
     battle.pbShowAbilitySplash(battler)
     battle.pbDisplay(_INTL("{1} is exerting its pressure!",battler.pbThis))
+    battle.pbHideAbilitySplash(battler)
+  }
+)
+
+BattleHandlers::AbilityOnSwitchIn.add(:WORLDEATER,
+  proc { |ability,battler,battle|
+    battle.pbShowAbilitySplash(battler)
+    battle.pbDisplay(_INTL("{1} is exerting its power!",battler.pbThis))
     battle.pbHideAbilitySplash(battler)
   }
 )

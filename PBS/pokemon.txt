@@ -26228,7 +26228,7 @@ BattlerShadowSize = 2
 Evolutions =
 #-------------------------------
 [823]
-Name = Omnimungandr
+Name = Omnidragon
 InternalName = OMNIDRAGON
 Type1 = DRAGON
 Type2 = FAIRY
@@ -26262,7 +26262,7 @@ Name = Locomortis
 InternalName = LOCOMORTIS
 Type1 = STEEL
 Type2 = GHOST
-BaseStats = 80,95,90,150,95,90
+BaseStats = 110,95,90,150,95,90
 GenderRate = Genderless
 GrowthRate = Fluctuating
 BaseEXP = 261

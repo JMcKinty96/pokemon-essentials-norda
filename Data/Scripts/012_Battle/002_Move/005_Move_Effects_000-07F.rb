@@ -2327,6 +2327,19 @@ class PokeBattle_Move_06E < PokeBattle_FixedDamageMove
       @battle.pbDisplay(_INTL("But it failed!"))
       return true
     end
+	#
+	if target.hasActiveAbility?(:WORLDEATER)
+	  @battle.pbShowAbilitySplash(target)
+      if PokeBattle_SceneConstants::USE_ABILITY_SPLASH
+        @battle.pbDisplay(_INTL("But it failed to affect {1}!",target.pbThis(true)))
+      else
+        @battle.pbDisplay(_INTL("But it failed to affect {1} because of its {2}!",
+           target.pbThis(true),target.abilityName))
+      end
+      @battle.pbHideAbilitySplash(target)
+      return true
+	end
+	#
     return false
   end
 
@@ -2363,7 +2376,7 @@ class PokeBattle_Move_070 < PokeBattle_FixedDamageMove
       @battle.pbDisplay(_INTL("{1} is unaffected!",target.pbThis))
       return true
     end
-    if target.hasActiveAbility?(:STURDY) && !@battle.moldBreaker
+    if target.hasActiveAbility?([:STURDY,:WORLDEATER]) && !@battle.moldBreaker
       @battle.pbShowAbilitySplash(target)
       if PokeBattle_SceneConstants::USE_ABILITY_SPLASH
         @battle.pbDisplay(_INTL("But it failed to affect {1}!",target.pbThis(true)))

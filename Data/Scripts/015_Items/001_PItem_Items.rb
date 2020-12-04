@@ -207,7 +207,8 @@ def pbIsUnlosableItem?(item,species,ability)
      :GIRATINA => [:GRISEOUSORB],
      :GENESECT => [:BURNDRIVE,:CHILLDRIVE,:DOUSEDRIVE,:SHOCKDRIVE],
      :KYOGRE   => [:BLUEORB],
-     :GROUDON  => [:REDORB]
+     :GROUDON  => [:REDORB],
+	 :OMNIDRAGON => [:RAINBOWORB,:CRACKEDRAINBOWORB]
   }
   combos.each do |comboSpecies, items|
     next if !isConst?(species,PBSpecies,comboSpecies)
