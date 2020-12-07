@@ -172,10 +172,13 @@ Outdoor = false
 ShowArea = true
 #-------------------------------
 [091]
+# Monet Town Houses
+BattleBack = 
 Bicycle = false
-MapPosition = 0,7,3
+MapPosition = 0,5,7
 Outdoor = false
-ShowArea = true
+Environment = None
+ShowArea = false
 #-------------------------------
 [092]
 Bicycle = false
@@ -362,7 +365,7 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [123]
-# Town 7
+# Turner Town
 MapSize = 1,1
 Weather = Rain,30
 Bicycle = true

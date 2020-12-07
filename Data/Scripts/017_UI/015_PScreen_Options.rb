@@ -20,7 +20,7 @@ class PokemonSystem
     @battlestyle = 0     # Battle style (0=switch, 1=set)
     @frame       = 0     # Default window frame (see also $TextFrames)
     @textskin    = 0     # Speech frame
-    @font        = 0     # Font (see also $VersionStyles)
+    @font        = 3     # Font (see also $VersionStyles)
     @screensize  = (SCREEN_ZOOM.floor).to_i   # 0=half size, 1=full size, 2=double size
     @border      = 0     # Screen border (0=off, 1=on)
     @language    = 0     # Language (see also LANGUAGES in script PokemonSystem)
@@ -112,9 +112,9 @@ $VersionStyles = [
 
 def pbSettingToTextSpeed(speed)
   case speed
-  when 0; return 2
-  when 1; return 1
-  when 2; return -2
+  when 0; return 1 #2
+  when 1; return -2 #1
+  when 2; return -4 #-2
   end
   return MessageConfig::TextSpeed || 1
 end

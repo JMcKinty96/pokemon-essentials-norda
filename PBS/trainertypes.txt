@@ -95,6 +95,6 @@
 93,PARASOLLADY,Parasol Lady,40,,,,Female,,
 94,GRUNTHORDE,Grunt Horde,100,,,,Mixed,,
 95,INTERVIEWERS,Interviewers,144,,,,Mixed,,
-96,RICHBOY,Rich Boy,160,,,,Male,,
+96,RICHBOY,Rich Boy,160,,,232 Encounter! Gambler.ogg,Male,,
 97,HIGHCLASSGIRL,High-Class Girl,150,,,,Female,,
 98,LEADERLoreQueen,Gym Leader,100,132 Battle! Gym Leader.ogg,133 Gym Leader Defeated!.mp3,,Female,150,

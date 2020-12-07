@@ -1,5 +1,5 @@
 module MessageConfig
-  FontName        = "Power Green"
+  FontName        = "Pokemon DP" # "Power Green"
   # in Graphics/Windowskins/ (specify empty string to use the default windowskin)
   TextSkinName    = "speech hgss 1"
   ChoiceSkinName  = "choice 1"
@@ -391,7 +391,7 @@ def pbSetSystemFont(bitmap)
   elsif fontname == "Pokemon Emerald Small" || fontname == "Power Green Small"
     bitmap.font.size = 25
   else
-    bitmap.font.size = 31
+    bitmap.font.size = 28
   end
 end
 
