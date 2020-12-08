@@ -1111,6 +1111,14 @@ BattleHandlers::DamageCalcUserAbility.add(:MEGAFIST,
   }
 )
 
+# Kicking ability
+
+BattleHandlers::DamageCalcUserAbility.add(:IRONFOOT,
+  proc { |ability,user,target,move,mults,baseDmg,type|
+    mults[BASE_DMG_MULT] *= 1.2 if move.kickMove?
+  }
+)
+
 BattleHandlers::DamageCalcUserAbility.add(:MEGALAUNCHER,
   proc { |ability,user,target,move,mults,baseDmg,type|
     mults[BASE_DMG_MULT] *= 1.5 if move.pulseMove?

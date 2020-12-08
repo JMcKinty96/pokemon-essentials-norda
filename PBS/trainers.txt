@@ -154,17 +154,18 @@ Pokemon = SAWK,18
 #-------------------------------
 [BLACKBELT,Bruce Yu]
 Pokemon = TYROGUE,16
-    Moves = TACKLE,HELPINGHAND,FAKEOUT,FORESIGHT
+    Moves = TACKLE,FAKEOUT
 Pokemon = HITMONLEE,20
-    Moves = MEDITATE,ROLLINGKICK,JUMPKICK,BRICKBREAK
+	Ability = 0
+    Moves = MEDITATE,ROLLINGKICK,JUMPKICK
 #-------------------------------
 [BUGCATCHER_2,Weevil]
-Pokemon = NINJASK,20
+Pokemon = NINJASK,23
     Gender = male
     Moves = ENDURE,FURYSWIPES,FURYCUTTER,SCREECH
     Ability = 0
     Ball = 5
-Pokemon = SHEDINJA,20
+Pokemon = SHEDINJA,23
     Moves = LEECHLIFE,SANDATTACK,FURYSWIPES,ENDURE
 #-------------------------------
 [BUGCATCHER_2,Wrex]

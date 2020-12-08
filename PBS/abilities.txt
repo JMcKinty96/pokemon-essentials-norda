@@ -256,3 +256,4 @@
 255,ROGUEJUSTICE,Rogue Justice,"Powers up Dark-type moves in a pinch."
 256,WORLDEATER,World Eater,"Reduces super-effective damage. Moves can be used regardless of Abilities. Immune to one-hit KO moves. Immune to Endeavor."
 257,DRAGONDREAM,Dragon Dream,"Wishing to be a dragon, when the Pokémon uses a Dragon-type move it gives up its Rock-type to become Dragon-type."
+258,IRONFOOT,Iron Foot,"Boosts the power of kicking moves by 20%."
