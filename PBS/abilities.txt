@@ -22,7 +22,7 @@
 22,INTIMIDATE,Intimidate,"Lowers the foe's Attack stat when entering battle."
 23,SHADOWTAG,Shadow Tag,"Prevents the foe from escaping."
 24,ROUGHSKIN,Rough Skin,"Inflicts damage to the foe on contact."
-25,WONDERGUARD,Wonder Guard,"Only super-effective moves will hit."
+25,WONDERGUARD,Wonder Guard,"Its mysterious power only lets supereffective moves hit the Pokémon."
 26,LEVITATE,Levitate,"Gives full immunity to all Ground-type moves."
 27,EFFECTSPORE,Effect Spore,"Contact may poison or cause paralysis or sleep."
 28,SYNCHRONIZE,Synchronize,"Passes a burn, poison, or paralysis to the foe."

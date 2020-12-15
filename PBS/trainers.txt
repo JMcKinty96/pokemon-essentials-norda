@@ -156,8 +156,8 @@ Pokemon = SAWK,18
 Pokemon = TYROGUE,16
     Moves = TACKLE,FAKEOUT
 Pokemon = HITMONLEE,20
-	Ability = 0
     Moves = MEDITATE,ROLLINGKICK,JUMPKICK
+    Ability = 0
 #-------------------------------
 [BUGCATCHER_2,Weevil]
 Pokemon = NINJASK,23
@@ -360,7 +360,7 @@ Pokemon = LANTURN,36
     Gender = male
     Moves = SCALD,VOLTSWITCH,ICEBEAM,SNORE
     Ability = 0
-	Item = SITRUSBERRY
+    Item = SITRUSBERRY
     Nature = CALM
 #-------------------------------
 [LEADERWright,Doctor Wright,1]
@@ -427,49 +427,49 @@ Pokemon = DITTO,35
 #-------------------------------
 [LEADERLoreQueen,Lady Alfhild,1]
 Pokemon = AZUMARILL,40
-	Moves = AQUAJET,KNOCKOFF,PLAYROUGH,BELLYDRUM
+    Moves = AQUAJET,KNOCKOFF,PLAYROUGH,BELLYDRUM
     Ball = 13
 Pokemon = BERSERKOAL,40
-	Moves = DRAGONDANCE,DRAGONTAIL,PROTECT,FLAMEWHEEL
-	Item = HABANBERRY
+    Moves = DRAGONDANCE,DRAGONTAIL,PROTECT,FLAMEWHEEL
+    Item = HABANBERRY
 Pokemon = GARDEVOIR,40
-	Moves = MOONBLAST,PSYSHOCK,WILLOWISP,CALMMIND
-	Ability = 1
-	Item = GARDEVOIRITE
+    Moves = MOONBLAST,PSYSHOCK,WILLOWISP,CALMMIND
+    Ability = 1
+    Item = GARDEVOIRITE
 Pokemon = TYRANTRUM,40
-	Moves = STONEEDGE,EARTHQUAKE,ZENHEADBUTT
-	Ability = 2
-	Item = YACHEBERRY
+    Moves = STONEEDGE,EARTHQUAKE,ZENHEADBUTT
+    Ability = 2
+    Item = YACHEBERRY
 Pokemon = AEGISLASH,40
-	Moves = SWORDSDANCE,IRONHEAD,SPARK,KINGSSHIELD
-	Item = LEFTOVERS
-	Form = 1
+    Form = 1
+    Moves = SWORDSDANCE,IRONHEAD,SPARK,KINGSSHIELD
+    Item = LEFTOVERS
 Pokemon = LAMPENT,40
-	Moves = CALMMIND,FLAMETHROWER,SHADOWBALL
-	Item = EVIOLITE
-	Ability = 1
+    Moves = CALMMIND,FLAMETHROWER,SHADOWBALL
+    Ability = 1
+    Item = EVIOLITE
 #-------------------------------
 [LEADERLoreQueen,Lady Alfhild]
 Pokemon = AZUMARILL,30
-	Moves = AQUAJET,KNOCKOFF,PLAYROUGH
+    Moves = AQUAJET,KNOCKOFF,PLAYROUGH
     Ball = 13
 Pokemon = BRANNSKELL,30
-	Ball = 21
-	Moves = DRAGONDANCE,DRAGONCLAW,PROTECT,FLAMEWHEEL
+    Moves = DRAGONDANCE,DRAGONCLAW,PROTECT,FLAMEWHEEL
+    Ball = 21
 Pokemon = GARDEVOIR,30
-	Moves = MOONBLAST,PSYSHOCK,WILLOWISP,CALMMIND
-	Ability = 1
+    Moves = MOONBLAST,PSYSHOCK,WILLOWISP,CALMMIND
+    Ability = 1
 Pokemon = TYRUNT,30
-	Moves = STONEEDGE,EARTHQUAKE,ZENHEADBUTT
-	Ability = 2
-	Item = BERRYJUICE
+    Moves = STONEEDGE,EARTHQUAKE,ZENHEADBUTT
+    Ability = 2
+    Item = BERRYJUICE
 Pokemon = DOUBLADE,30
-	Moves = SWORDSDANCE,IRONHEAD,SPARK
-	Item = EVIOLITE
-	Form = 1
+    Form = 1
+    Moves = SWORDSDANCE,IRONHEAD,SPARK
+    Item = EVIOLITE
 Pokemon = LAMPENT,30
-	Moves = CALMMIND,FLAMETHROWER,SHADOWBALL
-	Ability = 1
+    Moves = CALMMIND,FLAMETHROWER,SHADOWBALL
+    Ability = 1
 #-------------------------------
 [PICNICKER,Susie]
 Pokemon = MEOWTH,18
@@ -885,3 +885,39 @@ Pokemon = PAWNIARD,20
 [PROFESSOR,Type Tester]
 Pokemon = BULBASAUR,5
     Moves = DAZZLINGGLEAM,SPARK
+#-------------------------------
+[RIVALOAKLEY,Oakley,0]
+Pokemon = PIPLUP,10
+Pokemon = PAWNIARD,10
+Pokemon = TAILLOW,10
+#-------------------------------
+[RIVALOAKLEY,Oakley,1]
+Pokemon = TURTWIG,20
+Pokemon = PAWNIARD,10
+Pokemon = TAILLOW,10
+#-------------------------------
+[RIVALOAKLEY,Oakley,2]
+Pokemon = CHIMCHAR,20
+Pokemon = PAWNIARD,10
+Pokemon = TAILLOW,10
+#-------------------------------
+[RIVALOAKLEY1,Oakley,0]
+Pokemon = PIPLUP,20
+Pokemon = PAWNIARD,20
+Pokemon = TAILLOW,20
+Pokemon = LUXIO,20
+Pokemon = KADABRA,20
+#-------------------------------
+[RIVALOAKLEY1,Oakley,1]
+Pokemon = TURTWIG,20
+Pokemon = PAWNIARD,20
+Pokemon = TAILLOW,20
+Pokemon = LUXIO,20
+Pokemon = KADABRA,20
+#-------------------------------
+[RIVALOAKLEY1,Oakley,2]
+Pokemon = CHIMCHAR,20
+Pokemon = PAWNIARD,20
+Pokemon = TAILLOW,20
+Pokemon = LUXIO,20
+Pokemon = KADABRA,20

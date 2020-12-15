@@ -731,7 +731,7 @@ class PokeBattle_Move
       # Survive a lethal hit with 1 HP effects
       if nonLethal?(user,target)
         damage -= 1
-	# friendship lets them hang on with 1 hp, can happen multiple times
+	# friendship lets them hang on with 1 hp, can happen multiple times, but can't be asleep
 	  elsif target.happiness >= 200 && target.status!=PBStatuses::SLEEP && @battle.pbRandom(100)<10
 		  target.damageState.friendshipEndured = true
 		  damage -= 1

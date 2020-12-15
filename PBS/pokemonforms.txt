@@ -1908,6 +1908,31 @@ Weight = 2.5
 Kind = Electric Hammer
 Pokedex = This Pokémon is infused with the power of lightning. Ancient Norda warriors used them in battle.
 #-------------------------------
+[TANGELA,1]
+FormName = Norda Tangela
+Type1 = ICE
+Type2 = FAIRY
+BaseStats = 75,55,115,50,100,40
+Abilities = FOGWARNING
+HiddenAbility = REGENERATOR
+Height = 1.0
+Weight = 35.0
+Kind = Vine
+Pokedex = Its vines snap off easily and painlessly if they are grabbed, allowing it to make a quick getaway. The lost vines are replaced by new growth the very next day.
+Evolutions = TANGROWTH,HasMove,ANCIENTPOWER
+#-------------------------------
+[TANGROWTH,1]
+FormName = Norda Tangrowth
+Type1 = ICE
+Type2 = FAIRY
+BaseStats = 110,100,115,50,110,50
+Abilities = FOGWARNING
+HiddenAbility = REGENERATOR
+Height = 2.0
+Weight = 128.6
+Kind = Vine
+Pokedex = It ensnares prey by extending arms made of vines. Losing arms to predators does not trouble it.
+#-------------------------------
 [DOUBLADE,1]
 FormName = Norda Doublade
 Type1 = ELECTRIC
@@ -1978,7 +2003,7 @@ BaseStats = 76,204,71,108,104,71
 Abilities = MEGAFIST
 Height = 1.4
 Weight = 55.0
-Pokedex = Mega Infernape is able to use one hundred percent of its power with every hit, but as a result it can severely injure itself.
+Pokedex = Mega Infernape is able to use one hundred percent of its power with every punch, but as a result it can severely injure itself.
 BattlerPlayerY = 8
 BattlerEnemyY = 14
 #-------------------------------
@@ -2035,7 +2060,7 @@ MegaStone=BISHARPNITE
 BaseStats=65,175,100,100,60,90
 Abilities=HYPERCUTTER
 Height=1.7
-Pokedex = Mega Bisharp's blades now have tiny, teeth-like claws that run along the edge of the blade like a chainsaw. Bisharp no longer feels pity.
+Pokedex = Bisharp's blades now have tiny, teeth-like claws that run along the edge of the blade like a chainsaw. Bisharp no longer feels pity.
 BattlerEnemyY=11
 BattlerPlayerY=7
 BattlerAltitude=0

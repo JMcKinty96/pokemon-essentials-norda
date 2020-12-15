@@ -650,6 +650,7 @@
 700,DREAMCAPSULE,Dream Capsule,Dream Capsules,2,12500,"A capsule that forces a Pokémon to have its first Hidden Ability.",1,0,0,
 701,REVERSIONCAPSULE,Reversion Capsule,Reversion Capsules,2,1500,"A capsule that causes a Pokémon with a Hidden Ability to revert to its first basic Ability.",1,0,0,
 702,SHINYCAPSULE,Shiny Capsule,Shiny Capsules,1,99999,"A ludicrously rare item that makes a Pokémon shiny permanently.",1,0,0,
+#-------------------------------
 703,MAGNEZONEITE,Magnezoneite,Magnezoneites,1,1000,"One of the mysterious Mega Stones. Have Magnezone hold it, and this stone will enable it to Mega Evolve.",0,0,12,
 704,BISHARPNITE,Bisharpnite,Bisharpnites,1,1000,"One of the mysterious Mega Stones. Have Bisharp hold it, and this stone will enable it to Mega Evolve.",0,0,12,
 705,FLYGONITEX,Flygonite X,Flygonite Xs,1,1000,"One of the mysterious Mega Stones. Have Flygon hold it, and this stone will enable it to Mega Evolve.",0,0,12,
@@ -668,7 +669,7 @@
 725,EXPALL,Exp All,Exp Alls,8,0,"Turned ON. An item that gives all party members experience points (EXP).",2,0,6
 726,EXPALLOFF,Exp All,Exp Alls,8,0,"Turned OFF. An item that gives all party members experience points (EXP).",2,0,6
 #-------------------------------
-727,DRAGONSTONE,DracoStone,Draco Stones,1,2200,"A stone with a dark purple tint. It makes certain species of Pokémon evolve.",1,0,7,
+727,DRAGONSTONE,Draco Stone,Draco Stones,1,2200,"A stone with a dark purple tint. It makes certain species of Pokémon evolve.",1,0,7,
 728,MINTYFRESH,MintFrshTthpste,MintFrshTthpstes,2,300,"A delightful tube of Minty Fresh brand toothpaste. It restores the HP of one Pokémon by 60 points.",1,1,0,
 729,RARECANDYXL,Rare Candy XL,Rare Candy XLs,2,30000,"A candy that is packed with energy. It raises the level of a single Pokémon by three.",1,0,0,
 #-------------------------------

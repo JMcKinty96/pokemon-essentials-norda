@@ -183,12 +183,16 @@ class PokeBattle_Move
     # Disguise takes the damage
     return if target.damageState.disguise
     
-	# Target takes the damage
+    # Target takes the damage
     if damage>=target.hp
       damage = target.hp
       # Survive a lethal hit with 1 HP effects
       if nonLethal?(user,target)
         damage -= 1
+	# friendship lets them hang on with 1 hp, can happen multiple times, but can't be asleep
+	  elsif target.happiness >= 200 && target.status!=PBStatuses::SLEEP && @battle.pbRandom(100)<10
+		  target.damageState.friendshipEndured = true
+		  damage -= 1
       elsif target.effects[PBEffects::Endure]
         target.damageState.endured = true
         damage -= 1
@@ -202,10 +206,6 @@ class PokeBattle_Move
         elsif target.hasActiveItem?(:FOCUSBAND) && @battle.pbRandom(100)<10
           target.damageState.focusBand = true
           damage -= 1
-		# friendship lets them hang on with 1 hp, can happen multiple times
-		elsif target.happiness >= 200 && @battle.pbRandom(100)<=100
-		  target.damageState.friendshipEndured = true
-		  damage -= 1
         end
       end
     end

@@ -705,6 +705,15 @@ MultipleForms.register(:FLETCHLING,{
 
 MultipleForms.copy(:FLETCHLING,:FLETCHINDER,:TALONFLAME)
 
+MultipleForms.register(:TANGELA,{
+  "getFormOnCreation"=>proc{|pokemon|
+    mapPos = pbGetMetadata($game_map.map_id,MetadataMapPosition)
+	next 1 if mapPos && mapPos[0]==0 # Norda region
+	next 
+  }
+})
+
+MultipleForms.copy(:TANGELA,:TANGROWTH)
 
 MultipleForms.register(:HONEDGE,{
   "getFormOnCreation" => proc { |pkmn|

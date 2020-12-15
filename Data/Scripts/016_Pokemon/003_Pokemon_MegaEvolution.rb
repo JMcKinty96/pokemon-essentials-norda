@@ -15,12 +15,12 @@ class PokeBattle_Pokemon
         fSpec = formData[@species][i]
         next if !fSpec || fSpec<=0
         megaStone = speciesData[fSpec][SpeciesMegaStone] || 0
-        if megaStone>0 && self.hasItem?(megaStone)
+        if megaStone>0 && self.hasItem?(megaStone) && pkmn.happiness >= 200
           ret = i; break
         end
         if !checkItemOnly
           megaMove = speciesData[fSpec][SpeciesMegaMove] || 0
-          if megaMove>0 && self.hasMove?(megaMove)
+          if megaMove>0 && self.hasMove?(megaMove) && pkmn.happiness >= 200
             ret = i; break
           end
         end

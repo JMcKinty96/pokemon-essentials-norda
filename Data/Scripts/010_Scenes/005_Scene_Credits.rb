@@ -51,6 +51,10 @@ CREDIT=<<_END_
 
 "Pokémon Norda", by Screedle
 
+Inspired by
+"What If Scandinavia Was A Pokemon Region?"
+By Mr Buddy (Youtube)
+
 Special thanks:
 
 WolfPP

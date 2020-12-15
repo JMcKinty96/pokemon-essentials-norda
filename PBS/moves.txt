@@ -694,6 +694,6 @@
 675,WATERSPORT,Water Sport,09E,0,WATER,Status,0,15,0,BothSides,0,,"The user soaks itself with water. The move weakens Fire-type moves while the user is in the battle."
 676,WITHDRAW,Withdraw,01D,0,WATER,Status,0,40,0,User,0,d,"The user withdraws its body into its hard shell, raising its Defense stat."
 # custom moves
-701,ROLLINGSTOCK,Rolling Stock,08E,1,STEEL,Physical,95,10,0,00,0,abef,"The user rolls onward at full force. The more the user's stats are raised, the greater the damage."
+701,ROLLINGSTOCK,Rolling Stock,08E,1,STEEL,Physical,95,10,0,00,0,abef,"The user rolls onward at full force. Power increases the more the user's stats are raised."
 702,MYTHICBLAST,Mythic Blast,159,100,DRAGON,Special,95,5,0,00,0,bem,"The user fires a vicious energy beam at the enemy. This move is both Dragon and Fairy type."
 703,FLAMESCORCH,Flamescorch,0C0,25,FIRE,Physical,10,30,0,00,0,ben,"The target is hit with several small fire blasts. Two to five blasts are launched."

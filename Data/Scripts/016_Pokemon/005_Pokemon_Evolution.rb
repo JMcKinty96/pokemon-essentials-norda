@@ -62,8 +62,9 @@ module PBEvolution
   TradeItem         = 58
   TradeSpecies      = 59
   HasInPartyMinLevel= 60
+  LocationCapped 	= 61
 
-  def self.maxValue; return 59; end
+  def self.maxValue; return 61; end
 
   @@evolution_methods = HandlerHash.new(:PBEvolution)
 
@@ -651,6 +652,14 @@ PBEvolution.register(:Location, {
   }
 })
 
+PBEvolution.register(:LocationCapped, {
+  "minimumLevel" => 40,   # Needs level 40
+  "levelUpCheck" => proc { |pkmn, parameter|
+    next $game_map.map_id == parameter
+  }
+})
+
+
 PBEvolution.register(:Region, {
   "minimumLevel" => 1,   # Needs any level up
   "levelUpCheck" => proc { |pkmn, parameter|
@@ -709,6 +718,11 @@ PBEvolution.register(:ItemHappiness, {
 #===============================================================================
 PBEvolution.register(:Trade, {
   "parameterType" => nil,
+  #
+  "levelUpCheck" => proc { |pkmn, parameter|
+    next $game_map.map_id == 101
+  },
+  #
   "tradeCheck"    => proc { |pkmn, parameter, other_pkmn|
     next true
   }
@@ -747,6 +761,11 @@ PBEvolution.register(:TradeItem, {
   "tradeCheck"    => proc { |pkmn, parameter, other_pkmn|
     next pkmn.item == parameter
   },
+  #
+  "levelUpCheck" => proc { |pkmn, parameter|
+    next $game_map.map_id == 101 && pkmn.item == parameter
+  },
+  #
   "afterEvolution" => proc { |pkmn, new_species, parameter, evo_species|
     next false if evo_species != new_species || !pkmn.hasItem?(parameter)
     pkmn.setItem(0)   # Item is now consumed
@@ -765,6 +784,6 @@ PBEvolution.register(:HasInPartyMinLevel, {
   "minimumLevel"  => 15,   # Needs to be level 15 or up
   "parameterType" => :PBSpecies,
   "levelUpCheck"  => proc { |pkmn, parameter|
-    next pbHasSpecies?(parameter)
+    next pbHasSpecies?(parameter) && pkmn.level >= 15
   }
 })
