@@ -19,7 +19,7 @@ Events.onWildPokemonCreate += proc { |_sender, e|
 # and other such details.  Of course, you don't HAVE to use this code.
 Events.onWildPokemonCreate += proc { |_sender, e|
   pokemon = e[0]
-  if $game_map.map_id == 51
+  if $game_map.map_id == 1
     max_level = PBExperience.maxLevel
     new_level = pbBalancedLevel($Trainer.party) - 4 + rand(5)   # For variety
     new_level = 1 if new_level < 1
@@ -29,6 +29,28 @@ Events.onWildPokemonCreate += proc { |_sender, e|
     pokemon.resetMoves
   end
 }
+
+# New - more random level dungeons
+Events.onWildPokemonCreate += proc { |_sender, e|
+	pokemon = e[0]
+	for i in 0...SCALE_LEVEL_MAPS.length
+	  if $game_map.map_id == SCALE_LEVEL_MAPS[i]
+		max_level = PBExperience.maxLevel
+		new_level = pbBalancedLevel($Trainer.party) - 4 + rand(5)   # For variety
+		# Scale within the boundaries in Settings.rb
+		new_level = SCALING_MAPS_MIN_LVL[i] if new_level < SCALING_MAPS_MIN_LVL[i] && SCALING_MAPS_MIN_LVL[i] > 0
+		new_level = SCALING_MAPS_MAX_LVL[i] if new_level > SCALING_MAPS_MAX_LVL[i] && SCALING_MAPS_MAX_LVL[i] > 0
+		new_level = 1 if new_level < 1
+		new_level = max_level if new_level > max_level
+		pokemon.level = new_level
+		# De-evolve the pokemon if it's low enough level. has a buffer of -5 levels.
+		pokemon.species = pbGetPreviousForm(pokemon.species) if pokemon.level-5 < pbGetMinimumLevel(pokemon.species)
+		pokemon.calcStats
+		pokemon.resetMoves
+	  end
+	end
+}
+
 
 # This is the basis of a trainer modifier.  It works both for trainers loaded
 # when you battle them, and for partner trainers when they are registered.

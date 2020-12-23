@@ -360,3 +360,13 @@ LANGUAGES = [
 #  ["English", "english.dat"],
 #  ["Deutsch", "deutsch.dat"]
 ]
+
+# Custom settings
+#===============================================================================
+# * Maps that scale to the player party's average level.
+# * The minimum level for each map (0 disables the use of this feature)
+# * The maximum level for each map (0 disables the use of this feature)
+#===============================================================================
+SCALE_LEVEL_MAPS 		= [101,1]
+SCALING_MAPS_MIN_LVL	= [25,0]
+SCALING_MAPS_MAX_LVL	= [75,0]

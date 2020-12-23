@@ -15,7 +15,9 @@ class PokeBattle_Pokemon
         fSpec = formData[@species][i]
         next if !fSpec || fSpec<=0
         megaStone = speciesData[fSpec][SpeciesMegaStone] || 0
-        if megaStone>0 && self.hasItem?(megaStone) && pkmn.happiness >= 200
+        if megaStone>0 && self.hasItem?(megaStone) && self.happiness >= 200
+		# generic mega stone
+#		if megaStone>0 && (self.hasItem?(megaStone) || self.hasItem?(:MEGASTONE)) && self.happiness >= 200
           ret = i; break
         end
         if !checkItemOnly

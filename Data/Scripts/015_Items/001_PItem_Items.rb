@@ -345,7 +345,7 @@ def pbChangeLevel(pkmn,newlevel,scene)
     pkmn.level = newlevel
     pkmn.calcStats
     scene.pbRefresh
-    pbMessage(_INTL("{1} dropped to Lv. {2}!",pkmn.name,pkmn.level))
+    pbMessage(_INTL("\\me[Pkmn get]{1} dropped to Lv. {2}!",pkmn.name,pkmn.level))
     attackdiff  = pkmn.attack-attackdiff
     defensediff = pkmn.defense-defensediff
     speeddiff   = pkmn.speed-speeddiff
@@ -368,9 +368,10 @@ def pbChangeLevel(pkmn,newlevel,scene)
     pkmn.calcStats
     scene.pbRefresh
     if scene.is_a?(PokemonPartyScreen)
-      scene.pbDisplay(_INTL("{1} grew to Lv. {2}!",pkmn.name,pkmn.level))
+      # scene.pbDisplay(_INTL("\\me[Pkmn get]{1} grew to Lv. {2}!",pkmn.name,pkmn.level))
+	  pbMessage(_INTL("\\me[Pkmn get]{1} grew to Lv. {2}!",pkmn.name,pkmn.level))
     else
-      pbMessage(_INTL("{1} grew to Lv. {2}!",pkmn.name,pkmn.level))
+      pbMessage(_INTL("\\me[Pkmn get]{1} grew to Lv. {2}!",pkmn.name,pkmn.level))
     end
     attackdiff  = pkmn.attack-attackdiff
     defensediff = pkmn.defense-defensediff

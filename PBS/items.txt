@@ -645,7 +645,7 @@
 630,PRISONBOTTLE,Prison Bottle,Prison Bottles,8,0,"A bottle believed to have been used to seal away the power of a certain Pokémon long, long ago.",5,0,6,
 631,NSOLARIZER,N-Solarizer,N-Solarizers,8,0,"A machine to fuse Necrozma, which needs light, and Solgaleo.",5,0,6,
 632,NLUNARIZER,N-Lunarizer,N-Lunarizers,8,0,"A machine to fuse Necrozma, which needs light, and Lunala.",5,0,6,
-633,MEGARING,Mega Ring,Mega Rings,8,0,"This ring contains an untold power that somehow enables Pokémon carrying Mega Stones to Mega Evolve.",0,0,6,
+633,MEGARING,Mega Ring,Mega Rings,8,0,"This ring contains a strange power that enables Pokémon carrying Mega Stones to Mega Evolve, if they trust you.",0,0,6,
 #-------------------------------
 700,DREAMCAPSULE,Dream Capsule,Dream Capsules,2,12500,"A capsule that forces a Pokémon to have its first Hidden Ability.",1,0,0,
 701,REVERSIONCAPSULE,Reversion Capsule,Reversion Capsules,2,1500,"A capsule that causes a Pokémon with a Hidden Ability to revert to its first basic Ability.",1,0,0,
@@ -660,6 +660,7 @@
 709,TORTERRAITE,Torterraite,Torterraites,1,1000,"One of the mysterious Mega Stones. Have Torterra hold it, and this stone will enable it to Mega Evolve.",0,0,12,
 710,INFERNAPEITE,Infernapeite,Infernapeites,1,1000,"One of the mysterious Mega Stones. Have Infernape hold it, and this stone will enable it to Mega Evolve.",0,0,12,
 711,EMPOLEONITE,Empoleonite,Empoleonites,1,1000,"One of the mysterious Mega Stones. Have Empoleon hold it, and this stone will enable it to Mega Evolve.",0,0,12,
+712,MEGASTONE,Mega Stone,Mega Stones,1,1000,"A mysterious Mega Stone that enables any Pokémon with a Mega Form to Mega Evolve when held.",0,0,12,
 #-------------------------------
 720,SURFITEM,Float Raft,Float Rafts,8,0,"A portable motorised foam raft that lets you ride on top of calm water. Surf's up!",2,0,6
 721,ROCKSMASHITEM,Hammer,Hammers,8,0,"A small hammer with a head made of steel. It is able to break cracked boulders.",2,0,6

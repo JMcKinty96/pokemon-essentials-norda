@@ -1039,6 +1039,7 @@ Pokedex = This Gallade is a rogue defender of justice, acting more pragmatically
 Abilities = ROGUEJUSTICE
 HiddenAbility = INSTIGATE
 Moves = 0,SLASH,1,SLASH,1,SUCKERPUNCH,1,CLOSECOMBAT,1,LEAFBLADE,1,NIGHTSLASH,1,LEER,1,CONFUSION,1,DOUBLETEAM,1,TELEPORT,4,CONFUSION,6,DOUBLETEAM,9,TELEPORT,11,QUICKGUARD,14,PURSUIT,17,AERIALACE,19,HEALPULSE,23,WIDEGUARD,26,SWORDSDANCE,31,PSYCHOCUT,35,HELPINGHAND,40,FEINT,44,FALSESWIPE,49,PROTECT,53,CLOSECOMBAT,58,SUCKERPUNCH,64,PURSUIT
+Compatibility = Undiscovered
 BattlerPlayerY = 11
 BattlerEnemyY = 15
 #-------------------------------
@@ -1899,46 +1900,50 @@ Pokedex = Talonflame adapted to the Norda region, and it now burns with cold ins
 BattlerPlayerY = 0
 BattlerEnemyY = 5
 #-------------------------------
+[TANGELA,1]
+FormName = Norda Tangela
+Type1 = GRASS
+Type2 = FAIRY
+BaseStats = 75,55,40,50,100,115
+Abilities = FOGWARNING
+HiddenAbility = REGENERATOR
+Moves = 1,INGRAIN,1,CONSTRICT,4,SLEEPPOWDER,7,VINEWHIP,10,ABSORB,14,POISONPOWDER,16,CHARM,20,GROWTH,23,MEGADRAIN,27,KNOCKOFF,30,STUNSPORE,33,NATURALGIFT,34,GIGADRAIN,37,EVILWIND,41,SLAM,44,TICKLE,46,WRINGOUT,48,GRASSYTERRAIN,50,POWERWHIP,55,EVILWIND
+Height = 1.0
+Weight = 35.0
+Kind = Swamp Fairy
+Pokedex = Its vines snap off easily and painlessly if they are grabbed, allowing it to make a quick getaway. The lost vines are replaced by new growth the very next day.
+Evolutions = TANGROWTH,HasMove,EVILWIND
+#-------------------------------
+[TANGROWTH,1]
+FormName = Norda Tangrowth
+Type1 = DARK
+Type2 = FAIRY
+BaseStats = 110,100,50,50,110,115
+Abilities = FOGWARNING
+HiddenAbility = REGENERATOR
+Moves = 1,BLOCK,1,INGRAIN,1,CONSTRICT,4,SLEEPPOWDER,7,VINEWHIP,10,ABSORB,14,POISONPOWDER,17,BIND,20,GROWTH,23,MEGADRAIN,27,KNOCKOFF,30,STUNSPORE,33,NATURALGIFT,36,GIGADRAIN,40,EVILWIND,43,SLAM,46,MEANLOOK,49,WRINGOUT,51,TORMENT,53,POWERWHIP,56,BLOCK,59,DARKPULSE
+Height = 2.0
+Weight = 128.6
+Kind = Swamp Monster
+Pokedex = It enshrouds the area it lurks in with a deep, pervasive fog. Prey that stray into its territory seldom make it back out.
+#-------------------------------
 [HONEDGE,1]
 FormName = Norda Honedge
 Type1 = ELECTRIC
 Type2 = GHOST
 Abilities = VOLTABSORB
+Moves = 1,THUNDERSHOCK,1,SWORDSDANCE,5,FURYCUTTER,8,CHARGE,13,SPARK,18,AUTOTOMIZE,20,SHADOWSNEAK,22,AERIALACE,26,WILDCHARGE,29,SLASH,32,IRONDEFENSE,35,NIGHTSLASH,39,POWERTRICK,42,MAGNETRISE,47,SACREDSWORD
 Weight = 2.5
 Kind = Electric Hammer
 Pokedex = This Pokémon is infused with the power of lightning. Ancient Norda warriors used them in battle.
-#-------------------------------
-[TANGELA,1]
-FormName = Norda Tangela
-Type1 = ICE
-Type2 = FAIRY
-BaseStats = 75,55,115,50,100,40
-Abilities = FOGWARNING
-HiddenAbility = REGENERATOR
-Height = 1.0
-Weight = 35.0
-Kind = Vine
-Pokedex = Its vines snap off easily and painlessly if they are grabbed, allowing it to make a quick getaway. The lost vines are replaced by new growth the very next day.
-Evolutions = TANGROWTH,HasMove,ANCIENTPOWER
-#-------------------------------
-[TANGROWTH,1]
-FormName = Norda Tangrowth
-Type1 = ICE
-Type2 = FAIRY
-BaseStats = 110,100,115,50,110,50
-Abilities = FOGWARNING
-HiddenAbility = REGENERATOR
-Height = 2.0
-Weight = 128.6
-Kind = Vine
-Pokedex = It ensnares prey by extending arms made of vines. Losing arms to predators does not trouble it.
+Evolutions = DOUBLADE,Level,35
 #-------------------------------
 [DOUBLADE,1]
 FormName = Norda Doublade
 Type1 = ELECTRIC
 Type2 = GHOST
-BaseEXP = 65
 Abilities = VOLTABSORB
+Moves = 1,THUNDERSHOCK,1,SWORDSDANCE,1,FURYCUTTER,5,FURYCUTTER,8,CHARGE,13,SPARK,18,AUTOTOMIZE,20,SHADOWSNEAK,22,AERIALACE,26,WILDCHARGE,29,SLASH,32,IRONDEFENSE,36,NIGHTSLASH,41,POWERTRICK,45,MAGNETRISE,51,SACREDSWORD
 Weight = 5.0
 Kind = Electric Hammer
 Pokedex = This Pokémon is often found around power plants and near the places that lightning strikes.
@@ -1948,6 +1953,8 @@ Evolutions = AEGISLASH,Item,THUNDERSTONE
 FormName = Norda Aegislash (Shield)
 Type1 = ELECTRIC
 Type2 = GHOST
+BaseEXP = 234
+Moves = 0,KINGSSHIELD,1,SPARK,1,PURSUIT,1,CHARGE,1,SHADOWSNEAK,1,WILDCHARGE,1,IRONDEFENSE,1,NIGHTSLASH,1,POWERTRICK,1,MAGNETRISE,1,HEADSMASH,1,SWORDSDANCE,1,AERIALACE,1,KINGSSHIELD,1,SACREDSWORD
 Height = 1.5
 Weight = 64.0
 Kind = Divine Hammer
@@ -1962,6 +1969,7 @@ BaseStats = 60,150,50,60,150,50
 [AEGISLASH,3]
 FormName = Norda Aegislash (Hammer)
 BaseStats = 60,150,50,60,150,50
+Moves = 1,SPARK,1,PURSUIT,1,CHARGE,1,SHADOWSNEAK,1,WILDCHARGE,1,IRONDEFENSE,1,NIGHTSLASH,1,POWERTRICK,1,MAGNETRISE,1,HEADSMASH,1,SWORDSDANCE,1,AERIALACE,1,KINGSSHIELD,1,SACREDSWORD
 Kind = Divine Hammer
 Pokedex = This Pokémon only lets itself be carried by warriors who are worthy. For the unworthy, it weighs an infinite amount.
 #-------------------------------
@@ -1999,7 +2007,7 @@ BattlerEnemyY = 14
 [INFERNAPE,1]
 FormName = Mega Infernape
 MegaStone = INFERNAPEITE
-BaseStats = 76,204,71,108,104,71
+BaseStats = 76,124,81,148,114,91
 Abilities = MEGAFIST
 Height = 1.4
 Weight = 55.0
@@ -2010,7 +2018,7 @@ BattlerEnemyY = 14
 [EMPOLEON,1]
 FormName = Mega Empoleon
 MegaStone = EMPOLEONITE
-BaseStats = 84,84,100,100,111,101
+BaseStats = 84,106,128,70,131,111
 Abilities = IMPERIALRULE
 Height = 2.4
 Weight = 155.5

@@ -15,7 +15,8 @@ module EncounterTypes
   # SCREED new encounter types!
   StaticEncounter = 13
   EventEncounter = 14
-  CutEncounter = 15			   
+  CutEncounter = 15
+  DexFixerEnc	= 16
   Names = [
      "Land",
      "Cave",
@@ -32,7 +33,8 @@ module EncounterTypes
      "BugContest",
      "StaticEncounter",
      "EventEncounter",
-     "CutEncounter"			   
+     "CutEncounter",			   
+	 "DexFixerEnc"
   ]
   EnctypeChances = [
      [20,20,10,10,10,10,5,5,5,5], # land
@@ -50,10 +52,11 @@ module EncounterTypes
      [20,20,10,10,10,10,5,5,4,4,1,1],# bug contest
      [30,30,20,20], # wild area (roaming pokemon), also event based
      [40,20,20,20],  # event based encounters e.g. totems
-     [50,25,25]     # wild pokemon encountered when using cut move
+     [50,25,25],     # wild pokemon encountered when using cut move
+	 [10,10,10,10,10,10,10,10,10,10] # Used to fix any case where the Pokedex map doesnt reflect an encounter, e.g. Cave of Generations
   ]
-  EnctypeDensities   = [25,10,10,0,0,0,0,0,0,25,25,25,25,0,0,0]
-  EnctypeCompileDens = [ 1, 2, 3,0,0,0,0,0,0, 1, 1, 1, 1,0,0,0]
+  EnctypeDensities   = [25,10,10,0,0,0,0,0,0,25,25,25,25,0,0,0,0]
+  EnctypeCompileDens = [ 1, 2, 3,0,0,0,0,0,0, 1, 1, 1, 1,0,0,0,0]
 end
 # densities: self explanatory, encounter probability is density /180
 # compile dens: Each encounter method is defined as "Land"-type (1), 
@@ -248,7 +251,7 @@ class PokemonEncounters
     encList = pbGetEncounterTable(enctype)
     return nil if encList==nil
     chances = EncounterTypes::EnctypeChances[enctype]
-    # Static/Magnet Pull prefer wild encounters of certain types, if possible.
+	# Static/Magnet Pull prefer wild encounters of certain types, if possible.
     # If they activate, they remove all Pokémon from the encounter table that do
     # not have the type they favor. If none have that type, nothing is changed.
     firstPkmn = $Trainer.firstPokemon
@@ -258,6 +261,14 @@ class PokemonEncounters
         favoredType = getConst(PBTypes,:ELECTRIC)
       elsif isConst?(firstPkmn.ability,PBAbilities,:MAGNETPULL) && hasConst?(PBTypes,:STEEL)
         favoredType = getConst(PBTypes,:STEEL)
+      elsif isConst?(firstPkmn.ability,PBAbilities,:FLASHFIRE) && hasConst?(PBTypes,:FIRE)
+        favoredType = getConst(PBTypes,:FIRE)
+      elsif isConst?(firstPkmn.ability,PBAbilities,:HARVEST) && hasConst?(PBTypes,:GRASS)
+        favoredType = getConst(PBTypes,:GRASS)
+      elsif isConst?(firstPkmn.ability,PBAbilities,:LIGHTNINGROD) && hasConst?(PBTypes,:ELECTRIC)
+        favoredType = getConst(PBTypes,:ELECTRIC)
+      elsif isConst?(firstPkmn.ability,PBAbilities,:STORMDRAIN) && hasConst?(PBTypes,:WATER)
+        favoredType = getConst(PBTypes,:WATER)
       end
       if favoredType>=0
         newEncList = []
@@ -385,7 +396,8 @@ class PokemonEncounters
     # sufficiently weaker than the Pokémon with the ability
     if firstPkmn && rand(100)<50   # 50% chance of happening
       if isConst?(firstPkmn.ability,PBAbilities,:INTIMIDATE) ||
-         isConst?(firstPkmn.ability,PBAbilities,:KEENEYE)
+         isConst?(firstPkmn.ability,PBAbilities,:KEENEYE) ||
+		 isConst?(firstPkmn.ability,PBAbilities,:WHITENOISE)
         return nil if encPkmn[1]<=firstPkmn.level-5   # 5 or more levels weaker
       end
     end

@@ -320,18 +320,18 @@ EventEncounter
     WYNAUT,20
 #-------------------------------
 101 # Cave of Generations
-15,10,10
+25,10,10
 Cave
     KADABRA,25,30
     HAUNTER,25,30
     SABLEYE,25,30
     MAWILE,25,30
     GRAVELER,25,30
-    ROGGENROLA,25,30
-    AXEW,25,30
-    GIBLE,25,30
-    RHYHORN,25,30
-    DUSKULL,25,30
+    BOLDORE,25,30
+    FRAXURE,25,30
+    GABITE,25,30
+    RHYDON,25,30
+    DUSCLOPS,25,30
 Water
     CLAMPERL,25,35
     FEEBAS,25,35
@@ -342,6 +342,17 @@ RockSmash
     GIBLE,25
     SWINUB,25
     SWINUB,25
+DexFixerEnc
+    ABRA,25,30
+    GASTLY,25,30
+    SABLEYE,25,30
+    MAWILE,25,30
+    GEODUDE,25,30
+    ROGGENROLA,25,30
+    AXEW,25,30
+    GIBLE,25,30
+    RHYHORN,25,30
+    DUSKULL,25,30
 #-------------------------------
 113 # OpenField C3
 25,10,10
