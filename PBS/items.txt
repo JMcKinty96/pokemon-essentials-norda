@@ -674,3 +674,4 @@
 728,MINTYFRESH,MintFrshTthpste,MintFrshTthpstes,2,300,"A delightful tube of Minty Fresh brand toothpaste. It restores the HP of one Pokémon by 60 points.",1,1,0,
 729,RARECANDYXL,Rare Candy XL,Rare Candy XLs,2,30000,"A candy that is packed with energy. It raises the level of a single Pokémon by three.",1,0,0,
 #-------------------------------
+730,ABILITYCHARM,Ability Charm,Shiny Charms,8,0,"A pale charm that makes wild Pokémon have a small chance of having a Hidden Ability.",0,0,6,

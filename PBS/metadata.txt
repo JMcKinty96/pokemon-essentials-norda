@@ -21,6 +21,10 @@ MapPosition = 0,7,7
 Outdoor = true
 ShowArea = true
 #-------------------------------
+[004]
+# Gauguin Town Poké Center
+MapPosition = 0,7,7
+#-------------------------------
 [032]
 # Route B-1
 MapPosition = 0,4,2

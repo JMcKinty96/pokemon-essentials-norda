@@ -1105,6 +1105,7 @@ BattleHandlers::DamageCalcUserAbility.add(:IRONFIST,
   }
 )
 
+# More powerful Iron Fist
 BattleHandlers::DamageCalcUserAbility.add(:MEGAFIST,
   proc { |ability,user,target,move,mults,baseDmg,type|
     mults[BASE_DMG_MULT] *= 1.5 if move.punchingMove?
@@ -1112,7 +1113,6 @@ BattleHandlers::DamageCalcUserAbility.add(:MEGAFIST,
 )
 
 # Kicking ability
-
 BattleHandlers::DamageCalcUserAbility.add(:IRONFOOT,
   proc { |ability,user,target,move,mults,baseDmg,type|
     mults[BASE_DMG_MULT] *= 1.2 if move.kickMove?
@@ -1379,6 +1379,14 @@ BattleHandlers::DamageCalcTargetAbility.add(:HEATPROOF,
 BattleHandlers::DamageCalcTargetAbility.add(:MARVELSCALE,
   proc { |ability,user,target,move,mults,baseDmg,type|
     if target.pbHasAnyStatus? && move.physicalMove?
+      mults[DEF_MULT] *= 1.5
+    end
+  }
+)
+
+BattleHandlers::DamageCalcTargetAbility.add(:SPARKLESHIELD,
+  proc { |ability,user,target,move,mults,baseDmg,type|
+    if target.pbHasAnyStatus? && move.specialMove?
       mults[DEF_MULT] *= 1.5
     end
   }
@@ -2657,5 +2665,67 @@ BattleHandlers::AbilityOnBattlerFainting.add(:SOULHEART,
 BattleHandlers::RunFromBattleAbility.add(:RUNAWAY,
   proc { |ability,battler|
     next true
+  }
+)
+
+#===============================================================================
+# The following abilities were made by Lucidious89
+#===============================================================================
+# Custom Ability #26 - Outbreak
+#===============================================================================
+BattleHandlers::TargetAbilityOnHit.add(:OUTBREAK,
+  proc { |ability,user,target,move,battle|
+    next false if !move.pbContactMove?(user)
+    next false if user.status!=0
+    next false if target.status==0 || target.asleep? || target.frozen?
+    battle.pbShowAbilitySplash(target)
+    msg = nil
+    if target.poisoned?
+      if user.pbCanPoison?(target,PokeBattle_SceneConstants::USE_ABILITY_SPLASH) &&
+         user.affectedByContactEffect?(PokeBattle_SceneConstants::USE_ABILITY_SPLASH)
+        msg = _INTL("{1}'s {2} spread its poison to {3}!",target.pbThis,target.abilityName,user.pbThis(true))
+        user.pbPoison(target,msg)
+      end
+    elsif target.burned?
+      if user.pbCanBurn?(target,PokeBattle_SceneConstants::USE_ABILITY_SPLASH) &&
+         user.affectedByContactEffect?(PokeBattle_SceneConstants::USE_ABILITY_SPLASH)
+        msg = _INTL("{1}'s {2} spread its burn to {3}!",target.pbThis,target.abilityName,user.pbThis(true))
+        user.pbBurn(target,msg)
+      end
+    elsif target.paralyzed?
+      if user.pbCanParalyze?(target,PokeBattle_SceneConstants::USE_ABILITY_SPLASH) &&
+         user.affectedByContactEffect?(PokeBattle_SceneConstants::USE_ABILITY_SPLASH)
+        msg = _INTL("{1}'s {2} spread its paralysis to {3}!",target.pbThis,target.abilityName,user.pbThis(true))
+        user.pbParalyze(target,msg)
+      end
+    end
+    battle.pbHideAbilitySplash(target)
+  }
+)
+
+#===============================================================================
+# Custom Ability #29 - Delivery
+#===============================================================================
+BattleHandlers::AbilityOnSwitchIn.add(:DELIVERY,
+  proc { |ability,battler,battle|
+    next false if battler.item==0 || battler.unlosableItem?(battler.item)
+    battle.eachOtherSideBattler(battler.index) do |b|
+      next if b.semiInvulnerable? || b.effects[PBEffects::SkyDrop]>=0
+      next if b.item>0 || !b.near?(battler)
+      recipient = b
+      if recipient
+        battle.pbShowAbilitySplash(battler)
+        recipient.item = battler.item
+        battler.item = 0
+        if battle.wildBattle?
+          recipient.setInitialItem(recipient.item)
+          battler.setInitialItem(0)
+        end
+        battle.pbDisplay(_INTL("{1}'s {2} was delivered to {3}!",battler.pbThis,
+            recipient.itemName,recipient.pbThis(true)))
+        battle.pbHideAbilitySplash(battler)
+        recipient.pbHeldItemTriggerCheck
+      end
+    end
   }
 )

@@ -646,7 +646,7 @@ def pbPickup(pkmn)
   pickupListRare = pbDynamicItemList(
      :HYPERPOTION,
      :NUGGET,
-     :KINGSROCK,
+     :DRACOSTONE,
      :FULLRESTORE,
      :ETHER,
      :IRONBALL,

@@ -100,4 +100,4 @@
 98,LEADERLoreQueen,Gym Leader,100,132 Battle! Gym Leader.ogg,133 Gym Leader Defeated!.mp3,,Female,150,
 99,RIVALOAKLEY,Rival,15,,,,Female,,
 100,RIVALOAKLEY1,Rival,30,,,,Female,,
-101,RIVALOAKLEY1,Rival,50,,,,Female,,
+101,RIVALOAKLEY2,Rival,60,,,,Female,,

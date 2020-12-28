@@ -427,6 +427,7 @@ class PokeBattle_Battler
     return false if @effects[PBEffects::Transform]
     # Items that change a Pokémon's form
     return true if @pokemon && @pokemon.getMegaForm(true) > 0   # Mega Stone
+	return true if pbIsMegaStone?(check_item) # Mega Stone
     return pbIsUnlosableItem?(check_item, @species, @ability)
   end
 

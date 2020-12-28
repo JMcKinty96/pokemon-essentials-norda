@@ -448,6 +448,13 @@ def pbGenerateWildPokemon(species,level,isRoamer=false)
       genwildpoke.personalID = rand(65536)|(rand(65536)<<16)
     end
   end
+  # Ability Charm gives a 1/16 chance of a Wild Pokémon having a Hidden Ability (If applicable)
+  if hasConst?(PBItems,:ABILITYCHARM) && $PokemonBag.pbHasItem?(:ABILITYCHARM)
+	if rand(16)<1
+		newabil = 2
+		genwildpoke.setAbility(newabil)
+	end
+  end
   # Give Pokérus
   if rand(65536)<POKERUS_CHANCE
     genwildpoke.givePokerus
@@ -460,6 +467,12 @@ def pbGenerateWildPokemon(species,level,isRoamer=false)
         (rand(3)<2) ? genwildpoke.makeFemale : genwildpoke.makeMale
       elsif firstPkmn.female?
         (rand(3)<2) ? genwildpoke.makeMale : genwildpoke.makeFemale
+      end
+	elsif isConst?(firstPkmn.ability,PBAbilities,:RIVALRY) && !genwildpoke.singleGendered?
+      if firstPkmn.male?
+        (rand(3)<2) ? genwildpoke.makeMale : genwildpoke.makeFemale
+      elsif firstPkmn.female?
+        (rand(3)<2) ? genwildpoke.makeFemale : genwildpoke.makeMale
       end
     elsif isConst?(firstPkmn.ability,PBAbilities,:SYNCHRONIZE)
       genwildpoke.setNature(firstPkmn.nature) if !isRoamer && rand(100)<50

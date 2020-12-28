@@ -1149,7 +1149,7 @@ ItemHandlers::UseOnPokemon.add(:DREAMCAPSULE,proc { |item,pkmn,scene|
 	for i in abils
 		abil1 = i[0] if i[1]==0
 		abil2 = i[0] if i[1]==1
-		abil3=i[0] if i[1]==2
+		abil3 = i[0] if i[1]==2
 	end
 	if abil3<=0 || pkmn.hasHiddenAbility?
 		scene.pbDisplay(_INTL("It won't have any effect."))

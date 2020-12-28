@@ -1996,18 +1996,18 @@ Pokedex = With the Rainbow Orb cracked, Omnidragon has lost some of its full pot
 [TORTERRA,1]
 FormName = Mega Torterra
 MegaStone = TORTERRAITE
-BaseStats = 95,159,105,56,75,135
+BaseStats = 100,159,105,56,75,135
 Abilities = UNBREAKABLE
 Height = 2.5
 Weight = 600.0
-Pokedex = This Mega Evolution was first discovered when a Torterra had to become an unbreakable wall to stop weaker Pokémon from being killed.
+Pokedex = This Mega Evolution was first discovered when a Torterra had to act as an unbreakable shield to stop weaker Pokémon from being killed.
 BattlerPlayerY = 8
 BattlerEnemyY = 14
 #-------------------------------
 [INFERNAPE,1]
 FormName = Mega Infernape
 MegaStone = INFERNAPEITE
-BaseStats = 76,124,81,148,114,91
+BaseStats = 76,120,81,148,114,91
 Abilities = MEGAFIST
 Height = 1.4
 Weight = 55.0
@@ -2047,7 +2047,7 @@ Type2=DRAGON
 BaseStats=80,160,80,100,80,120
 Abilities=TOUGHCLAWS
 Weight=3.0
-Pokedex = This mega evolution causes Flygon's wings to become vestegial. It claws are incredibly tough, but continuously grow longer.
+Pokedex = This mega evolution causes Flygon's wings to become vestegial. It claws are incredibly tough, and continuously grow longer.
 BattlerPlayerY=17
 BattlerEnemyY=28
 BattlerAltitude=0
