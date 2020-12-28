@@ -257,7 +257,8 @@
 323,WORLDEATER,World Eater,"Reduces super-effective damage by 25%. Moves can be used regardless of Abilities. Immune to one-hit KO moves. Immune to Endeavor."
 324,DRAGONDREAM,Dragon Dream,"Wishing to be a dragon, when the Pokémon uses a Dragon-type move it gives up its Rock-type to become Dragon-type."
 325,IRONFOOT,Iron Foot,"Boosts the power of kicking moves by 20%."
-326,SPARKLESHIELD,Sparkle Shield,"Ups Special Defense if there is a status problem."#
+326,SPARKLESHIELD,Sparkle Shield,"Ups Special Defense if there is a status problem."
+327,STEAMENGINE,Steam Engine,"Maximise the Pokémon's Speed stat if hit by a Fire- or Water-type move. The heat can help with the hatching of Pokémon eggs."
 # Abilities Inspired by Lucidious89
 401,OUTBREAK,Outbreak,"Contact with the Pokémon spreads its status condition if poisoned, burned, or paralysed."
 402,DELIVERY,Special Delivery,"Passes a held item to a foe upon entering battle."

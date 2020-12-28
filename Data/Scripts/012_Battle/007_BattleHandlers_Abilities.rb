@@ -1713,6 +1713,14 @@ BattleHandlers::TargetAbilityOnHit.add(:JUSTIFIED,
   }
 )
 
+# Steam Engine
+BattleHandlers::TargetAbilityOnHit.add(:STEAMENGINE,
+  proc { |ability,user,target,move,battle|
+    next if !isConst?(move.calcType,PBTypes,:WATER) && !isConst?(move.calcType,PBTypes,:FIRE)
+    target.pbRaiseStatStageByAbility(PBStats::SPEED,6,target)
+  }
+)
+
 BattleHandlers::TargetAbilityOnHit.add(:MUMMY,
   proc { |ability,user,target,move,battle|
     next if !move.pbContactMove?(user)
@@ -2711,7 +2719,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:DELIVERY,
     next false if battler.item==0 || battler.unlosableItem?(battler.item)
     battle.eachOtherSideBattler(battler.index) do |b|
       next if b.semiInvulnerable? || b.effects[PBEffects::SkyDrop]>=0
-      next if b.item>0 || !b.near?(battler)
+      next if b.item>0 || !b.near?(battler) || battler.item==0
       recipient = b
       if recipient
         battle.pbShowAbilitySplash(battler)

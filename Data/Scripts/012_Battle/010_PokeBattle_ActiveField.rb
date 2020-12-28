@@ -61,6 +61,8 @@ begin
       @effects[PBEffects::Tailwind]           = 0
       @effects[PBEffects::ToxicSpikes]        = 0
       @effects[PBEffects::WideGuard]          = false
+	  #
+	  @effects[PBEffects::SnowTrap]			  = false
     end
   end
 

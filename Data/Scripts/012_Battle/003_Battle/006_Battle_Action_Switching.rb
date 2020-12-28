@@ -366,6 +366,23 @@ class PokeBattle_Battle
         end
       end
     end
+	# Snow Trap
+    if battler.pbOwnSide.effects[PBEffects::SnowTrap] && battler.takesIndirectDamage? &&
+       !battler.airborne?
+      aType = getConst(PBTypes,:ICE) || 0
+      bTypes = battler.pbTypes(true)
+      eff = PBTypes.getCombinedEffectiveness(aType,bTypes[0],bTypes[1],bTypes[2])
+      if !PBTypes.ineffective?(eff)
+        eff = eff.to_f/PBTypeEffectiveness::NORMAL_EFFECTIVE
+        oldHP = battler.hp
+        battler.pbReduceHP(battler.totalhp*eff/8,false)
+        pbDisplay(_INTL("Jagged ice dug into {1}!",battler.pbThis))
+        battler.pbItemHPHealCheck
+        if battler.pbAbilitiesOnDamageTaken(oldHP)   # Switched out
+          return pbOnActiveOne(battler)   # For replacement battler
+        end
+      end
+    end
     # Spikes
     if battler.pbOwnSide.effects[PBEffects::Spikes]>0 && battler.takesIndirectDamage? &&
        !battler.airborne?

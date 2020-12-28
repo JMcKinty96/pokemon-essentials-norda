@@ -1297,11 +1297,13 @@ class PokeBattle_Move_049 < PokeBattle_TargetStatDownMove
     return false if targetSide.effects[PBEffects::StealthRock] ||
                     targetSide.effects[PBEffects::Spikes]>0 ||
                     targetSide.effects[PBEffects::ToxicSpikes]>0 ||
+					targetSide.effects[PBEffects::SnowTrap]>0 ||
                     targetSide.effects[PBEffects::StickyWeb]
     return false if NEWEST_BATTLE_MECHANICS &&
                     (targetOpposingSide.effects[PBEffects::StealthRock] ||
                     targetOpposingSide.effects[PBEffects::Spikes]>0 ||
                     targetOpposingSide.effects[PBEffects::ToxicSpikes]>0 ||
+					targetOpposingSide.effects[PBEffects::SnowTrap]>0 ||
                     targetOpposingSide.effects[PBEffects::StickyWeb])
     return super
   end
@@ -1357,6 +1359,13 @@ class PokeBattle_Move_049 < PokeBattle_TargetStatDownMove
       target.pbOwnSide.effects[PBEffects::StickyWeb]      = false
       target.pbOpposingSide.effects[PBEffects::StickyWeb] = false if NEWEST_BATTLE_MECHANICS
       @battle.pbDisplay(_INTL("{1} blew away sticky webs!",user.pbThis))
+    end
+	if target.pbOwnSide.effects[PBEffects::SnowTrap] ||
+       (NEWEST_BATTLE_MECHANICS &&
+       target.pbOpposingSide.effects[PBEffects::SnowTrap])
+      target.pbOwnSide.effects[PBEffects::SnowTrap]      = false
+      target.pbOpposingSide.effects[PBEffects::SnowTrap] = false if NEWEST_BATTLE_MECHANICS
+      @battle.pbDisplay(_INTL("{1} blew away the snow trap!",user.pbThis))
     end
   end
 end

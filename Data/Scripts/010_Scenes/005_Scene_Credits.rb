@@ -72,6 +72,9 @@ Nickaloose
 KleinStudio
 (BW Seasons)
 
+Mr Gela
+(various scripts and tips)
+
 raZ
 (General help)
 

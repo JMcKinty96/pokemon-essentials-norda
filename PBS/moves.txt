@@ -698,3 +698,5 @@
 702,MYTHICBLAST,Mythic Blast,159,100,DRAGON,Special,95,5,0,00,0,bem,"The user fires a vicious energy beam at the enemy. This move is both Dragon and Fairy type."
 703,SCORCHBLASTS,Scorch Blasts,0C0,25,FIRE,Physical,100,20,0,00,0,ben,"The target is hit with several small fire blasts. Two to five blasts are launched."
 704,EVILWIND,Evil Power,02D,60,DARK,Special,100,5,10,NearOther,0,bef,"The user attacks with a sinister, lurking force. It may also raise all the user's stats at once."
+705,ICEPELLET,Snow Pellet,046,75,ICE,Special,90,10,10,NearOther,0,befn,"The user loads up a dense snowball and shoots it. It may also lower the target's Sp. Def."
+706,SNOWTRAP,Snow Trap,1F5,0,ICE,Status,0,20,0,FoeSide,0,c,"The user creates jagged ice spikes, concealed by snow. The trap hurts foes that switch into battle."

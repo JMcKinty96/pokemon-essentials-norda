@@ -626,9 +626,9 @@ class PokemonSummary_Scene
     
     stars=[] # Array of each star depending on IVs
     for i in 0..5
-     if pokemon.iv[i] >= 31 # Best star above 31 IVs
+     if pokemon.iv[i] >= 31 # Best star at 31 IVs
     stars.push(4)
-	  elsif pokemon.iv[i] >= 21 # Best star between 21-30 IVs
+	  elsif pokemon.iv[i] >= 21 # Great star between 21-30 IVs
     stars.push(3)
       elsif pokemon.iv[i] >= 11 # Okay star between 11-20 IVs
     stars.push(2)

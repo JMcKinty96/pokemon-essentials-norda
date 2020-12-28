@@ -7,7 +7,6 @@ Pokemon = BEEDRILL,18
     Moves = TWINEEDLE,FURYATTACK,PROTECT,BRICKBREAK
     Ball = 5
 Pokemon = PONYTA,18
-    Name = Eponyta
     Gender = female
     Moves = DOUBLEKICK,FLAMEWHEEL,SOLARBEAM,SUNNYDAY
     Ability = 2
