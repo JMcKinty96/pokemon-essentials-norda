@@ -2714,26 +2714,33 @@ BattleHandlers::TargetAbilityOnHit.add(:OUTBREAK,
 #===============================================================================
 # Custom Ability #29 - Delivery
 #===============================================================================
+
+
 BattleHandlers::AbilityOnSwitchIn.add(:DELIVERY,
   proc { |ability,battler,battle|
     next false if battler.item==0 || battler.unlosableItem?(battler.item)
+    recipient = nil
     battle.eachOtherSideBattler(battler.index) do |b|
       next if b.semiInvulnerable? || b.effects[PBEffects::SkyDrop]>=0
-      next if b.item>0 || !b.near?(battler) || battler.item==0
-      recipient = b
-      if recipient
-        battle.pbShowAbilitySplash(battler)
-        recipient.item = battler.item
-        battler.item = 0
-        if battle.wildBattle?
-          recipient.setInitialItem(recipient.item)
-          battler.setInitialItem(0)
-        end
-        battle.pbDisplay(_INTL("{1}'s {2} was delivered to {3}!",battler.pbThis,
-            recipient.itemName,recipient.pbThis(true)))
-        battle.pbHideAbilitySplash(battler)
-        recipient.pbHeldItemTriggerCheck
+      next if b.item>0 || !b.near?(battler)
+      if b == battler.pbDirectOpposing
+        recipient = b
+        break
       end
+      recipient = b
+    end
+    if recipient
+      battle.pbShowAbilitySplash(battler)
+      recipient.item = battler.item
+      battler.item = 0
+      if battle.wildBattle?
+        recipient.setInitialItem(recipient.item)
+        battler.setInitialItem(0)
+      end
+      battle.pbDisplay(_INTL("{1}'s {2} was delivered to {3}!",battler.pbThis,
+          recipient.itemName,recipient.pbThis(true)))
+      battle.pbHideAbilitySplash(battler)
+      recipient.pbHeldItemTriggerCheck
     end
   }
 )
