@@ -50,6 +50,11 @@ class PokeBattle_Move_103 < PokeBattle_Move
     user.pbOpposingSide.effects[PBEffects::Spikes] += 1
     @battle.pbDisplay(_INTL("Spikes were scattered all around {1}'s feet!",
        user.pbOpposingTeam(true)))
+	# for balance purposes, get rid of all layers of Snow Trap too
+	if user.pbOpposingSide.effects[PBEffects::SnowTrap]
+      user.pbOpposingSide.effects[PBEffects::SnowTrap] = false
+      @battle.pbDisplay(_INTL("{1} got rid of the jagged ice around {2}!",user.pbThis,user.pbOpposingTeam(true)))
+    end
   end
 end
 

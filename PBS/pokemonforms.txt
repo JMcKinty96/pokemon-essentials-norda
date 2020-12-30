@@ -1853,6 +1853,8 @@ Abilities = NEUROFORCE
 Height = 7.5
 Color = Yellow
 #-------------------------------
+# New Forms
+#-------------------------------
 [MAGEARNA,1]
 FormName = Original Color
 Color = Red
@@ -1866,6 +1868,7 @@ Moves = 1,TACKLE,1,GROWL,6,QUICKATTACK,10,PECK,13,AGILITY,16,FLAIL,21,ROOST,25,R
 Height = 1.7
 Weight = 0.3
 Color = Blue
+Kind = Tiny Robin
 Pokedex = These friendly Pokemon send signals to one another with beautiful chirps and tail-feather movements. They love cold weather.
 BattlerPlayerY = 15
 BattlerEnemyY = 18
@@ -2057,7 +2060,7 @@ FormName=Mega Magnezone
 MegaStone=MAGNEZONEITE
 BaseStats=70,100,135,90,150,90
 Abilities=LEVITATE
-Pokedex = Mega Magnezone interferes with wireless transmissions in a large radius. It appears to be unaffected by gravity in this state.
+Pokedex = Mega Magnezone interferes with wireless transmissions in a large radius. It produces magnetism strong enough to let it float.
 BattlerEnemyY=18
 BattlerPlayerY=25
 BattlerAltitude=11
