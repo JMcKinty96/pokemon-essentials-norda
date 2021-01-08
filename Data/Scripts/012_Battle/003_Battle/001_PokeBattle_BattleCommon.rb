@@ -102,7 +102,7 @@ module PokeBattle_BattleCommon
       pbDisplay(_INTL("The Trainer blocked your Poké Ball! Don't be a thief!"))
       return
     # Prevent catching wild pokemon based on a switch
-	elsif $game_switches[200]==true
+	elsif $game_switches[NO_CAPTURE]
 	  @scene.pbThrowAndDeflect(ball,1)
       pbDisplay(_INTL("The Pokémon deflected the ball!\nIt seems that it can't be caught!"))
       return

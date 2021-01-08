@@ -352,6 +352,10 @@ def pbDayCareGenerateEgg
   shinyretries = 0
   shinyretries += 5 if father.language!=mother.language
   shinyretries += 2 if hasConst?(PBItems,:SHINYCHARM) && $PokemonBag.pbHasItem?(:SHINYCHARM)
+  # Shiny parent increases shiny chance
+  shinyretries += 1 if father.shiny?
+  shinyretries += 1 if mother.shiny?
+  #
   if shinyretries>0
     shinyretries.times do
       break if egg.shiny?

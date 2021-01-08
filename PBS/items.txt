@@ -675,3 +675,9 @@
 729,RARECANDYXL,Rare Candy XL,Rare Candy XLs,2,30000,"A candy that is packed with energy. It raises the level of a single Pokémon by three.",1,0,0,
 #-------------------------------
 730,ABILITYCHARM,Ability Charm,Shiny Charms,8,0,"A pale charm that makes wild Pokémon have a small chance of having a Hidden Ability.",0,0,6,
+#-------------------------------
+801,XM01,XM01,XM01s,4,0,"The user loads up a dense snowball and shoots it. It may also lower the target's Sp. Def.",4,0,0,ICEPELLET
+802,XM02,XM02,XM02s,4,0,"The user creates jagged ice spikes on the ground. The trap hurts foes that switch into battle.",4,0,0,SNOWTRAP
+803,XM03,XM03,XM03s,4,0,"The user scares the target half to death with its worst fears. It may also lower the target's Speed stat.",4,0,0,MANIFESTFEAR
+804,XM04,XM04,XM04s,4,0,"The user slams through the target without hesitation. Can't be stopped by the target's Ability.",4,0,0,BOULDERBASH
+805,XM05,XM05,XM05s,4,0,"Countless small bugs attack the enemy team. This attack never misses.",4,0,0,SWARMATTACK

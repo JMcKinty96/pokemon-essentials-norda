@@ -886,21 +886,25 @@ Pokemon = BULBASAUR,5
     Moves = DAZZLINGGLEAM,SPARK
 #-------------------------------
 [RIVALOAKLEY,Oakley,0]
+LoseText = "How could this happen...?"
 Pokemon = PIPLUP,10
 Pokemon = PAWNIARD,10
 Pokemon = TAILLOW,10
 #-------------------------------
 [RIVALOAKLEY,Oakley,1]
+LoseText = "How could this happen...?"
 Pokemon = TURTWIG,20
 Pokemon = PAWNIARD,10
 Pokemon = TAILLOW,10
 #-------------------------------
 [RIVALOAKLEY,Oakley,2]
+LoseText = "How could this happen...?"
 Pokemon = CHIMCHAR,20
 Pokemon = PAWNIARD,10
 Pokemon = TAILLOW,10
 #-------------------------------
 [RIVALOAKLEY1,Oakley,0]
+LoseText = "How could this happen...?"
 Pokemon = PIPLUP,20
 Pokemon = PAWNIARD,20
 Pokemon = TAILLOW,20
@@ -908,6 +912,7 @@ Pokemon = LUXIO,20
 Pokemon = KADABRA,20
 #-------------------------------
 [RIVALOAKLEY1,Oakley,1]
+LoseText = "How could this happen...?"
 Pokemon = TURTWIG,20
 Pokemon = PAWNIARD,20
 Pokemon = TAILLOW,20
@@ -915,6 +920,7 @@ Pokemon = LUXIO,20
 Pokemon = KADABRA,20
 #-------------------------------
 [RIVALOAKLEY1,Oakley,2]
+LoseText = "How could this happen...?"
 Pokemon = CHIMCHAR,20
 Pokemon = PAWNIARD,20
 Pokemon = TAILLOW,20
