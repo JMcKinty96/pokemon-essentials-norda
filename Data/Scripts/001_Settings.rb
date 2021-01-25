@@ -203,7 +203,7 @@ REGION_MAP_EXTRAS = [
 def pbStorageCreator
   return _INTL("Lars")
 end
-NUM_STORAGE_BOXES = 30
+NUM_STORAGE_BOXES = 31
 
 #===============================================================================
 # * Whether the Pokédex list shown is the one for the player's current region

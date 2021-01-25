@@ -2068,7 +2068,7 @@ BattlerAltitude=11
 [BISHARP-1]
 FormName=Mega Bisharp
 MegaStone=BISHARPNITE
-BaseStats=65,175,100,100,60,90
+BaseStats=75,140,120,115,60,90
 Abilities=HYPERCUTTER
 Height=1.7
 Pokedex = Bisharp's blades now have tiny, teeth-like claws that run along the edge of the blade like a chainsaw. Bisharp no longer feels pity.

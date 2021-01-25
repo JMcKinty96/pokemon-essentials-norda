@@ -113,7 +113,9 @@ def pbPrepareBattle(battle)
       battle.defaultWeather = PBWeather::Sandstorm
     when PBFieldWeather::Sun
       battle.defaultWeather = PBWeather::Sun
-    end
+	when PBFieldWeather::Fog
+	 battle.defaultWeather = PBWeather::Fog
+  end
   else
     battle.defaultWeather = battleRules["defaultWeather"]
   end

@@ -49,7 +49,7 @@ module RPG
       @weatherTypes[PBFieldWeather::Blizzard]  = [[], -16, 16, -4]
       @weatherTypes[PBFieldWeather::Sandstorm] = [[], -12,  4, -2]
       @weatherTypes[PBFieldWeather::Sun]       = nil
-	  @weatherTypes[PBFieldWeather::Fog] 	   = [[],0,0,0]													   
+	  @weatherTypes[PBFieldWeather::Fog] 	   = nil													   
       @sprites = []
     end
 
@@ -73,31 +73,8 @@ module RPG
       @oy = oy
       @sprites.each { |s| s.oy = @oy }
     end
-
-    def prepareFogBitmaps # SCREED NEW
-      if !@fogBitmap1
-        bmwidth  = 512 #512
-        bmheight = 512 #512
-        # literally none of this works
-        # I dont know how to use bitmaps
-        
-        #@fogBitmap1 = Bitmap.new(bmwidth,bmheight)
-        #@fogBitmap2 = Bitmap.new(bmwidth,bmheight)
-        #fogColor = Color.new(224, 232, 240, 255)
-        #@fogBitmap1.fill_rect(4,2,2,2,fogColor)
-        #@fogBitmap2.fill_rect(2,0,4,2,fogColor)
-        #@weatherTypes[PBFieldWeather::Fog][0][0] = @fogBitmap1
-        #@weatherTypes[PBFieldWeather::Fog][0][1] = @fogBitmap2
-        
-#        image="/Graphics/Fogs/KlausFog"
-#        @fogBitmapImage = AnimatedBitmap.new(image)
-#        @weatherTypes[PBFieldWeather::Fog][0][1] = @fogBitmapImage
-#        @fogBitmap1 = Bitmap.new(bmwidth,bmheight)
-        @fogBitmap1 = AnimatedBitmap.new("Graphics/Fogs/KlausFog").bitmap
-        @weatherTypes[PBFieldWeather::Fog][0][1] = @fogBitmap1
-        end
-    end 
-    def prepareRainBitmap
+	
+	def prepareRainBitmap
       rainColor = Color.new(255,255,255,255)
       @rain_bitmap = Bitmap.new(32,128)
       for i in 0...16
@@ -231,17 +208,16 @@ module RPG
       when PBFieldWeather::None
         @sprites.each { |s| s.dispose }
         @sprites.clear
-        return
+      return
       when PBFieldWeather::Rain;                             prepareRainBitmap
       when PBFieldWeather::HeavyRain, PBFieldWeather::Storm; prepareStormBitmap
       when PBFieldWeather::Snow;                             prepareSnowBitmaps
       when PBFieldWeather::Blizzard;                         prepareBlizzardBitmaps
       when PBFieldWeather::Sandstorm;                        prepareSandstormBitmaps
-      when PBFieldWeather::Fog                              # SCREED
+      when PBFieldWeather::Fog	# Screed fog
         @sprites.each { |s| s.dispose }
         @sprites.clear
-        return	  
-      end
+      return
       weatherBitmaps = (@type==PBFieldWeather::None || @type==PBFieldWeather::Sun) ? nil : @weatherTypes[@type][0]
       ensureSprites
       @sprites.each_with_index do |s,i|
@@ -251,6 +227,7 @@ module RPG
         s.bitmap  = (weatherBitmaps) ? weatherBitmaps[i%weatherBitmaps.length]: nil
       end
     end
+	end
 
     def update
       # @max is (power+1)*4, where power is between 1 and 9
@@ -264,7 +241,8 @@ module RPG
       when PBFieldWeather::Blizzard;  @viewport.tone.set( @max*3/4,  @max*3/4,   max*3/4,  0)
       when PBFieldWeather::Sandstorm; @viewport.tone.set(   @max/2,         0,   -@max/2,  0)
       # SCREED
-      when PBFieldWeather::Fog;       @viewport.tone.set(@max*4/4,@max*4/4,@max*4/4,100)				
+      when PBFieldWeather::Fog
+		@viewport.tone.set(@max*4/4,@max*4/4,@max*4/4,100)						
       when PBFieldWeather::Sun
         @sun = @max if @sun!=@max && @sun!=-@max
         @sun = -@sun if @sunValue>@max || @sunValue<0
@@ -277,7 +255,7 @@ module RPG
         @viewport.flash(Color.new(255,255,255,230),rnd*20) if rnd<4
       end
       @viewport.update
-      return if @type==PBFieldWeather::None || @type==PBFieldWeather::Sun
+      return if @type==PBFieldWeather::None || @type==PBFieldWeather::Sun || @type==PBFieldWeather::Fog
       # Update weather particles (raindrops, snowflakes, etc.)
       ensureSprites
       for i in 1..@max
